@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import "../styles/animations.css";
+
+:root {
+  --background: #0e0e0c;
+  --foreground: #f5f0e8;
+  --muted: #b8b0a3;
+  --border: rgba(245, 240, 232, 0.14);
+  --accent: #c8a96a;
+  --light: #f6f1ea;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(200, 169, 106, 0.12), transparent 28%),
+    linear-gradient(180deg, #11110f 0%, #0e0e0c 35%, #0e0e0c 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: #0e0e0c;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.premium-grid {
+  background-image: linear-gradient(rgba(245, 240, 232, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 240, 232, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.glass-panel {
+  background: rgba(14, 14, 12, 0.58);
+  backdrop-filter: blur(18px);
+}
+
+.article p + p {
+  margin-top: 1.25rem;
+}

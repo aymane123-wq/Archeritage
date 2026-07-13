@@ -1,34 +1,23 @@
 import type { Metadata } from 'next';
 
-import { ContactFormSection } from '@/components/sections/ContactFormSection';
-import { ContactHero } from '@/components/sections/ContactHero';
+import { PageMotion } from '@/components/motion/PageMotion';
+import { ContactForm } from '@/components/site/ContactForm';
 import { Container } from '@/components/ui/Container';
-import { createMetadata } from '@/lib/seo';
+import { contactPage } from '@/content/site';
 
-export const metadata: Metadata = createMetadata({
-  title: 'Contact | ARCHERITAGE',
-  description: 'Parlez à l’équipe ARCHERITAGE de votre projet, de votre site et de vos ambitions.',
-  path: '/contact',
-});
+export const metadata: Metadata = { title: contactPage.title, description: contactPage.introduction };
 
 export default function ContactPage() {
   return (
-    <>
-      <ContactHero />
-      <ContactFormSection />
-      <section className="py-10 sm:py-14 lg:py-16">
-        <Container>
-          <div className="overflow-hidden rounded-[2rem] border border-[var(--border)] bg-white/[0.03]">
-            <div className="flex min-h-[280px] items-center justify-center bg-[linear-gradient(135deg,rgba(245,240,232,0.08),rgba(200,169,106,0.08))] p-8 text-center">
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.35em] text-[var(--accent)]">Carte</p>
-                <p className="mt-4 max-w-lg text-2xl font-semibold tracking-[-0.03em]">Emplacement du bureau à Rabat, Maroc</p>
-                <p className="mt-3 text-sm text-[var(--muted)]">Remplacez ce bloc par une carte intégrée lorsque vous serez prêt à connecter le service choisi.</p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-    </>
+    <PageMotion>
+      <header className="showcase-hero"><div className="showcase-hero__grid" /><Container className="relative z-10"><div><p className="eyebrow">{contactPage.eyebrow}</p><h1>{contactPage.title}</h1><p className="showcase-hero__intro">{contactPage.introduction}</p></div></Container></header>
+      <section className="contact-page"><Container className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:items-start lg:gap-12">
+        <div className="contact-context">
+          <div className="space-y-8">{contactPage.guidance.map((item, index) => <article key={item.title}><span>0{index + 1}</span><h2>{item.title}</h2><p>{item.text}</p></article>)}</div>
+          <div className="mt-10 border-t border-[var(--border)] pt-7">{contactPage.details.map((detail) => <p key={detail} className="text-sm leading-7 text-[var(--muted)]">{detail}</p>)}</div>
+        </div>
+        <div className="contact-form-panel"><p className="eyebrow">Formulaire de contact</p><h2>Décrire votre projet</h2><div className="mt-8"><ContactForm /></div></div>
+      </Container></section>
+    </PageMotion>
   );
 }

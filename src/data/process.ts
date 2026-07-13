@@ -3,27 +3,27 @@ import type { ProcessStep } from '@/types';
 export const processSteps: ProcessStep[] = [
   {
     number: '01',
-    title: 'Esquisse',
-    description: 'Nous cadrons le besoin, le site et les usages afin de produire une première direction claire et lisible.',
+    title: 'Première lecture',
+    description: 'Comprendre le lieu, son histoire, son état et les intentions du porteur de projet.',
   },
   {
     number: '02',
-    title: 'Développement',
-    description: 'Le concept se précise avec les matières, les volumes, les contraintes techniques et le budget cible.',
+    title: 'Diagnostic',
+    description: 'Relevés, analyse des matériaux, état sanitaire, contraintes patrimoniales et opportunités.',
   },
   {
     number: '03',
-    title: 'Autorisations',
-    description: 'Nous préparons les dossiers administratifs et les pièces nécessaires à la validation du projet.',
+    title: 'Stratégie d’intervention',
+    description: 'Définir ce qui doit être préservé, restauré, transformé ou valorisé.',
   },
   {
     number: '04',
-    title: 'Exécution',
-    description: 'Les plans techniques, détails et consultations entreprises sont finalisés avec une rigueur millimétrique.',
+    title: 'Dossiers & coordination',
+    description: 'Préparer les documents, organiser les échanges et accompagner les étapes administratives.',
   },
   {
     number: '05',
-    title: 'Réalisation',
-    description: 'Le chantier est suivi jusqu’à la livraison afin de préserver la qualité du geste architectural.',
+    title: 'Chantier & transmission',
+    description: 'Suivre l’exécution, contrôler les détails et assurer la cohérence patrimoniale du projet.',
   },
 ];

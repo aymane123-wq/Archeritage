@@ -43,7 +43,7 @@ export function ContactFormSection() {
       <Container className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="space-y-8">
           <SectionLabel label="Informations" title="Parlez-nous de votre besoin." />
-          <div className="grid gap-5 rounded-[1.75rem] border border-[var(--border)] bg-white/[0.02] p-6 text-sm leading-7 text-[var(--muted)]">
+          <div className="surface-card grid gap-5 rounded-[0.75rem] p-6 text-sm leading-7 text-[var(--muted)]">
             <div>
               <p className="text-[11px] uppercase tracking-[0.35em] text-[var(--accent)]">Adresse</p>
               <p className="mt-2">{site.address}</p>
@@ -61,7 +61,7 @@ export function ContactFormSection() {
           </div>
         </div>
 
-        <form className="rounded-[1.75rem] border border-[var(--border)] bg-white/[0.02] p-6 sm:p-8" onSubmit={handleSubmit(onSubmit)} noValidate>
+        <form className="surface-card rounded-[0.75rem] p-6 sm:p-8" onSubmit={handleSubmit(onSubmit)} noValidate>
           <div className="grid gap-5 sm:grid-cols-2">
             <Field label="Nom" error={errors.name?.message}>
               <input {...register('name')} className={inputClass} />
@@ -77,10 +77,13 @@ export function ContactFormSection() {
                 <option value="" disabled>
                   Sélectionner
                 </option>
-                <option value="Conception architecturale">Conception architecturale</option>
-                <option value="Réalisation & exécution">Réalisation & exécution</option>
-                <option value="Design intérieur">Design intérieur</option>
-                <option value="Branding & identité">Branding & identité</option>
+                <option value="Restauration patrimoniale">Restauration patrimoniale</option>
+                <option value="Réhabilitation / reconversion">Réhabilitation / reconversion</option>
+                <option value="Diagnostic d’un bâtiment ancien">Diagnostic d’un bâtiment ancien</option>
+                <option value="Investissement au Maroc">Investissement au Maroc</option>
+                <option value="Étude de faisabilité">Étude de faisabilité</option>
+                <option value="Suivi de chantier">Suivi de chantier</option>
+                <option value="Autre demande">Autre demande</option>
               </select>
             </Field>
           </div>
@@ -102,7 +105,7 @@ export function ContactFormSection() {
 }
 
 const inputClass =
-  'mt-2 w-full rounded-[1rem] border border-[var(--border)] bg-transparent px-4 py-3 text-sm text-[var(--foreground)] outline-none transition-colors placeholder:text-[var(--muted)] focus:border-[var(--accent)]';
+  'mt-2 w-full rounded-[0.55rem] border border-[var(--border)] bg-[#0f0f0c] px-4 py-3 text-sm text-[var(--foreground)] outline-none transition-colors placeholder:text-[var(--muted)] focus:border-[var(--accent)]';
 
 function Field({ label, error, children, className }: { label: string; error?: string; children: React.ReactNode; className?: string }) {
   return (

@@ -8,24 +8,24 @@ export function MissionContent() {
     <section className="py-20 sm:py-24 lg:py-28">
       <Container className="grid gap-14 lg:grid-cols-2 lg:items-start">
         <div className="space-y-8">
-          <SectionLabel label="Philosophie" title="Créer des lieux clairs, sensibles et intemporels." />
+          <SectionLabel label="Notre approche" title="Lire le lieu avant de le transformer." />
           <Reveal>
             <div className="space-y-6 text-sm leading-7 text-[var(--muted)] sm:text-base">
               <p>
-                Notre démarche fusionne créativité, précision technique et sens du contexte. Chaque volume est pensé comme une réponse juste à un usage réel.
+                Notre rôle est de comprendre la valeur d’un lieu, d’en mesurer les contraintes, puis de construire une stratégie d’intervention qui respecte son histoire tout en ouvrant des usages nouveaux.
               </p>
               <p>
-                Nous recherchons des architectures sobres, robustes et élégantes, où les matières nobles, la lumière et les détails dessinent une expérience durable.
+                Pour les institutions, propriétaires, investisseurs marocains, MRE ou porteurs de projets à l’étranger, ARCHERITAGE apporte une méthode entre rigueur technique, sensibilité culturelle et connaissance du contexte local.
               </p>
             </div>
           </Reveal>
         </div>
 
         <div className="grid gap-6">
-          <ImageReveal src="/images/mission/studio-02.webp" alt="Atelier ARCHERITAGE" className="aspect-[5/4]" fallbackLabel="Mission interior placeholder" />
+          <ImageReveal src="/images/hero/hero-05.jpg" alt="Étude patrimoniale et lecture d’un bâtiment ancien" className="aspect-[5/4]" fallbackLabel="Étude patrimoniale" />
           <Reveal>
-            <p className="rounded-[1.5rem] border border-[var(--border)] bg-white/[0.02] p-6 text-sm leading-7 text-[var(--muted)]">
-              Nous travaillons l’architecture comme un ensemble cohérent: une structure, une atmosphère, un mobilier, une image. Le résultat doit être lisible immédiatement et rester pertinent dans le temps.
+            <p className="surface-card rounded-[0.75rem] p-6 text-sm leading-7 text-[var(--muted)]">
+              Patrimoine, investissement et territoire doivent être pensés ensemble: le projet doit conserver l’âme du lieu, clarifier ses contraintes et retrouver un usage viable.
             </p>
           </Reveal>
         </div>

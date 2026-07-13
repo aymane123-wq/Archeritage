@@ -23,7 +23,7 @@ export function DropdownMenu({ item, open, onOpenChange, currentPath }: Dropdown
       <button
         type="button"
         className={cn(
-          'inline-flex items-center gap-1 text-sm transition-colors hover:text-[var(--accent)]',
+          'inline-flex items-center gap-1 text-[0.78rem] font-medium uppercase tracking-[0.18em] transition-colors hover:text-[var(--accent)]',
           currentPath.startsWith(item.href) ? 'text-[var(--accent)]' : 'text-[var(--foreground)]',
         )}
         aria-haspopup="true"
@@ -42,7 +42,7 @@ export function DropdownMenu({ item, open, onOpenChange, currentPath }: Dropdown
 
       <div
         className={cn(
-          'absolute left-0 top-full z-50 mt-3 w-[19rem] rounded-[1.5rem] border border-[var(--border)] bg-[rgba(14,14,12,0.96)] p-2 shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-all duration-300',
+          'absolute left-0 top-full z-50 mt-3 w-[21rem] rounded-[0.75rem] border border-[var(--border)] bg-[rgba(14,14,12,0.96)] p-2 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-300',
           open ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 opacity-0',
         )}
       >
@@ -51,7 +51,7 @@ export function DropdownMenu({ item, open, onOpenChange, currentPath }: Dropdown
             key={child.href}
             href={child.href}
             className={cn(
-              'block rounded-[1rem] px-4 py-3 text-sm transition-colors hover:bg-white/5 hover:text-[var(--accent)]',
+              'block rounded-[0.45rem] px-4 py-3 text-sm transition-colors hover:bg-white/5 hover:text-[var(--accent)]',
               currentPath === child.href ? 'text-[var(--accent)]' : 'text-[var(--foreground)]',
             )}
             onClick={() => onOpenChange(false)}

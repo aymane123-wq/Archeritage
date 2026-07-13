@@ -1,7 +1,8 @@
 import type { Stat } from '@/types';
 
 export const stats: Stat[] = [
-  { value: '12+', label: 'Années de pratique', detail: 'Accompagnement de projets résidentiels et tertiaires.' },
-  { value: '84', label: 'Projets livrés', detail: 'Des études au chantier avec une même exigence.' },
-  { value: '4', label: 'Domaines clés', detail: 'Architecture, réalisation, intérieur et branding.' },
+  { value: 'Patrimoine', label: 'Architecture, mémoire et territoire', detail: 'Une lecture des lieux avant toute intervention.' },
+  { value: 'Maroc', label: 'Contexte local', detail: 'Une attention aux réalités administratives, culturelles et constructives.' },
+  { value: 'Investisseurs', label: 'Projets entrants', detail: 'Un accompagnement pour cadrer les opportunités avec responsabilité.' },
+  { value: 'Méthode', label: 'De l’étude au chantier', detail: 'Diagnostic, stratégie, coordination et suivi patrimonial.' },
 ];

@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 
@@ -14,9 +12,7 @@ export default function NotFound() {
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Button href="/">Retour à l’accueil</Button>
-          <Link href="/contact" className="rounded-full border border-[var(--border)] px-5 py-3 text-sm transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]">
-            Contactez-nous
-          </Link>
+          <Button href="/contact" variant="secondary">Contactez-nous</Button>
         </div>
       </Container>
     </section>

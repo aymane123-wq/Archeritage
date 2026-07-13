@@ -14,15 +14,15 @@ type ButtonProps = {
 };
 
 const variants: Record<ButtonVariant, string> = {
-  primary: 'bg-[var(--light)] text-[var(--background)] hover:bg-[var(--accent)]',
-  secondary: 'border border-[var(--border)] bg-transparent text-[var(--foreground)] hover:border-[var(--accent)] hover:text-[var(--accent)]',
-  ghost: 'bg-transparent text-[var(--foreground)] hover:bg-white/5',
+  primary: 'border border-[var(--light)] bg-[var(--light)] text-[var(--background)] hover:border-[var(--accent)] hover:bg-[var(--accent)]',
+  secondary: 'border border-[var(--border-strong)] bg-[rgba(245,240,232,0.025)] text-[var(--foreground)] hover:border-[var(--accent)] hover:text-[var(--accent)]',
+  ghost: 'border border-transparent bg-transparent text-[var(--foreground)] hover:border-[var(--border)] hover:bg-white/5',
   link: 'bg-transparent px-0 py-0 text-[var(--accent)] underline-offset-4 hover:underline',
 };
 
 export function Button({ href, children, variant = 'primary', className, onClick, type = 'button' }: ButtonProps) {
   const classes = cn(
-    'inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]',
+    'inline-flex min-h-11 items-center justify-center gap-2 rounded-[0.55rem] px-5 py-3 text-[0.8rem] font-semibold uppercase tracking-[0.16em] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)]',
     variants[variant],
     className,
   );

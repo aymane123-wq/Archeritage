@@ -7,6 +7,7 @@ import { ServiceCard } from '@/components/ui/ServiceCard';
 import { services } from '@/data/services';
 import { SectionMarker } from '@/components/ui/SectionMarker';
 import { Reveal } from '@/components/ui/Reveal';
+import { RevealGroup } from '@/components/ui/RevealGroup';
 
 export function ServicesOverview() {
   return (
@@ -15,19 +16,19 @@ export function ServicesOverview() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="flex items-center gap-4">
             <SectionMarker className="hidden sm:inline-flex" />
-            <SectionLabel label="Expertise" title="Nos domaines d’intervention" />
+            <SectionLabel label="Expertises" title="Accompagner les projets patrimoniaux de l’étude au chantier" />
           </div>
-          <Button href="/services" variant="secondary">
-            Tous les services <ArrowRight className="h-4 w-4" />
-          </Button>
+          <Reveal delay={0.12}>
+            <Button href="/services" variant="secondary">
+              Toutes les expertises <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Reveal>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {services.map((service, index) => (
-            <Reveal key={service.slug} direction="up" delay={index * 0.06}>
-              <ServiceCard service={service} variant="featured" />
-            </Reveal>
+        <RevealGroup className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {services.map((service) => (
+            <ServiceCard key={service.slug} service={service} variant="featured" />
           ))}
-        </div>
+        </RevealGroup>
       </Container>
     </section>
   );

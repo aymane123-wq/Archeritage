@@ -2,7 +2,7 @@
   "name": "archeritage",
   "version": "1.0.0",
   "private": true,
-  "description": "Premium architecture and cabinet studio website built with Next.js App Router, TypeScript, Tailwind CSS, GSAP, Lenis, React Hook Form, and Zod.",
+  "description": "Moroccan heritage architecture website for restoration, rehabilitation, cultural valorization, and investor support.",
   "license": "ISC",
   "author": "",
   "type": "commonjs",

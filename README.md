@@ -1,6 +1,6 @@
 # ARCHERITAGE
 
-Premium architecture and cabinet studio website built with Next.js App Router, TypeScript, Tailwind CSS, GSAP, Lenis, React Hook Form, and Zod.
+Moroccan heritage architecture website for restoration, rehabilitation, cultural valorization, and investor support, built with Next.js App Router, TypeScript, Tailwind CSS, GSAP, Lenis, React Hook Form, and Zod.
 
 ## Scripts
 
@@ -12,7 +12,7 @@ Premium architecture and cabinet studio website built with Next.js App Router, T
 
 - `src/app` - routes, layout, metadata, and page entry points
 - `src/components` - reusable layout, section, and UI components
-- `src/data` - navigation, services, projects, posts, footer, process, stats, and team data
+- `src/data` - navigation, expertises, references, journal posts, footer, process, stats, and team data
 - `src/hooks` - Lenis and GSAP helpers
 - `src/lib` - shared utilities and metadata helpers
 - `public/images` - placeholder asset folders for future project imagery

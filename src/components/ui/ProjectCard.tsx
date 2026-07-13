@@ -17,7 +17,7 @@ export function ProjectCard({ project, className, variant = 'default' }: Project
   return (
     <article
       className={cn(
-        'group overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[linear-gradient(180deg,rgba(245,240,232,0.04),rgba(245,240,232,0.01))] transition-colors duration-300 hover:border-[var(--accent)]',
+        'surface-card group overflow-hidden rounded-[0.75rem] transition-colors duration-300 hover:border-[var(--accent)]',
         variant === 'featured' ? 'shadow-[0_18px_60px_rgba(0,0,0,0.22)]' : '',
         className,
       )}
@@ -27,7 +27,7 @@ export function ProjectCard({ project, className, variant = 'default' }: Project
         <div className={cn('relative overflow-hidden', variant === 'featured' ? 'aspect-[4/5]' : 'aspect-[4/3]')}>
           <SafeImage src={imageSrc} alt={project.altText} fallbackLabel={project.title} className="h-full w-full rounded-none border-0 transition-transform duration-700 group-hover:scale-[1.06]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(14,14,12,0.82)] via-[rgba(14,14,12,0.18)] to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-95" />
-          <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/12 bg-black/25 px-3 py-1.5 text-[10px] uppercase tracking-[0.35em] text-[var(--light)] backdrop-blur-sm">
+          <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-[0.45rem] border border-white/12 bg-black/25 px-3 py-1.5 text-[10px] uppercase tracking-[0.35em] text-[var(--light)] backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
             {project.categoryLabel}
           </div>

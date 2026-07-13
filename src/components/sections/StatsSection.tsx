@@ -1,4 +1,5 @@
 import { Container } from '@/components/ui/Container';
+import { RevealGroup } from '@/components/ui/RevealGroup';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { StatItem } from '@/components/ui/StatItem';
 import { cn } from '@/lib/utils';
@@ -16,11 +17,11 @@ export function StatsSection({ items = [], className, title = 'Une pratique pré
     <section className={cn('py-20 sm:py-24 lg:py-28', className)}>
       <Container>
         <SectionLabel label={label} title={title} />
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <RevealGroup className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {items.map((stat) => (
             <StatItem key={stat.label} stat={stat} />
           ))}
-        </div>
+        </RevealGroup>
       </Container>
     </section>
   );

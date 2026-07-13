@@ -1,56 +1,22 @@
 import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 
+import { FooterMotion } from '@/components/motion/FooterMotion';
 import { Container } from '@/components/ui/Container';
-import { footerGroups, socialLinks } from '@/data/footer';
-import { site } from '@/data/site';
+import { cabinetPage, contactPage, siteRoutes } from '@/content/site';
 
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--border)] bg-[#0b0b09] text-[var(--foreground)]">
-      <Container className="py-16 sm:py-20 lg:py-24">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
-          <div className="space-y-6">
-            <p className="text-[11px] uppercase tracking-[0.35em] text-[var(--accent)]">ARCHERITAGE</p>
-            <p className="max-w-xl text-4xl font-semibold tracking-[-0.04em] text-[var(--light)] sm:text-5xl lg:text-6xl">
-              Architecture, intérieur et identité pour des lieux durables et précis.
-            </p>
-            <p className="max-w-lg text-sm leading-7 text-[var(--muted)]">{site.description}</p>
-          </div>
-
-          <div className="grid gap-10 sm:grid-cols-3">
-            {footerGroups.map((group) => (
-              <div key={group.title} className="space-y-4">
-                <h2 className="text-sm uppercase tracking-[0.3em] text-[var(--accent)]">{group.title}</h2>
-                <div className="grid gap-3 text-sm text-[var(--muted)]">
-                  {group.links.map((link) => (
-                    <Link key={link.href} href={link.href} className="transition-colors hover:text-[var(--foreground)]">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+    <FooterMotion><footer className="site-footer">
+      <Container>
+        <div className="site-footer__wordmark">ARCHERITAGE</div>
+        <div className="site-footer__grid">
+          <div><p className="eyebrow">Cabinet d’architecture</p><p className="site-footer__statement">{cabinetPage.statement}</p><p className="site-footer__copy">{cabinetPage.introduction}</p></div>
+          <nav aria-label="Navigation du pied de page">{siteRoutes.map((route, index) => <Link key={route.href} href={route.href}><span>{String(index + 1).padStart(2, '0')}</span>{route.label}<ArrowUpRight className="h-3.5 w-3.5" /></Link>)}</nav>
+          <div className="site-footer__contact"><p className="eyebrow">Contact</p>{contactPage.details.map((detail) => <p key={detail}>{detail}</p>)}<Link href="/contact" className="arrow-link">Parler d’un projet<ArrowUpRight className="h-4 w-4" /></Link></div>
         </div>
-
-        <div className="mt-16 grid gap-8 border-t border-[var(--border)] pt-8 sm:grid-cols-2 lg:grid-cols-[1fr_auto_auto] lg:items-center">
-          <div className="space-y-2 text-sm text-[var(--muted)]">
-            <p>{site.email}</p>
-            <p>{site.phone} · {site.secondaryPhone}</p>
-          </div>
-          <div className="flex flex-wrap gap-4 text-sm text-[var(--muted)]">
-            {socialLinks.map((link) => (
-              <a key={link.href} href={link.href} className="transition-colors hover:text-[var(--foreground)]" target="_blank" rel="noreferrer">
-                {link.label}
-              </a>
-            ))}
-          </div>
-          <div className="text-sm text-[var(--muted)]">
-            <p>{site.address}</p>
-            <p className="mt-2">© 2026 {site.legalName}. Tous droits réservés.</p>
-          </div>
-        </div>
+        <div className="site-footer__bottom"><p>Archeritage</p><p>Architecture · Patrimoine · Gouvernance</p><p>© 2026 Archeritage</p></div>
       </Container>
-    </footer>
+    </footer></FooterMotion>
   );
 }

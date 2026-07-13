@@ -2,6 +2,8 @@ import Link from 'next/link';
 
 import { Container } from '@/components/ui/Container';
 import { ImageReveal } from '@/components/ui/ImageReveal';
+import { Reveal } from '@/components/ui/Reveal';
+import { RevealGroup } from '@/components/ui/RevealGroup';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { projects } from '@/data/projects';
 import type { Project } from '@/types';
@@ -20,21 +22,21 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
       <section className="py-20 sm:py-24 lg:py-28">
         <Container className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-start">
           <div>
-            <SectionLabel label="Projet" title="Une écriture architecturale sobre, précise et habitée." />
-            <div className="article mt-6 max-w-3xl text-sm leading-7 text-[var(--muted)] sm:text-base">
-              <p>{project.description}</p>
-              <p>
-                Le projet a été conduit avec une attention particulière portée au rythme des espaces, au rapport entre lumière naturelle et artificielle, ainsi qu’au confort des usages.
+            <SectionLabel label="Référence" title="Une intervention à documenter avec prudence et précision." />
+            <Reveal className="article mt-6 max-w-3xl text-sm leading-7 text-[var(--muted)] sm:text-base" stagger={0.08} childSelector="[data-project-paragraph]">
+              <p data-project-paragraph>{project.description}</p>
+              <p data-project-paragraph>
+                Les informations détaillées, visuels, partenaires et données sensibles seront intégrés après validation du client afin d’éviter toute affirmation non documentée.
               </p>
-            </div>
+            </Reveal>
           </div>
-          <div className="grid gap-4 rounded-[1.75rem] border border-[var(--border)] bg-white/[0.02] p-6 text-sm leading-7 text-[var(--muted)]">
+          <Reveal className="surface-card grid gap-4 rounded-[0.75rem] p-6 text-sm leading-7 text-[var(--muted)]">
             <div>
               <p className="text-[11px] uppercase tracking-[0.35em] text-[var(--accent)]">Localisation</p>
               <p className="mt-2 text-[var(--foreground)]">{project.location}</p>
             </div>
             <div>
-              <p className="text-[11px] uppercase tracking-[0.35em] text-[var(--accent)]">Année</p>
+              <p className="text-[11px] uppercase tracking-[0.35em] text-[var(--accent)]">Statut</p>
               <p className="mt-2 text-[var(--foreground)]">{project.year}</p>
             </div>
             {project.surface ? (
@@ -43,31 +45,35 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
                 <p className="mt-2 text-[var(--foreground)]">{project.surface}</p>
               </div>
             ) : null}
-          </div>
+          </Reveal>
         </Container>
       </section>
 
       <section className="py-10 sm:py-14 lg:py-16">
-        <Container className="grid gap-4 md:grid-cols-2">
-          <Link href={`/projets/${previousProject.slug}`} className="rounded-[1.5rem] border border-[var(--border)] p-6 transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]">
-            <p className="text-[11px] uppercase tracking-[0.35em] text-[var(--accent)]">Projet précédent</p>
-            <p className="mt-3 text-2xl font-semibold tracking-[-0.03em]">{previousProject.title}</p>
-          </Link>
-          <Link href={`/projets/${nextProject.slug}`} className="rounded-[1.5rem] border border-[var(--border)] p-6 text-right transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]">
-            <p className="text-[11px] uppercase tracking-[0.35em] text-[var(--accent)]">Projet suivant</p>
-            <p className="mt-3 text-2xl font-semibold tracking-[-0.03em]">{nextProject.title}</p>
-          </Link>
+        <Container>
+          <RevealGroup className="grid gap-4 md:grid-cols-2" childSelector="[data-project-nav-card]">
+            <Link data-project-nav-card href={`/projets/${previousProject.slug}`} className="surface-card rounded-[0.75rem] p-6 transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]">
+              <p className="text-[11px] uppercase tracking-[0.35em] text-[var(--accent)]">Référence précédente</p>
+              <p className="mt-3 text-2xl font-semibold tracking-[-0.03em]">{previousProject.title}</p>
+            </Link>
+            <Link data-project-nav-card href={`/projets/${nextProject.slug}`} className="surface-card rounded-[0.75rem] p-6 text-right transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]">
+              <p className="text-[11px] uppercase tracking-[0.35em] text-[var(--accent)]">Référence suivante</p>
+              <p className="mt-3 text-2xl font-semibold tracking-[-0.03em]">{nextProject.title}</p>
+            </Link>
+          </RevealGroup>
         </Container>
       </section>
 
       <section className="py-20 sm:py-24 lg:py-28">
         <Container>
-          <SectionLabel label="Galerie" title="Des images qui racontent le projet dans sa continuité." />
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
+          <SectionLabel label="Galerie" title="Visuels à compléter avec les documents validés." />
+          <RevealGroup className="mt-10 grid gap-5 md:grid-cols-2" childSelector="[data-gallery-item]">
             {project.gallery.map((image, index) => (
-              <ImageReveal key={image} src={image} alt={`${project.title} - image ${index + 1}`} className="aspect-[4/3]" fallbackLabel={project.title} />
+              <div key={image} data-gallery-item>
+                <ImageReveal src={image} alt={`${project.title} - image ${index + 1}`} className="aspect-[4/3]" fallbackLabel={project.title} />
+              </div>
             ))}
-          </div>
+          </RevealGroup>
         </Container>
       </section>
     </>

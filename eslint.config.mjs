@@ -1,10 +1,12 @@
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
+import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
 	{
-		ignores: ['.next/**', 'node_modules/**'],
+		ignores: ['.next/**', 'node_modules/**', 'next-env.d.ts'],
 	},
+	nextPlugin.flatConfig.coreWebVitals,
 	{
 		files: ['**/*.{ts,tsx}'],
 		languageOptions: {

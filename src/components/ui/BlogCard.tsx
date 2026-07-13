@@ -11,7 +11,7 @@ type BlogCardProps = {
 
 export function BlogCard({ post }: BlogCardProps) {
   return (
-    <article className="group overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[linear-gradient(180deg,rgba(245,240,232,0.03),rgba(245,240,232,0.01))] transition-colors duration-300 hover:border-[var(--accent)]" data-card>
+    <article className="surface-card group overflow-hidden rounded-[0.75rem] transition-colors duration-300 hover:border-[var(--accent)]" data-card>
       <Link href={`/histoires/${post.slug}`} className="block h-full">
         <div className="relative aspect-[4/3] overflow-hidden">
           <SafeImage src={post.coverImage || post.heroImage} alt={post.altText} fallbackLabel={post.title} className="h-full w-full rounded-none border-0 transition-transform duration-700 group-hover:scale-[1.06]" />

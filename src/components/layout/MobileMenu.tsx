@@ -8,9 +8,9 @@ import { useGSAP } from '@gsap/react';
 import { Menu, X } from 'lucide-react';
 
 import { navigation } from '@/data/navigation';
+import { ContactPhoneIcon } from '@/components/ui/ContactPhoneIcon';
 import { gsap, registerGsapPlugins } from '@/lib/gsap';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/Button';
 
 type MobileMenuProps = {
   open: boolean;
@@ -45,7 +45,7 @@ export function MobileMenu({ open, onOpenChange }: MobileMenuProps) {
     <div className="lg:hidden">
       <button
         type="button"
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] text-[var(--foreground)]"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-[0.55rem] border border-[var(--border)] bg-black/20 text-[var(--foreground)] backdrop-blur-sm"
         aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
         aria-expanded={open}
         onClick={() => onOpenChange(!open)}
@@ -61,39 +61,33 @@ export function MobileMenu({ open, onOpenChange }: MobileMenuProps) {
         )}
       >
         <div className="flex items-center justify-between border-b border-[var(--border)] pb-4">
-          <Link href="/" className="text-base font-semibold tracking-[0.32em] text-[var(--foreground)]" onClick={() => onOpenChange(false)}>
+          <Link href="/" aria-label="Retour à l’accueil" className="text-base font-semibold tracking-[0.32em] text-[var(--foreground)]" onClick={() => onOpenChange(false)}>
             ARCHERITAGE
           </Link>
-          <button type="button" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)]" onClick={() => onOpenChange(false)} aria-label="Fermer le menu">
+          <button type="button" className="inline-flex h-11 w-11 items-center justify-center rounded-[0.55rem] border border-[var(--border)]" onClick={() => onOpenChange(false)} aria-label="Fermer le menu">
             <X className="h-5 w-5" />
           </button>
         </div>
 
-        <div className="mt-10 grid gap-6">
-          {navigation.map((item) => (
-            <div key={item.href} className="space-y-3 border-b border-[var(--border)] pb-5">
-              <Link href={item.href} className={cn('block text-3xl font-semibold tracking-[-0.03em]', pathname === item.href ? 'text-[var(--accent)]' : 'text-[var(--foreground)]')} onClick={() => onOpenChange(false)}>
-                {item.label}
+        <div className="mt-8 grid border-t border-[var(--border)]">
+          {navigation.filter((item) => item.href !== '/contact').map((item, index) => (
+            <div key={item.href} className="border-b border-[var(--border)]">
+              <Link href={item.href} className={cn('group flex items-center justify-between py-4', pathname === item.href ? 'text-[var(--accent)]' : 'text-[var(--foreground)]')} onClick={() => onOpenChange(false)}>
+                <span className="text-[10px] tracking-[.2em] text-[var(--accent)]">{String(index + 1).padStart(2, '0')}</span>
+                <span className="text-right text-[clamp(1.7rem,8vw,2.6rem)] font-medium tracking-[-0.035em] transition-transform group-hover:-translate-x-2">{item.label}</span>
               </Link>
-              {item.children?.length ? (
-                <div className="grid gap-2 pl-1">
-                  {item.children.map((child) => (
-                    <Link key={child.href} href={child.href} className="text-sm text-[var(--muted)] transition-colors hover:text-[var(--accent)]" onClick={() => onOpenChange(false)}>
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              ) : null}
             </div>
           ))}
         </div>
-
-        <div className="mt-8 grid gap-4">
-          <Button href="/contact" variant="primary" className="w-full justify-center">
-            Contactez-nous
-          </Button>
-          <p className="text-sm text-[var(--muted)]">contact@archeritage.studio</p>
-        </div>
+        <Link
+          href="/contact"
+          aria-label="Contactez-nous"
+          className="group mt-8 inline-flex h-13 w-full items-center justify-center gap-3 rounded-full border border-white/25 bg-black/25 px-6 text-sm font-bold uppercase tracking-[0.06em] text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-px hover:border-white/45 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F2C300]"
+          onClick={() => onOpenChange(false)}
+        >
+          <span>CONTACTEZ-NOUS</span>
+          <ContactPhoneIcon className="h-6 w-6 shrink-0 text-[#F2C300] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-rotate-3" />
+        </Link>
       </div>
     </div>
   );

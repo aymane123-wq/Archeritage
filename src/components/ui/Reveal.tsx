@@ -10,57 +10,80 @@ import { cn } from '@/lib/utils';
 type RevealProps = {
   children: React.ReactNode;
   className?: string;
-  direction?: 'up' | 'down' | 'left' | 'right';
+  direction?: 'up' | 'down' | 'left' | 'right' | 'none';
   delay?: number;
+  duration?: number;
   stagger?: number;
   once?: boolean;
+  amount?: number;
+  childSelector?: string;
   as?: React.ElementType;
 };
 
 const offsets = {
-  up: { y: 28, x: 0 },
-  down: { y: -28, x: 0 },
-  left: { x: 28, y: 0 },
-  right: { x: -28, y: 0 },
+  up: { y: 42, x: 0 },
+  down: { y: -42, x: 0 },
+  left: { x: 42, y: 0 },
+  right: { x: -42, y: 0 },
+  none: { x: 0, y: 0 },
 } as const;
 
-export function Reveal({ children, className, direction = 'up', delay = 0, stagger = 0, once = true, as: Component = 'div' }: RevealProps) {
+export function Reveal({
+  children,
+  className,
+  direction = 'up',
+  delay = 0,
+  duration = 1.05,
+  stagger = 0,
+  once = true,
+  amount = 0.82,
+  childSelector = '[data-reveal-item]',
+  as: Component = 'div',
+}: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
       registerGsapPlugins();
 
-      if (!ref.current || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (!ref.current) {
         return;
       }
 
       const target = ref.current;
-      const animatedChildren = target.querySelectorAll<HTMLElement>('[data-reveal-item]');
+      const animatedChildren = target.querySelectorAll<HTMLElement>(childSelector);
       const initial = offsets[direction];
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (reducedMotion) {
+        gsap.set([target, ...Array.from(animatedChildren)], { clearProps: 'all', opacity: 1, x: 0, y: 0 });
+        return;
+      }
 
       if (stagger > 0 && animatedChildren.length > 0) {
-        gsap.fromTo(animatedChildren, { opacity: 0, ...initial }, {
+        gsap.fromTo(animatedChildren, { autoAlpha: 0, ...initial }, {
+          autoAlpha: 1,
           opacity: 1,
           x: 0,
           y: 0,
-          duration: 0.8,
+          duration,
           ease: 'power3.out',
           stagger,
           delay,
-          scrollTrigger: { trigger: target, start: 'top 82%', once },
+          scrollTrigger: { trigger: target, start: `top ${amount * 100}%`, once },
         });
         return;
       }
 
-      gsap.fromTo(target, { opacity: 0, ...initial }, {
+      gsap.fromTo(target, { autoAlpha: 0, ...initial }, {
+        autoAlpha: 1,
         opacity: 1,
         x: 0,
         y: 0,
-        duration: 0.9,
+        duration,
         ease: 'power3.out',
         delay,
-        scrollTrigger: { trigger: target, start: 'top 82%', once },
+        scrollTrigger: { trigger: target, start: `top ${amount * 100}%`, once },
       });
     },
     { scope: ref },

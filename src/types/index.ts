@@ -9,21 +9,30 @@ export type FooterLink = {
   href: string;
 };
 
+export type ExpertiseVisualType = 'diagnostic' | 'restoration' | 'reconversion' | 'investor' | 'studies' | 'site';
+
 export type Service = {
   slug: string;
   title: string;
   eyebrow: string;
   description: string;
   intro: string;
-  image: string;
-  altText: string;
+  image?: string;
+  altText?: string;
+  visualType: ExpertiseVisualType;
+  visualLabel: string;
   icon: string;
   highlights: string[];
   process: string[];
   relatedProjectSlugs: string[];
 };
 
-export type ProjectCategory = 'habitat' | 'commercial' | 'interieurs' | 'equipements';
+export type ProjectCategory =
+  | 'patrimoine-religieux'
+  | 'kasbahs-medinas'
+  | 'equipements-culturels'
+  | 'sites-historiques'
+  | 'etudes-conseils';
 
 export type Project = {
   slug: string;
@@ -79,6 +88,7 @@ export type HeroSlide = {
   id: string;
   title: string;
   category: string;
+  description: string;
   image: string;
   alt: string;
 };

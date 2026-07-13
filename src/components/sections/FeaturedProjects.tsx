@@ -6,7 +6,7 @@ import { ProjectCard } from '@/components/ui/ProjectCard';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { projects } from '@/data/projects';
 import { SectionMarker } from '@/components/ui/SectionMarker';
-import { Reveal } from '@/components/ui/Reveal';
+import { RevealGroup } from '@/components/ui/RevealGroup';
 
 export function FeaturedProjects() {
   return (
@@ -15,19 +15,17 @@ export function FeaturedProjects() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="flex items-center gap-4">
             <SectionMarker className="hidden sm:inline-flex" />
-            <SectionLabel label="Sélection" title="Nos projets récents" />
+            <SectionLabel label="Références" title="Sujets patrimoniaux à documenter et valoriser" />
           </div>
           <Button href="/projets" variant="secondary">
-            Voir tout <ArrowRight className="h-4 w-4" />
+            Voir les références <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
-        <div className="mt-10 grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
+        <RevealGroup className="mt-10 grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
           {projects.slice(0, 4).map((project) => (
-            <Reveal key={project.slug} direction="up" stagger={0}>
-              <ProjectCard project={project} variant="featured" />
-            </Reveal>
+            <ProjectCard key={project.slug} project={project} variant="featured" />
           ))}
-        </div>
+        </RevealGroup>
       </Container>
     </section>
   );

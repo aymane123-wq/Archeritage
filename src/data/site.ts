@@ -1,11 +1,12 @@
 export const site = {
   brand: 'ARCHERITAGE',
-  legalName: 'Archeritage',
-  url: 'http://localhost:3000',
+  legalName: 'ARCHERITAGE',
+  url: 'https://archeritage.ma',
   email: '[à compléter]',
   phone: '[à compléter]',
   secondaryPhone: '[à compléter]',
   address: '[à compléter]',
+  city: 'Casablanca, Maroc',
   hours: '[à compléter]',
-  description: 'Archeritage, cabinet d’architecture, de patrimoine et de gouvernance des projets complexes',
+  description: 'Cabinet d’architecture, valorisation foncière et patrimoine à Casablanca.',
 };

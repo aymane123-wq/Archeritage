@@ -13,7 +13,7 @@ export function MissionHero() {
             ARCHERITAGE intervient à l’intersection de l’architecture, du patrimoine et du développement territorial.
           </p>
         </div>
-        <ImageReveal src="/images/hero/hero-05.jpg" alt="Patrimoine architectural marocain" className="aspect-[4/5]" priority fallbackLabel="Mission patrimoine" />
+        <ImageReveal src="/images/references/tinmel-cover.jpg" alt="Patrimoine architectural de la mosquée de Tinmel" className="aspect-[4/5]" priority fallbackLabel="Mission patrimoine" />
       </Container>
     </section>
   );

@@ -10,7 +10,7 @@ export function HomeHero() {
     <section className="relative min-h-[92svh] overflow-hidden bg-[#0d0d0a]">
       <div className="absolute inset-0">
         <SafeImage
-          src="/images/hero/hero-01.jpg"
+          src="/images/references/tinmel-cover.jpg"
           alt="Patrimoine architectural marocain"
           priority
           sizes="100vw"

@@ -6,7 +6,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'Patrimoine vivant',
     category: 'Mémoire des lieux',
     description: 'Préserver les traces, comprendre les matières et révéler la valeur culturelle des édifices.',
-    image: '/images/hero/hero-01.jpg',
+    image: '/images/references/tinmel-cover.jpg',
     alt: 'Architecture patrimoniale marocaine et matière ancienne',
   },
   {
@@ -14,7 +14,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'Réhabilitation sensible',
     category: 'Restauration',
     description: 'Intervenir avec précision sur les architectures anciennes, sans effacer leur identité.',
-    image: '/images/hero/hero-02.jpg',
+    image: '/images/references/tiznit-cover.jpg',
     alt: 'Bâtiment historique marocain en cours de réhabilitation',
   },
   {
@@ -22,7 +22,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'Investir au Maroc',
     category: 'Accompagnement',
     description: 'Guider les porteurs de projets marocains et étrangers dans un territoire riche, complexe et patrimonial.',
-    image: '/images/hero/hero-03.jpg',
+    image: '/images/hero/hero-urbanisme-foncier.png',
     alt: 'Contexte urbain patrimonial au Maroc',
   },
   {
@@ -30,7 +30,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'Médinas, kasbahs, lieux culturels',
     category: 'Valorisation',
     description: 'Transformer les lieux historiques en projets durables, habitables et transmissibles.',
-    image: '/images/hero/hero-04.jpg',
+    image: '/images/references/cervantes-cover.jpg',
     alt: 'Médina et architecture en terre au Maroc',
   },
   {
@@ -38,7 +38,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'De l’étude au chantier',
     category: 'Maîtrise du processus',
     description: 'Diagnostic, autorisations, coordination et suivi d’exécution autour des exigences du patrimoine.',
-    image: '/images/hero/hero-05.jpg',
+    image: '/images/missions/mission-coordination-plans.jpg',
     alt: 'Relevé architectural et chantier patrimonial',
   },
 ];

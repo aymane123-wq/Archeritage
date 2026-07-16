@@ -3,126 +3,82 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { useGSAP } from '@gsap/react';
-
 import { Container } from '@/components/ui/Container';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { gsap, registerGsapPlugins } from '@/lib/gsap';
-import { motion } from '@/lib/motion-config';
 
 const slides = [
-  { src: '/images/hero/hero-01.jpg', label: 'Architecture' },
-  { src: '/images/hero/hero-02.jpg', label: 'Patrimoine' },
-  { src: '/images/hero/hero-03.jpg', label: 'Réhabilitation' },
-  { src: '/images/hero/hero-04.jpg', label: 'Territoires' },
-  { src: '/images/hero/hero-05.jpg', label: 'Projets complexes' },
+  {
+    src: '/images/hero/hero-architecture-publique.jpg',
+    alt: 'Architecture contemporaine d’un équipement public de grande envergure',
+    position: { desktop: 'center 56%', mobile: 'center 54%' },
+  },
+  {
+    src: '/images/hero/hero-urbanisme-foncier.png',
+    alt: 'Vue aérienne d’un territoire structuré par ses parcelles et ses voies',
+    position: { desktop: 'center 52%', mobile: 'center' },
+  },
+  {
+    src: '/images/references/tinmel-cover.jpg',
+    alt: 'Architecture patrimoniale de la mosquée de Tinmel',
+    position: { desktop: 'center 52%', mobile: 'center' },
+  },
+  {
+    src: '/images/hero/hero-architecture-residentielle.jpg',
+    alt: 'Architecture résidentielle contemporaine dans son environnement paysager',
+    position: { desktop: 'center 52%', mobile: 'center' },
+  },
+  {
+    src: '/images/missions/mission-coordination-plans.jpg',
+    alt: 'Professionnels examinant des plans lors d’une coordination de projet',
+    position: { desktop: 'center 50%', mobile: 'center 48%' },
+  },
 ];
 
-type HomeHeroSliderProps = {
-  eyebrow: string;
-  title: string;
-  text: string;
-};
+type Props = { eyebrow: string; title: string; introduction: string; supporting: string };
 
-export function HomeHeroSlider({ eyebrow, title, text }: HomeHeroSliderProps) {
+export function HomeHeroSlider({ eyebrow, title, introduction, supporting }: Props) {
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const rootRef = useRef<HTMLElement | null>(null);
-  const previousRef = useRef(0);
-  const reduced = useReducedMotion();
+  const root = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (paused || reduced || document.hidden) return;
-    const timer = window.setTimeout(() => setActive((current) => (current + 1) % slides.length), 5500);
-    return () => window.clearTimeout(timer);
-  }, [active, paused, reduced]);
-
-  useEffect(() => {
-    const visibility = () => setPaused(document.hidden);
-    document.addEventListener('visibilitychange', visibility);
-    return () => document.removeEventListener('visibilitychange', visibility);
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const timer = window.setInterval(() => setActive((value) => (value + 1) % slides.length), 5000);
+    return () => window.clearInterval(timer);
   }, []);
 
-  useGSAP(() => {
-    registerGsapPlugins();
-    if (!rootRef.current) return;
-
-    const images = rootRef.current.querySelectorAll<HTMLElement>('[data-hero-slide]');
-    const incoming = images[active];
-    const outgoing = images[previousRef.current];
-    if (reduced) {
-      images.forEach((image, index) => gsap.set(image, { autoAlpha: index === active ? 1 : 0, scale: 1, clipPath: 'inset(0 0 0 0)' }));
-      return;
-    }
-    if (incoming && active !== previousRef.current) {
-      gsap.set(incoming, { zIndex: 2, autoAlpha: 1 });
-      gsap.fromTo(incoming, { clipPath: 'inset(0 0 0 100%)', scale: 1.065, xPercent: 1.5 }, { clipPath: 'inset(0 0 0 0%)', scale: 1, xPercent: 0, duration: motion.duration.cinematic, ease: motion.ease.inOut, overwrite: true });
-      if (outgoing) gsap.to(outgoing, { autoAlpha: 0, scale: 1.025, duration: motion.duration.slow, ease: motion.ease.inOut, overwrite: true, onComplete: () => gsap.set(outgoing, { zIndex: 0 }) });
-    }
-    previousRef.current = active;
-    const status = rootRef.current.querySelector('[data-hero-status]');
-    if (status) gsap.fromTo(status, { yPercent: 80, opacity: 0 }, { yPercent: 0, opacity: 1, duration: motion.duration.fast, ease: motion.ease.strong });
-  }, { scope: rootRef, dependencies: [active, reduced] });
+  useEffect(() => {
+    const next = new window.Image();
+    next.src = slides[(active + 1) % slides.length].src;
+  }, [active]);
 
   useGSAP(() => {
     registerGsapPlugins();
-    const root = rootRef.current;
-    if (!root || reduced) return;
-    const alreadySeen = sessionStorage.getItem('archeritage-intro-seen');
-    const panels = root.querySelectorAll('[data-intro-panel]');
-    const wordmark = root.querySelector('[data-intro-wordmark]');
-    const lines = root.querySelectorAll('[data-hero-line]');
-    const supporting = root.querySelectorAll('[data-hero-support]');
-    const controls = root.querySelector('.hero-slider-controls');
-    const timeline = gsap.timeline({ defaults: { ease: motion.ease.strong } });
-    if (!alreadySeen) {
-      sessionStorage.setItem('archeritage-intro-seen', 'true');
-      gsap.set(panels, { display: 'block' });
-      timeline
-        .fromTo(wordmark, { opacity: 0, letterSpacing: '.5em' }, { opacity: 1, letterSpacing: '.3em', duration: .5 })
-        .to(wordmark, { opacity: 0, duration: .25 }, .55)
-        .to(panels[0], { xPercent: -101, duration: 1.05, ease: motion.ease.inOut }, .65)
-        .to(panels[1], { xPercent: 101, duration: 1.05, ease: motion.ease.inOut }, .65)
-        .set(panels, { display: 'none' });
-    }
-    timeline
-      .fromTo(document.querySelectorAll('header.fixed a, header.fixed nav'), { opacity: 0, y: -12 }, { opacity: 1, y: 0, stagger: .06, duration: .55 }, alreadySeen ? 0 : 1.05)
-      .fromTo(root.querySelector('.hero-copy .eyebrow'), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: .5 }, '<.05')
-      .fromTo(lines, { yPercent: 110 }, { yPercent: 0, stagger: .12, duration: 1.05, ease: motion.ease.cinematic }, '<.05')
-      .fromTo(supporting, { opacity: 0, y: 18 }, { opacity: 1, y: 0, stagger: .09, duration: .7 }, '-=.55')
-      .fromTo(controls, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .5 }, '-=.25');
-  }, { scope: rootRef, dependencies: [reduced] });
+    if (!root.current) return;
+    const items = root.current.querySelectorAll('[data-slide]');
+    items.forEach((item, index) => gsap.to(item, { autoAlpha: index === active ? 1 : 0, scale: index === active ? 1.025 : 1, duration: 1.1, ease: 'power2.inOut', overwrite: true }));
+  }, { scope: root, dependencies: [active] });
 
-  return (
-    <header ref={rootRef} className="portfolio-hero">
-      <div data-intro-panel className="hero-intro-panel hero-intro-panel--left" />
-      <div data-intro-panel className="hero-intro-panel hero-intro-panel--right" />
-      <div data-intro-wordmark className="hero-intro-wordmark">ARCHERITAGE</div>
-      <div className="absolute inset-0 bg-[#0b0b09]">
-        {slides.map((slide, index) => (
-          <div key={slide.src} data-hero-slide className={`absolute inset-0 ${index === 0 ? 'opacity-100' : 'opacity-0'}`} aria-hidden={index !== active}>
-            <Image src={slide.src} alt="" fill priority={index === 0} sizes="100vw" className="object-cover" />
-          </div>
-        ))}
+  return <header className="home-hero" ref={root}>
+    <div className="home-hero__images">{slides.map((slide, index) => <div
+      data-slide
+      key={slide.src}
+      className={index ? 'opacity-0' : ''}
+      aria-hidden={index !== active}
+      style={{
+        '--hero-position-desktop': slide.position.desktop,
+        '--hero-position-mobile': slide.position.mobile,
+      } as CSSProperties}
+    ><Image src={slide.src} alt={slide.alt} fill priority={index === 0} loading={index === 0 ? 'eager' : 'lazy'} sizes="100vw" /></div>)}</div>
+    <div className="home-hero__shade" />
+    <Container className="home-hero__inner">
+      <div className="home-hero__content">
+        <p className="eyebrow">{eyebrow}</p>
+        <h1>{title}</h1>
+        <div className="home-hero__bottom"><div><p className="home-hero__intro">{introduction}</p><p className="home-hero__support">{supporting}</p></div><div className="home-hero__actions"><Link className="button button--primary" href="/contact">Discuter d’un projet <ArrowRight aria-hidden="true" /></Link><Link className="button button--ghost" href="/expertises">Découvrir nos expertises</Link></div></div>
       </div>
-      <div className="portfolio-hero__overlay" />
-      <div className="portfolio-hero__grid" />
-      <Container className="relative z-10 flex min-h-[100svh] flex-col justify-end pb-8 pt-32 sm:pb-12 lg:pb-14">
-        <div className="hero-copy max-w-6xl">
-          <p className="eyebrow text-[var(--light)]">{eyebrow}</p>
-          <h1>{title.split(', ').map((line, index) => <span key={line} className="hero-title-line"><span data-hero-line>{line}{index < title.split(', ').length - 1 ? ',' : ''}</span></span>)}</h1>
-          <div className="mt-7 grid gap-6 border-t border-white/25 pt-6 lg:grid-cols-[minmax(0,42rem)_auto] lg:items-end lg:justify-between">
-            <p data-hero-support>{text}</p>
-            <div data-hero-support className="flex flex-wrap gap-3"><Link href="/cabinet" className="button-primary">Découvrir le cabinet<ArrowRight className="h-4 w-4" /></Link><Link href="/references" className="button-secondary">Voir les références<ArrowRight className="h-4 w-4" /></Link></div>
-          </div>
-        </div>
-
-        <div className="hero-slider-controls" aria-label="Images du cabinet" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-          <p data-hero-status key={active}><span>{String(active + 1).padStart(2, '0')}</span> / {String(slides.length).padStart(2, '0')} · {slides[active].label}</p>
-          <div>{slides.map((slide, index) => <button key={slide.src} type="button" onClick={() => setActive(index)} aria-label={`Afficher ${slide.label}`} aria-current={index === active}><span className={index === active ? 'is-active' : ''} /></button>)}</div>
-        </div>
-      </Container>
-    </header>
-  );
+      <div className="hero-progress" aria-label={`Image ${active + 1} sur ${slides.length}`}><span>{String(active + 1).padStart(2, '0')}</span><div>{slides.map((slide, index) => <button key={slide.src} type="button" aria-label={`Afficher l’image ${index + 1}`} aria-current={index === active} onClick={() => setActive(index)}><i /></button>)}</div><span>{String(slides.length).padStart(2, '0')}</span></div>
+    </Container>
+  </header>;
 }

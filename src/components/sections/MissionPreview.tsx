@@ -31,7 +31,7 @@ export function MissionPreview() {
           </Reveal>
         </div>
         <div className="relative">
-          <ImageReveal src="/images/hero/hero-03.jpg" alt="Étude du patrimoine architectural marocain" className="aspect-[4/5]" fallbackLabel="Mission patrimoine" direction="right" />
+          <ImageReveal src="/images/references/tiznit-cover.jpg" alt="Contexte urbain et patrimonial de Tiznit" className="aspect-[4/5]" fallbackLabel="Mission patrimoine" direction="right" />
           <div className="absolute left-4 top-4 max-w-[16rem] rounded-[0.65rem] border border-white/12 bg-[rgba(14,14,12,0.72)] p-4 backdrop-blur-md">
             <p className="text-[10px] uppercase tracking-[0.35em] text-[var(--accent)]">Casablanca · Maroc</p>
             <p className="mt-2 text-sm leading-6 text-[var(--light)]">Un accompagnement pour lire, restaurer et valoriser les lieux patrimoniaux avec méthode.</p>

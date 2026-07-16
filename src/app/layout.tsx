@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, Inter } from 'next/font/google';
+import { Fraunces, Inter } from 'next/font/google';
 
 import './globals.css';
 
@@ -11,9 +11,8 @@ const inter = Inter({
   variable: '--font-sans',
 });
 
-const display = Cormorant_Garamond({
+const display = Fraunces({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
   variable: '--font-display',
 });
 
@@ -30,13 +29,18 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.brand,
     type: 'website',
+    locale: 'fr_FR',
+    images: [{ url: '/images/hero/hero-architecture-publique.jpg', width: 2400, height: 1350, alt: 'ARCHERITAGE' }],
   },
+  twitter: { card: 'summary_large_image', title: site.brand, description: site.description, images: ['/images/hero/hero-architecture-publique.jpg'] },
+  alternates: { canonical: '/' },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr" className="scroll-smooth">
+    <html lang="fr">
       <body className={`${inter.variable} ${display.variable} min-h-screen bg-[var(--background)] text-[var(--foreground)] antialiased`}>
+        <a className="skip-link" href="#main-content">Aller au contenu</a>
         <SiteChrome>{children}</SiteChrome>
       </body>
     </html>

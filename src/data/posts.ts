@@ -23,9 +23,9 @@ export const posts: Post[] = [
     category: 'Investissement',
     date: '2026-03-18',
     excerpt: 'Un projet patrimonial au Maroc demande une lecture du lieu, du contexte local et des étapes administratives.',
-    coverImage: '/images/hero/hero-04.jpg',
+    coverImage: '/images/journal/journal-architecture-residentielle.jpg',
     altText: 'Contexte patrimonial marocain et accompagnement investisseur',
-    heroImage: '/images/hero/hero-04.jpg',
+    heroImage: '/images/journal/journal-architecture-residentielle.jpg',
     content: [
       'L’intérêt patrimonial d’un bâtiment peut devenir un levier de projet, mais il impose aussi des responsabilités et des contraintes à anticiper.',
       'Avant l’acquisition ou la transformation, il faut clarifier l’état du bâti, les protections éventuelles, les acteurs locaux, les autorisations et le potentiel d’usage.',

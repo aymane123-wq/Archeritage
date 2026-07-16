@@ -22,7 +22,7 @@ export function MissionContent() {
         </div>
 
         <div className="grid gap-6">
-          <ImageReveal src="/images/hero/hero-05.jpg" alt="Étude patrimoniale et lecture d’un bâtiment ancien" className="aspect-[5/4]" fallbackLabel="Étude patrimoniale" />
+          <ImageReveal src="/images/missions/mission-etude-plans.jpg" alt="Étude de plans dans un contexte de projet architectural" className="aspect-[5/4]" fallbackLabel="Étude architecturale" />
           <Reveal>
             <p className="surface-card rounded-[0.75rem] p-6 text-sm leading-7 text-[var(--muted)]">
               Patrimoine, investissement et territoire doivent être pensés ensemble: le projet doit conserver l’âme du lieu, clarifier ses contraintes et retrouver un usage viable.

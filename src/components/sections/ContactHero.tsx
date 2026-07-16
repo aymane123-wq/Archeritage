@@ -16,7 +16,7 @@ export function ContactHero() {
             </p>
           </Reveal>
         </div>
-        <ImageReveal src="/images/hero/hero-03.jpg" alt="Contexte patrimonial marocain pour ARCHERITAGE" className="aspect-[4/5]" priority fallbackLabel="Contact ARCHERITAGE" />
+        <ImageReveal src="/images/cabinet/cabinet-architecture-institutionnelle.jpg" alt="Architecture institutionnelle dans son contexte territorial" className="aspect-[4/5]" priority fallbackLabel="Contact ARCHERITAGE" />
       </Container>
     </section>
   );

@@ -1,3 +1,5 @@
+import { contactDetails } from './contact-details';
+
 export const contactPage = {
   eyebrow: 'Contact',
   title: 'Parler d’un projet avec Archeritage',
@@ -7,5 +9,9 @@ export const contactPage = {
     { title: 'Confidentialité', text: 'Les informations et documents transmis sont utilisés uniquement pour comprendre votre demande et préparer un premier échange.' },
     { title: 'Premier rendez-vous', text: 'L’échange initial permet de préciser la situation, les objectifs, les risques identifiés et les prochaines étapes envisageables.' },
   ],
-  details: ['Email : [à compléter]', 'Téléphone : [à compléter]', 'Adresse : [à compléter]', 'Ville : [à compléter]'],
+  details: [
+    `Email : ${contactDetails.email}`,
+    `Téléphone : ${contactDetails.phoneDisplay}`,
+    ...contactDetails.addressLines,
+  ],
 };

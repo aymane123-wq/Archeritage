@@ -1,6 +1,38 @@
 import type { Metadata } from 'next';
 import { Container } from '@/components/ui/Container';
 import { PageHero } from '@/components/ui/PageHero';
+import { contactDetails, contactLinks } from '@/content/site/contact-details';
+import { legalDetails, legalValidationRequired } from '@/content/site/legal-details';
 
-export const metadata: Metadata = { title: 'Mentions légales', robots: { index: false, follow: true } };
-export default function LegalPage() { return <><PageHero eyebrow="Informations légales" title="Mentions légales" introduction="Les informations juridiques définitives doivent être validées avant la mise en ligne." /><section className="section section--ivory"><Container className="legal-copy"><h2>Éditeur du site</h2><p>Raison sociale : [à compléter]</p><p>Forme juridique, capital social et registre de commerce : [à compléter]</p><p>Adresse : [à compléter]</p><p>Email et téléphone : [à compléter]</p><h2>Hébergement</h2><p>Hébergeur : [à compléter lors du déploiement]</p></Container></section></>; }
+export const metadata: Metadata = {
+  title: 'Mentions légales',
+  description: 'Informations légales et conditions d’utilisation du site ARCHERITAGE.',
+  robots: { index: false, follow: true },
+};
+
+export default function LegalPage() {
+  return (
+    <>
+      <PageHero eyebrow="Informations légales" title="Mentions légales" introduction="Informations disponibles sur l’éditeur et l’utilisation du site ARCHERITAGE." />
+      <section className="section section--ivory">
+        <Container className="legal-copy">
+          <h2>Éditeur et contact</h2>
+          <p><strong>ARCHERITAGE</strong> — Cabinet d’architecture, valorisation foncière et patrimoine.</p>
+          <address>{contactDetails.addressLines.map((line) => <span key={line}>{line}</span>)}</address>
+          <p><a href={contactLinks.email}>{contactDetails.email}</a> · <a href={contactLinks.phone}>{contactDetails.phoneDisplay}</a></p>
+
+          <h2>Propriété intellectuelle</h2>
+          <p>Les textes, la structure, l’identité visuelle et les éléments graphiques publiés sur ce site sont protégés. Toute reproduction ou adaptation nécessite l’autorisation préalable d’ARCHERITAGE, sauf usage autorisé par la loi.</p>
+
+          <h2>Responsabilité</h2>
+          <p>Les informations présentées ont une vocation générale et ne constituent ni une étude, ni un diagnostic, ni un engagement contractuel. Chaque projet fait l’objet d’un cadrage adapté à son contexte.</p>
+
+          <h2>Informations en attente de validation</h2>
+          <p>La version destinée à la production doit être validée par la direction ou le conseil juridique avant publication. Les éléments suivants restent centralisés dans la configuration interne et ne sont pas publiés tant qu’ils ne sont pas confirmés :</p>
+          <ul>{legalValidationRequired.map((item) => <li key={item}>{item}</li>)}</ul>
+          {legalDetails.hostingProviderName ? <p>Hébergement : {legalDetails.hostingProviderName}</p> : null}
+        </Container>
+      </section>
+    </>
+  );
+}

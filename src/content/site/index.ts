@@ -1,5 +1,10 @@
 export { cabinetPage } from './cabinet';
 export { contactPage } from './contact';
+export { contactDetails, contactLinks } from './contact-details';
+export * from './contact-form';
+export { clientSegments } from './client-segments';
+export { expertiseContactCtas } from './contextual-ctas';
+export { legalDetails, legalValidationRequired } from './legal-details';
 export { expertisesPage } from './expertises';
 export { homePage } from './home';
 export { journalPage } from './journal';

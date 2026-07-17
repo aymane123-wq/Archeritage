@@ -14,8 +14,8 @@ type ButtonProps = {
 };
 
 const variants: Record<ButtonVariant, string> = {
-  primary: 'border border-[var(--light)] bg-[var(--light)] text-[var(--background)] hover:border-[var(--accent)] hover:bg-[var(--accent)]',
-  secondary: 'border border-[var(--border-strong)] bg-[rgba(245,240,232,0.025)] text-[var(--foreground)] hover:border-[var(--accent)] hover:text-[var(--accent)]',
+  primary: 'border border-[var(--accent)] bg-[var(--accent)] text-white hover:border-[var(--color-rust)] hover:bg-[var(--color-rust)]',
+  secondary: 'border border-[var(--border)] bg-transparent text-[var(--foreground)] hover:border-[var(--accent)] hover:text-[var(--accent)]',
   ghost: 'border border-transparent bg-transparent text-[var(--foreground)] hover:border-[var(--border)] hover:bg-white/5',
   link: 'bg-transparent px-0 py-0 text-[var(--accent)] underline-offset-4 hover:underline',
 };

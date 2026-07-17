@@ -45,7 +45,7 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
-      <CTASection text={home.finalCta} label="Discuter d’un projet" />
+      <CTASection text={home.finalCta} label="CONTACTEZ-NOUS" />
     </>
   );
 }

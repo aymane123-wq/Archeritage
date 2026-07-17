@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import { DesktopNav } from './DesktopNav';
@@ -11,8 +12,10 @@ import { useScrollDirection } from '@/hooks/useScrollDirection';
 import { cn } from '@/lib/utils';
 
 export function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [hasFocusWithin, setHasFocusWithin] = useState(false);
   const direction = useScrollDirection();
 
   useEffect(() => {
@@ -23,7 +26,15 @@ export function Header() {
   }, []);
 
   return (
-    <header className={cn('site-header', direction === 'down' && !mobileOpen && 'site-header--hidden', scrolled && 'site-header--scrolled')}>
+    <header
+      className={cn('site-header', direction === 'down' && !mobileOpen && !hasFocusWithin && 'site-header--hidden', scrolled && 'site-header--scrolled')}
+      onFocusCapture={() => setHasFocusWithin(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+          setHasFocusWithin(false);
+        }
+      }}
+    >
       <Container className={cn('flex items-center justify-between gap-6 transition-[height] duration-300', scrolled ? 'h-[4.25rem] lg:h-[4.75rem]' : 'h-[4.75rem] lg:h-[5.5rem]')}>
         <Link href="/" aria-label="Retour à l’accueil" className="site-logo">
           <span>ARCHERITAGE</span>
@@ -34,6 +45,7 @@ export function Header() {
         <Link
           href="/contact"
           aria-label="Contactez-nous"
+          aria-current={pathname === '/contact' ? 'page' : undefined}
           className="header-contact"
         >
           <span>CONTACTEZ-NOUS</span>

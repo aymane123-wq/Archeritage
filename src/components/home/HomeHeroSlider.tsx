@@ -51,11 +51,6 @@ export function HomeHeroSlider({ eyebrow, title, introduction, supporting }: Pro
     return () => window.clearTimeout(timer);
   }, [active, autoplayEnabled, timerVersion]);
 
-  useEffect(() => {
-    const next = new window.Image();
-    next.src = slides[(active + 1) % slides.length].src;
-  }, [active]);
-
   useGSAP(() => {
     registerGsapPlugins();
     if (!root.current) return;
@@ -123,9 +118,11 @@ export function HomeHeroSlider({ eyebrow, title, introduction, supporting }: Pro
           <div className="hero-controls__buttons">
             <button type="button" onClick={() => navigate(active - 1)} aria-label="Image précédente"><ChevronLeft aria-hidden="true" /></button>
             <button type="button" onClick={() => navigate(active + 1)} aria-label="Image suivante"><ChevronRight aria-hidden="true" /></button>
-            <button type="button" onClick={() => setIsPlaying((value) => !value)} aria-label={isPlaying ? 'Mettre le diaporama en pause' : 'Reprendre le diaporama'} aria-pressed={!isPlaying}>
-              {isPlaying ? <Pause aria-hidden="true" /> : <Play aria-hidden="true" />}
-            </button>
+            {!reducedMotion ? (
+              <button type="button" onClick={() => setIsPlaying((value) => !value)} aria-label={isPlaying ? 'Mettre le diaporama en pause' : 'Reprendre le diaporama'} aria-pressed={!isPlaying}>
+                {isPlaying ? <Pause aria-hidden="true" /> : <Play aria-hidden="true" />}
+              </button>
+            ) : null}
           </div>
         </div>
       </Container>

@@ -1,8 +1,10 @@
 'use client';
 
-import { useState, type InputHTMLAttributes } from 'react';
+import Link from 'next/link';
+import { useRef, useState, type ChangeEvent, type InputHTMLAttributes } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { ArcheritageIcon } from '@/components/icons/ArcheritageIcon';
 import {
   clientProfileOptions,
   desiredTimelineOptions,
@@ -10,7 +12,13 @@ import {
   projectTypeOptions,
   type ContactInitialValues,
 } from '@/content/site/contact-form';
-import { contactSchema, type ContactValues } from '@/lib/validation';
+import {
+  CONTACT_ATTACHMENT_ACCEPT,
+  CONTACT_ATTACHMENT_ERROR,
+  contactSchema,
+  isAllowedContactAttachment,
+  type ContactValues,
+} from '@/lib/validation';
 
 type ContactFormProps = {
   initialValues?: ContactInitialValues;
@@ -18,6 +26,9 @@ type ContactFormProps = {
 
 export function ContactForm({ initialValues = {} }: ContactFormProps) {
   const [status, setStatus] = useState<{ kind: 'success' | 'error'; message: string } | null>(null);
+  const [attachmentError, setAttachmentError] = useState<string | null>(null);
+  const [attachmentName, setAttachmentName] = useState('Aucun fichier sélectionné');
+  const attachmentRef = useRef<HTMLInputElement>(null);
   const {
     register,
     handleSubmit,
@@ -41,13 +52,19 @@ export function ContactForm({ initialValues = {} }: ContactFormProps) {
     },
   });
 
-  const submit = handleSubmit(async (values, event) => {
+  const submit = handleSubmit(async (values) => {
     setStatus(null);
+    const attachment = attachmentRef.current?.files?.[0];
+    if (attachment && !isAllowedContactAttachment(attachment)) {
+      setAttachmentError(CONTACT_ATTACHMENT_ERROR);
+      attachmentRef.current?.focus();
+      return;
+    }
+    setAttachmentError(null);
+
     const form = new FormData();
     Object.entries(values).forEach(([key, value]) => form.append(key, value ?? ''));
-    const formElement = event?.target as HTMLFormElement | undefined;
-    const attachment = formElement?.elements.namedItem('attachment') as HTMLInputElement | null;
-    if (attachment?.files?.[0]) form.append('attachment', attachment.files[0]);
+    if (attachment) form.append('attachment', attachment);
 
     try {
       const response = await fetch('/api/contact', { method: 'POST', body: form });
@@ -55,11 +72,18 @@ export function ContactForm({ initialValues = {} }: ContactFormProps) {
       if (!response.ok) throw new Error(result.message || 'La demande n’a pas pu être envoyée.');
       setStatus({ kind: 'success', message: result.message || 'Votre demande a bien été transmise.' });
       reset();
-      if (attachment) attachment.value = '';
+      if (attachmentRef.current) attachmentRef.current.value = '';
+      setAttachmentName('Aucun fichier sélectionné');
     } catch (error) {
       setStatus({ kind: 'error', message: error instanceof Error ? error.message : 'Une erreur est survenue.' });
     }
   });
+
+  const handleAttachmentChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    setAttachmentName(file?.name || 'Aucun fichier sélectionné');
+    setAttachmentError(file && !isAllowedContactAttachment(file) ? CONTACT_ATTACHMENT_ERROR : null);
+  };
 
   const field = (
     name: keyof ContactValues,
@@ -71,6 +95,8 @@ export function ContactForm({ initialValues = {} }: ContactFormProps) {
       {label}{required ? <span aria-hidden="true"> *</span> : null}
       <input
         id={name}
+        required={required}
+        aria-required={required || undefined}
         aria-invalid={Boolean(errors[name])}
         aria-describedby={errors[name] ? `${name}-error` : undefined}
         {...options}
@@ -90,6 +116,8 @@ export function ContactForm({ initialValues = {} }: ContactFormProps) {
       {label}{required ? <span aria-hidden="true"> *</span> : null}
       <select
         id={name}
+        required={required}
+        aria-required={required || undefined}
         aria-invalid={Boolean(errors[name])}
         aria-describedby={errors[name] ? `${name}-error` : undefined}
         {...register(name)}
@@ -120,16 +148,34 @@ export function ContactForm({ initialValues = {} }: ContactFormProps) {
       </div>
       <label htmlFor="message">
         Message / contexte du projet <span aria-hidden="true">*</span>
-        <textarea id="message" rows={7} aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} {...register('message')} />
+        <textarea id="message" rows={7} required aria-required="true" aria-invalid={Boolean(errors.message)} aria-describedby={errors.message ? 'message-error' : undefined} {...register('message')} />
         {errors.message ? <small id="message-error" role="alert">{errors.message.message}</small> : null}
       </label>
-      <label htmlFor="attachment">
-        Pièce jointe <span className="optional">Optionnel · PDF, DOC, DOCX, JPG ou PNG · 5 Mo max.</span>
-        <input id="attachment" name="attachment" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" />
-      </label>
-      {status ? <div className={`form-status form-status--${status.kind}`} role={status.kind === 'error' ? 'alert' : 'status'} aria-live="polite">{status.message}</div> : null}
+      <div className="contact-file-field">
+        <span id="attachment-label" className="form-label-with-icon"><ArcheritageIcon name="upload" tone="accent" />Pièce jointe</span>
+        <span id="attachment-help" className="optional">Optionnel · PDF, DOC, DOCX, JPG ou PNG · 5 Mo max.</span>
+        <div className="contact-file-control">
+          <input
+            ref={attachmentRef}
+            className="contact-file-input"
+            id="attachment"
+            name="attachment"
+            type="file"
+            accept={CONTACT_ATTACHMENT_ACCEPT}
+            aria-labelledby="attachment-label"
+            aria-describedby={`attachment-help attachment-name${attachmentError ? ' attachment-error' : ''}`}
+            aria-invalid={Boolean(attachmentError)}
+            onChange={handleAttachmentChange}
+          />
+          <label className="contact-file-trigger" htmlFor="attachment">Choisir un fichier</label>
+          <span className="contact-file-name" id="attachment-name" aria-live="polite">{attachmentName}</span>
+        </div>
+        {attachmentError ? <small id="attachment-error" role="alert">{attachmentError}</small> : null}
+      </div>
+      {status ? <div className={`form-status form-status--${status.kind}`} role={status.kind === 'error' ? 'alert' : 'status'} aria-live="polite"><ArcheritageIcon name={status.kind === 'success' ? 'check' : 'shield-alert'} />{status.message}</div> : null}
+      <p className="contact-form-privacy">Vos données sont utilisées uniquement pour répondre à votre demande. <Link href="/confidentialite">Consulter la politique de confidentialité</Link>.</p>
       <button className="button button--primary" type="submit" disabled={isSubmitting}>
-        {isSubmitting ? 'Envoi en cours…' : 'Envoyer ma demande'}
+        {isSubmitting ? 'Envoi en cours…' : 'Envoyer ma demande'}<ArcheritageIcon name="send" />
       </button>
     </form>
   );

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import { ArcheritageIcon, clientProfileIcons } from '@/components/icons/ArcheritageIcon';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { clientSegments } from '@/content/site/client-segments';
@@ -16,7 +17,10 @@ export function ClientSegmentation() {
         <div className="client-segment-grid">
           {clientSegments.map((segment, index) => (
             <article className="client-segment-card" key={segment.title}>
-              <span className="client-segment-card__index">{String(index + 1).padStart(2, '0')}</span>
+              <div className="client-segment-card__meta">
+                <ArcheritageIcon name={clientProfileIcons[index]} variant="card" tone="accent" />
+                <span className="client-segment-card__index">{String(index + 1).padStart(2, '0')}</span>
+              </div>
               <h3>{segment.title}</h3>
               <ul>{segment.points.map((point) => <li key={point}>{point}</li>)}</ul>
               <Link href={segment.href}>{segment.cta}<ArrowUpRight aria-hidden="true" /></Link>

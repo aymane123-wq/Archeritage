@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Politique de confidentialité',
   description: 'Traitement des données transmises à ARCHERITAGE par le formulaire de contact.',
   robots: { index: false, follow: true },
+  alternates: { canonical: '/confidentialite' },
 };
 
 export default function PrivacyPage() {
@@ -29,8 +30,6 @@ export default function PrivacyPage() {
 
           <h2>Exercer vos droits</h2>
           <p>Pour demander l’accès, la rectification ou la suppression des informations transmises, écrivez à <a href={contactLinks.email}>{contactDetails.email}</a>. Toute demande est traitée selon le cadre légal applicable et après vérification de l’identité du demandeur lorsque cela est nécessaire.</p>
-
-          <p className="legal-validation-note">Cette politique doit faire l’objet d’une validation de la direction ou du conseil juridique avant mise en production.</p>
         </Container>
       </section>
     </>

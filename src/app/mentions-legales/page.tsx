@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { Container } from '@/components/ui/Container';
 import { PageHero } from '@/components/ui/PageHero';
 import { contactDetails, contactLinks } from '@/content/site/contact-details';
-import { legalDetails, legalValidationRequired } from '@/content/site/legal-details';
 
 export const metadata: Metadata = {
   title: 'Mentions légales',
   description: 'Informations légales et conditions d’utilisation du site ARCHERITAGE.',
   robots: { index: false, follow: true },
+  alternates: { canonical: '/mentions-legales' },
 };
 
 export default function LegalPage() {
@@ -27,10 +27,6 @@ export default function LegalPage() {
           <h2>Responsabilité</h2>
           <p>Les informations présentées ont une vocation générale et ne constituent ni une étude, ni un diagnostic, ni un engagement contractuel. Chaque projet fait l’objet d’un cadrage adapté à son contexte.</p>
 
-          <h2>Informations en attente de validation</h2>
-          <p>La version destinée à la production doit être validée par la direction ou le conseil juridique avant publication. Les éléments suivants restent centralisés dans la configuration interne et ne sont pas publiés tant qu’ils ne sont pas confirmés :</p>
-          <ul>{legalValidationRequired.map((item) => <li key={item}>{item}</li>)}</ul>
-          {legalDetails.hostingProviderName ? <p>Hébergement : {legalDetails.hostingProviderName}</p> : null}
         </Container>
       </section>
     </>

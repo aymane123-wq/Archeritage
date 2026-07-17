@@ -1,0 +1,395 @@
+{
+  "generatedAt": "2026-07-17T11:35:53.922Z",
+  "results": [
+    {
+      "viewport": "390x844",
+      "slide": "01",
+      "counter": "01",
+      "ctaText": "DISCUTER D’UN PROJET",
+      "ctaOpacity": "1",
+      "ctaVisibility": "visible",
+      "ctaRect": {
+        "x": 20,
+        "y": 668.78125,
+        "width": 350,
+        "height": 50.390625
+      },
+      "image": "http://localhost:3013/_next/image?url=%2Fimages%2Fhero%2Fhero-architecture-publique.jpg&w=640&q=75",
+      "selectedAttempt": 1,
+      "whitePixelScore": 446,
+      "attemptScores": [
+        {
+          "attempt": 1,
+          "score": 446
+        },
+        {
+          "attempt": 2,
+          "score": 446
+        },
+        {
+          "attempt": 3,
+          "score": 446
+        },
+        {
+          "attempt": 4,
+          "score": 446
+        },
+        {
+          "attempt": 5,
+          "score": 446
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "slide": "02",
+      "counter": "02",
+      "ctaText": "DISCUTER D’UN PROJET",
+      "ctaOpacity": "1",
+      "ctaVisibility": "visible",
+      "ctaRect": {
+        "x": 20,
+        "y": 668.78125,
+        "width": 350,
+        "height": 50.390625
+      },
+      "image": "http://localhost:3013/_next/image?url=%2Fimages%2Fhero%2Fhero-urbanisme-foncier.png&w=640&q=75",
+      "selectedAttempt": 1,
+      "whitePixelScore": 446,
+      "attemptScores": [
+        {
+          "attempt": 1,
+          "score": 446
+        },
+        {
+          "attempt": 2,
+          "score": 446
+        },
+        {
+          "attempt": 3,
+          "score": 446
+        },
+        {
+          "attempt": 4,
+          "score": 446
+        },
+        {
+          "attempt": 5,
+          "score": 446
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "slide": "03",
+      "counter": "03",
+      "ctaText": "DISCUTER D’UN PROJET",
+      "ctaOpacity": "1",
+      "ctaVisibility": "visible",
+      "ctaRect": {
+        "x": 20,
+        "y": 668.78125,
+        "width": 350,
+        "height": 50.390625
+      },
+      "image": "http://localhost:3013/_next/image?url=%2Fimages%2Freferences%2Ftinmel-cover.jpg&w=640&q=75",
+      "selectedAttempt": 1,
+      "whitePixelScore": 446,
+      "attemptScores": [
+        {
+          "attempt": 1,
+          "score": 446
+        },
+        {
+          "attempt": 2,
+          "score": 446
+        },
+        {
+          "attempt": 3,
+          "score": 446
+        },
+        {
+          "attempt": 4,
+          "score": 446
+        },
+        {
+          "attempt": 5,
+          "score": 446
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "slide": "04",
+      "counter": "04",
+      "ctaText": "DISCUTER D’UN PROJET",
+      "ctaOpacity": "1",
+      "ctaVisibility": "visible",
+      "ctaRect": {
+        "x": 20,
+        "y": 668.78125,
+        "width": 350,
+        "height": 50.390625
+      },
+      "image": "http://localhost:3013/_next/image?url=%2Fimages%2Fhero%2Fhero-architecture-residentielle.jpg&w=640&q=75",
+      "selectedAttempt": 1,
+      "whitePixelScore": 446,
+      "attemptScores": [
+        {
+          "attempt": 1,
+          "score": 446
+        },
+        {
+          "attempt": 2,
+          "score": 446
+        },
+        {
+          "attempt": 3,
+          "score": 446
+        },
+        {
+          "attempt": 4,
+          "score": 446
+        },
+        {
+          "attempt": 5,
+          "score": 446
+        }
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "slide": "05",
+      "counter": "05",
+      "ctaText": "DISCUTER D’UN PROJET",
+      "ctaOpacity": "1",
+      "ctaVisibility": "visible",
+      "ctaRect": {
+        "x": 20,
+        "y": 668.78125,
+        "width": 350,
+        "height": 50.390625
+      },
+      "image": "http://localhost:3013/_next/image?url=%2Fimages%2Fmissions%2Fmission-coordination-plans.jpg&w=640&q=75",
+      "selectedAttempt": 1,
+      "whitePixelScore": 446,
+      "attemptScores": [
+        {
+          "attempt": 1,
+          "score": 446
+        },
+        {
+          "attempt": 2,
+          "score": 446
+        },
+        {
+          "attempt": 3,
+          "score": 446
+        },
+        {
+          "attempt": 4,
+          "score": 446
+        },
+        {
+          "attempt": 5,
+          "score": 446
+        }
+      ]
+    },
+    {
+      "viewport": "1440x900",
+      "slide": "01",
+      "counter": "01",
+      "ctaText": "DISCUTER D’UN PROJET",
+      "ctaOpacity": "1",
+      "ctaVisibility": "visible",
+      "ctaRect": {
+        "x": 789.5,
+        "y": 669.609375,
+        "width": 234.984375,
+        "height": 50.390625
+      },
+      "image": "http://localhost:3013/_next/image?url=%2Fimages%2Fhero%2Fhero-architecture-publique.jpg&w=1920&q=75",
+      "selectedAttempt": 1,
+      "whitePixelScore": 446,
+      "attemptScores": [
+        {
+          "attempt": 1,
+          "score": 446
+        },
+        {
+          "attempt": 2,
+          "score": 446
+        },
+        {
+          "attempt": 3,
+          "score": 446
+        },
+        {
+          "attempt": 4,
+          "score": 446
+        },
+        {
+          "attempt": 5,
+          "score": 446
+        }
+      ]
+    },
+    {
+      "viewport": "1440x900",
+      "slide": "02",
+      "counter": "02",
+      "ctaText": "DISCUTER D’UN PROJET",
+      "ctaOpacity": "1",
+      "ctaVisibility": "visible",
+      "ctaRect": {
+        "x": 789.5,
+        "y": 669.609375,
+        "width": 234.984375,
+        "height": 50.390625
+      },
+      "image": "http://localhost:3013/_next/image?url=%2Fimages%2Fhero%2Fhero-urbanisme-foncier.png&w=1920&q=75",
+      "selectedAttempt": 1,
+      "whitePixelScore": 446,
+      "attemptScores": [
+        {
+          "attempt": 1,
+          "score": 446
+        },
+        {
+          "attempt": 2,
+          "score": 446
+        },
+        {
+          "attempt": 3,
+          "score": 446
+        },
+        {
+          "attempt": 4,
+          "score": 446
+        },
+        {
+          "attempt": 5,
+          "score": 446
+        }
+      ]
+    },
+    {
+      "viewport": "1440x900",
+      "slide": "03",
+      "counter": "03",
+      "ctaText": "DISCUTER D’UN PROJET",
+      "ctaOpacity": "1",
+      "ctaVisibility": "visible",
+      "ctaRect": {
+        "x": 789.5,
+        "y": 669.609375,
+        "width": 234.984375,
+        "height": 50.390625
+      },
+      "image": "http://localhost:3013/_next/image?url=%2Fimages%2Freferences%2Ftinmel-cover.jpg&w=1920&q=75",
+      "selectedAttempt": 1,
+      "whitePixelScore": 446,
+      "attemptScores": [
+        {
+          "attempt": 1,
+          "score": 446
+        },
+        {
+          "attempt": 2,
+          "score": 446
+        },
+        {
+          "attempt": 3,
+          "score": 446
+        },
+        {
+          "attempt": 4,
+          "score": 446
+        },
+        {
+          "attempt": 5,
+          "score": 446
+        }
+      ]
+    },
+    {
+      "viewport": "1440x900",
+      "slide": "04",
+      "counter": "04",
+      "ctaText": "DISCUTER D’UN PROJET",
+      "ctaOpacity": "1",
+      "ctaVisibility": "visible",
+      "ctaRect": {
+        "x": 789.5,
+        "y": 669.609375,
+        "width": 234.984375,
+        "height": 50.390625
+      },
+      "image": "http://localhost:3013/_next/image?url=%2Fimages%2Fhero%2Fhero-architecture-residentielle.jpg&w=1920&q=75",
+      "selectedAttempt": 1,
+      "whitePixelScore": 446,
+      "attemptScores": [
+        {
+          "attempt": 1,
+          "score": 446
+        },
+        {
+          "attempt": 2,
+          "score": 446
+        },
+        {
+          "attempt": 3,
+          "score": 446
+        },
+        {
+          "attempt": 4,
+          "score": 446
+        },
+        {
+          "attempt": 5,
+          "score": 446
+        }
+      ]
+    },
+    {
+      "viewport": "1440x900",
+      "slide": "05",
+      "counter": "05",
+      "ctaText": "DISCUTER D’UN PROJET",
+      "ctaOpacity": "1",
+      "ctaVisibility": "visible",
+      "ctaRect": {
+        "x": 789.5,
+        "y": 669.609375,
+        "width": 234.984375,
+        "height": 50.390625
+      },
+      "image": "http://localhost:3013/_next/image?url=%2Fimages%2Fmissions%2Fmission-coordination-plans.jpg&w=1920&q=75",
+      "selectedAttempt": 1,
+      "whitePixelScore": 446,
+      "attemptScores": [
+        {
+          "attempt": 1,
+          "score": 446
+        },
+        {
+          "attempt": 2,
+          "score": 446
+        },
+        {
+          "attempt": 3,
+          "score": 446
+        },
+        {
+          "attempt": 4,
+          "score": 446
+        },
+        {
+          "attempt": 5,
+          "score": 446
+        }
+      ]
+    }
+  ]
+}

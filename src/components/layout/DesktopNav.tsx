@@ -11,11 +11,15 @@ export function DesktopNav() {
 
   return (
     <nav className="desktop-nav" aria-label="Navigation principale">
-      {navigation.filter((item) => item.href !== '/contact').map((item) => (
-        <Link key={item.href} href={item.href} className={cn(pathname === item.href && 'is-active')}>
-          {item.label}
-        </Link>
-      ))}
+      {navigation.filter((item) => item.href !== '/contact').map((item) => {
+        const isActive = item.href === '/' ? pathname === '/' : pathname === item.href || pathname.startsWith(`${item.href}/`);
+
+        return (
+          <Link key={item.href} href={item.href} className={cn(isActive && 'is-active')} aria-current={isActive ? 'page' : undefined}>
+            {item.label}
+          </Link>
+        );
+      })}
     </nav>
   );
 }

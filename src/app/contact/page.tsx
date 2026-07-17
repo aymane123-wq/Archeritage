@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Check } from 'lucide-react';
+import { ArcheritageIcon } from '@/components/icons/ArcheritageIcon';
 import { ContactForm } from '@/components/site/ContactForm';
 import { Container } from '@/components/ui/Container';
 import { PageHero } from '@/components/ui/PageHero';
@@ -10,7 +10,7 @@ import { getProfessionalServiceJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: contact.title,
-  description: 'Présentez votre projet à ARCHERITAGE. Une première réponse sous 48 heures ouvrées.',
+  description: 'Présentez votre projet à ARCHERITAGE. Un premier échange, sous 48 heures.',
   alternates: { canonical: '/contact' },
 };
 
@@ -28,31 +28,35 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
       <PageHero
         eyebrow="Contact"
         title={contact.title}
-        introduction="Un premier échange sous 48 heures"
-        supporting="Nous revenons vers vous sous 48 heures ouvrées afin de clarifier votre contexte et de préparer un premier échange utile."
+        introduction={contact.promise}
+        supporting={contact.introduction}
       />
       <section className="section section--ivory">
         <Container className="contact-layout">
+          <div className="contact-guidance">
+            <div className="contact-details contact-details--primary">
+              <p className="eyebrow">Contact direct</p>
+              <h2>Coordonnées</h2>
+              <p className="contact-detail-line"><ArcheritageIcon name="mail" tone="accent" /><a href={contactLinks.email}>{contactDetails.email}</a></p>
+              <p className="contact-detail-line"><ArcheritageIcon name="phone" tone="accent" /><a href={contactLinks.phone}>{contactDetails.phoneDisplay}</a></p>
+              <address className="contact-detail-line"><ArcheritageIcon name="map-pin" tone="accent" /><span>{contactDetails.addressLines.map((line) => <span key={line}>{line}</span>)}</span></address>
+            </div>
+            <p className="eyebrow">Nous solliciter pour</p>
+            <ul>{contact.reasons.map((reason) => <li key={reason}><ArcheritageIcon name="check" tone="accent" />{reason}</li>)}</ul>
+            <div className="contact-details contact-details--identity">
+              <p>ARCHERITAGE — Cabinet d’architecture, valorisation foncière et patrimoine</p>
+              <p>Fondateur : Ahmed Taoufik Naciri, architecte</p>
+            </div>
+            <div className="contact-note">
+              <h2><ArcheritageIcon name="shield-check" variant="card" tone="accent" />Confidentialité</h2>
+              <p>{contact.confidentiality}</p>
+            </div>
+          </div>
           <div className="contact-form-panel">
             <p className="eyebrow">Votre demande</p>
             <h2>Décrire votre projet</h2>
+            <p className="contact-form-panel__guidance">{contact.guidance}</p>
             <ContactForm initialValues={initialValues} />
-          </div>
-          <div className="contact-guidance">
-            <p className="eyebrow">Nous solliciter pour</p>
-            <ul>{contact.reasons.map((reason) => <li key={reason}><Check aria-hidden="true" />{reason}</li>)}</ul>
-            <div className="contact-details">
-              <h2>Coordonnées</h2>
-              <p>ARCHERITAGE — Cabinet d’architecture, valorisation foncière et patrimoine</p>
-              <p>Fondateur : Ahmed Taoufik Naciri, architecte</p>
-              <p><a href={contactLinks.email}>{contactDetails.email}</a></p>
-              <p><a href={contactLinks.phone}>{contactDetails.phoneDisplay}</a></p>
-              <address>{contactDetails.addressLines.map((line) => <span key={line}>{line}</span>)}</address>
-            </div>
-            <div className="contact-note">
-              <h2>Confidentialité</h2>
-              <p>{contact.confidentiality}</p>
-            </div>
           </div>
         </Container>
       </section>

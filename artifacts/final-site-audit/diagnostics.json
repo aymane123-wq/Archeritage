@@ -1,0 +1,2696 @@
+{
+  "generatedAt": "2026-07-17T11:33:48.799Z",
+  "baseUrl": "http://localhost:3013",
+  "diagnostics": [
+    {
+      "route": "/",
+      "routeName": "home",
+      "viewport": "360x800",
+      "title": "Valoriser le foncier. Construire l’envergure. Préserver la mémoire.",
+      "pathname": "/",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 7972,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div",
+          "left": -4,
+          "right": 365,
+          "width": 369
+        },
+        {
+          "selector": "img",
+          "left": -4,
+          "right": 365,
+          "width": 369
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Valoriser le foncier. Construire l’envergure. Préserver la mémoire."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/cabinet",
+      "routeName": "cabinet",
+      "viewport": "360x800",
+      "title": "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine | ARCHERITAGE",
+      "pathname": "/cabinet",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 6684,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/expertises",
+      "routeName": "expertises",
+      "viewport": "360x800",
+      "title": "Une expertise architecturale au service du foncier, des grands projets et du patrimoine | ARCHERITAGE",
+      "pathname": "/expertises",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 5741,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expertise architecturale au service du foncier, des grands projets et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/missions",
+      "routeName": "missions",
+      "viewport": "360x800",
+      "title": "Comment Archeritage intervient sur vos projets | ARCHERITAGE",
+      "pathname": "/missions",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 4892,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Comment Archeritage intervient sur vos projets"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/methode",
+      "routeName": "methode",
+      "viewport": "360x800",
+      "title": "PATRIGOV by Archeritage | ARCHERITAGE",
+      "pathname": "/methode",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 6218,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "PATRIGOV by Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/references",
+      "routeName": "references",
+      "viewport": "360x800",
+      "title": "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine | ARCHERITAGE",
+      "pathname": "/references",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 5941,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal",
+      "routeName": "journal",
+      "viewport": "360x800",
+      "title": "Journal Archeritage | ARCHERITAGE",
+      "pathname": "/journal",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 4465,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Journal Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "routeName": "article-foncier",
+      "viewport": "360x800",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 1777,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/tinmel-116-jours-retard",
+      "routeName": "article-tinmel",
+      "viewport": "360x800",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/tinmel-116-jours-retard",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 1777,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/restauration-rehabilitation-reconversion",
+      "routeName": "article-reconversion",
+      "viewport": "360x800",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/restauration-rehabilitation-reconversion",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 1777,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/contact",
+      "routeName": "contact",
+      "viewport": "360x800",
+      "title": "Parler d’un projet avec Archeritage | ARCHERITAGE",
+      "pathname": "/contact",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 4929,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div.honeypot",
+          "left": -9957,
+          "right": -9956,
+          "width": 1
+        },
+        {
+          "selector": "label",
+          "left": -9957,
+          "right": -9956,
+          "width": 1
+        },
+        {
+          "selector": "#website",
+          "left": -9957,
+          "right": -9926,
+          "width": 31
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Parler d’un projet avec Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/mentions-legales",
+      "routeName": "mentions-legales",
+      "viewport": "360x800",
+      "title": "Mentions légales | ARCHERITAGE",
+      "pathname": "/mentions-legales",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 2551,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Mentions légales"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/confidentialite",
+      "routeName": "confidentialite",
+      "viewport": "360x800",
+      "title": "Politique de confidentialité | ARCHERITAGE",
+      "pathname": "/confidentialite",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 3148,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Politique de confidentialité"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/route-audit-inexistante",
+      "routeName": "not-found",
+      "viewport": "360x800",
+      "title": "ARCHERITAGE",
+      "pathname": "/route-audit-inexistante",
+      "viewportWidth": 360,
+      "documentWidth": 360,
+      "bodyWidth": 360,
+      "documentHeight": 1777,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/",
+      "routeName": "home",
+      "viewport": "390x844",
+      "title": "Valoriser le foncier. Construire l’envergure. Préserver la mémoire.",
+      "pathname": "/",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 7917,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div",
+          "left": -5,
+          "right": 395,
+          "width": 400
+        },
+        {
+          "selector": "img",
+          "left": -5,
+          "right": 395,
+          "width": 400
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Valoriser le foncier. Construire l’envergure. Préserver la mémoire."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/cabinet",
+      "routeName": "cabinet",
+      "viewport": "390x844",
+      "title": "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine | ARCHERITAGE",
+      "pathname": "/cabinet",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 6455,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/expertises",
+      "routeName": "expertises",
+      "viewport": "390x844",
+      "title": "Une expertise architecturale au service du foncier, des grands projets et du patrimoine | ARCHERITAGE",
+      "pathname": "/expertises",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 5521,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expertise architecturale au service du foncier, des grands projets et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/missions",
+      "routeName": "missions",
+      "viewport": "390x844",
+      "title": "Comment Archeritage intervient sur vos projets | ARCHERITAGE",
+      "pathname": "/missions",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 4730,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Comment Archeritage intervient sur vos projets"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/methode",
+      "routeName": "methode",
+      "viewport": "390x844",
+      "title": "PATRIGOV by Archeritage | ARCHERITAGE",
+      "pathname": "/methode",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 6043,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "PATRIGOV by Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/references",
+      "routeName": "references",
+      "viewport": "390x844",
+      "title": "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine | ARCHERITAGE",
+      "pathname": "/references",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 5751,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal",
+      "routeName": "journal",
+      "viewport": "390x844",
+      "title": "Journal Archeritage | ARCHERITAGE",
+      "pathname": "/journal",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 4422,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Journal Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "routeName": "article-foncier",
+      "viewport": "390x844",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 1728,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/tinmel-116-jours-retard",
+      "routeName": "article-tinmel",
+      "viewport": "390x844",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/tinmel-116-jours-retard",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 1728,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/restauration-rehabilitation-reconversion",
+      "routeName": "article-reconversion",
+      "viewport": "390x844",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/restauration-rehabilitation-reconversion",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 1728,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/contact",
+      "routeName": "contact",
+      "viewport": "390x844",
+      "title": "Parler d’un projet avec Archeritage | ARCHERITAGE",
+      "pathname": "/contact",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 4752,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div.honeypot",
+          "left": -9957,
+          "right": -9956,
+          "width": 1
+        },
+        {
+          "selector": "label",
+          "left": -9957,
+          "right": -9956,
+          "width": 1
+        },
+        {
+          "selector": "#website",
+          "left": -9957,
+          "right": -9926,
+          "width": 31
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Parler d’un projet avec Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/mentions-legales",
+      "routeName": "mentions-legales",
+      "viewport": "390x844",
+      "title": "Mentions légales | ARCHERITAGE",
+      "pathname": "/mentions-legales",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 2474,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Mentions légales"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/confidentialite",
+      "routeName": "confidentialite",
+      "viewport": "390x844",
+      "title": "Politique de confidentialité | ARCHERITAGE",
+      "pathname": "/confidentialite",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 3017,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Politique de confidentialité"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/route-audit-inexistante",
+      "routeName": "not-found",
+      "viewport": "390x844",
+      "title": "ARCHERITAGE",
+      "pathname": "/route-audit-inexistante",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "documentHeight": 1728,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/",
+      "routeName": "home",
+      "viewport": "768x1024",
+      "title": "Valoriser le foncier. Construire l’envergure. Préserver la mémoire.",
+      "pathname": "/",
+      "viewportWidth": 768,
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "documentHeight": 7089,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div",
+          "left": -10,
+          "right": 778,
+          "width": 787
+        },
+        {
+          "selector": "img",
+          "left": -10,
+          "right": 778,
+          "width": 787
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Valoriser le foncier. Construire l’envergure. Préserver la mémoire."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/cabinet",
+      "routeName": "cabinet",
+      "viewport": "768x1024",
+      "title": "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine | ARCHERITAGE",
+      "pathname": "/cabinet",
+      "viewportWidth": 768,
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "documentHeight": 5441,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/expertises",
+      "routeName": "expertises",
+      "viewport": "768x1024",
+      "title": "Une expertise architecturale au service du foncier, des grands projets et du patrimoine | ARCHERITAGE",
+      "pathname": "/expertises",
+      "viewportWidth": 768,
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "documentHeight": 5518,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expertise architecturale au service du foncier, des grands projets et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/missions",
+      "routeName": "missions",
+      "viewport": "768x1024",
+      "title": "Comment Archeritage intervient sur vos projets | ARCHERITAGE",
+      "pathname": "/missions",
+      "viewportWidth": 768,
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "documentHeight": 3698,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Comment Archeritage intervient sur vos projets"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/methode",
+      "routeName": "methode",
+      "viewport": "768x1024",
+      "title": "PATRIGOV by Archeritage | ARCHERITAGE",
+      "pathname": "/methode",
+      "viewportWidth": 768,
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "documentHeight": 4216,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "PATRIGOV by Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/references",
+      "routeName": "references",
+      "viewport": "768x1024",
+      "title": "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine | ARCHERITAGE",
+      "pathname": "/references",
+      "viewportWidth": 768,
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "documentHeight": 4436,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal",
+      "routeName": "journal",
+      "viewport": "768x1024",
+      "title": "Journal Archeritage | ARCHERITAGE",
+      "pathname": "/journal",
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "documentHeight": 3235,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Journal Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "routeName": "article-foncier",
+      "viewport": "768x1024",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "documentHeight": 1847,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/tinmel-116-jours-retard",
+      "routeName": "article-tinmel",
+      "viewport": "768x1024",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/tinmel-116-jours-retard",
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "documentHeight": 1847,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/restauration-rehabilitation-reconversion",
+      "routeName": "article-reconversion",
+      "viewport": "768x1024",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/restauration-rehabilitation-reconversion",
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "documentHeight": 1847,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/contact",
+      "routeName": "contact",
+      "viewport": "768x1024",
+      "title": "Parler d’un projet avec Archeritage | ARCHERITAGE",
+      "pathname": "/contact",
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "documentHeight": 3906,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div.honeypot",
+          "left": -9936,
+          "right": -9935,
+          "width": 1
+        },
+        {
+          "selector": "label",
+          "left": -9936,
+          "right": -9935,
+          "width": 1
+        },
+        {
+          "selector": "#website",
+          "left": -9936,
+          "right": -9905,
+          "width": 31
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Parler d’un projet avec Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/mentions-legales",
+      "routeName": "mentions-legales",
+      "viewport": "768x1024",
+      "title": "Mentions légales | ARCHERITAGE",
+      "pathname": "/mentions-legales",
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "documentHeight": 2234,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Mentions légales"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/confidentialite",
+      "routeName": "confidentialite",
+      "viewport": "768x1024",
+      "title": "Politique de confidentialité | ARCHERITAGE",
+      "pathname": "/confidentialite",
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "documentHeight": 2639,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Politique de confidentialité"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/route-audit-inexistante",
+      "routeName": "not-found",
+      "viewport": "768x1024",
+      "title": "ARCHERITAGE",
+      "pathname": "/route-audit-inexistante",
+      "viewportWidth": 768,
+      "documentWidth": 753,
+      "bodyWidth": 753,
+      "documentHeight": 1847,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/",
+      "routeName": "home",
+      "viewport": "1024x768",
+      "title": "Valoriser le foncier. Construire l’envergure. Préserver la mémoire.",
+      "pathname": "/",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 4105,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div",
+          "left": -13,
+          "right": 1022,
+          "width": 1034
+        },
+        {
+          "selector": "img",
+          "left": -13,
+          "right": 1022,
+          "width": 1034
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Valoriser le foncier. Construire l’envergure. Préserver la mémoire."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/cabinet",
+      "routeName": "cabinet",
+      "viewport": "1024x768",
+      "title": "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine | ARCHERITAGE",
+      "pathname": "/cabinet",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 4223,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/expertises",
+      "routeName": "expertises",
+      "viewport": "1024x768",
+      "title": "Une expertise architecturale au service du foncier, des grands projets et du patrimoine | ARCHERITAGE",
+      "pathname": "/expertises",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 3116,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expertise architecturale au service du foncier, des grands projets et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/missions",
+      "routeName": "missions",
+      "viewport": "1024x768",
+      "title": "Comment Archeritage intervient sur vos projets | ARCHERITAGE",
+      "pathname": "/missions",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 3310,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Comment Archeritage intervient sur vos projets"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/methode",
+      "routeName": "methode",
+      "viewport": "1024x768",
+      "title": "PATRIGOV by Archeritage | ARCHERITAGE",
+      "pathname": "/methode",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 3747,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "PATRIGOV by Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/references",
+      "routeName": "references",
+      "viewport": "1024x768",
+      "title": "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine | ARCHERITAGE",
+      "pathname": "/references",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 3883,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal",
+      "routeName": "journal",
+      "viewport": "1024x768",
+      "title": "Journal Archeritage | ARCHERITAGE",
+      "pathname": "/journal",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 2807,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Journal Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "routeName": "article-foncier",
+      "viewport": "1024x768",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 1226,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/tinmel-116-jours-retard",
+      "routeName": "article-tinmel",
+      "viewport": "1024x768",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/tinmel-116-jours-retard",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 1226,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/restauration-rehabilitation-reconversion",
+      "routeName": "article-reconversion",
+      "viewport": "1024x768",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/restauration-rehabilitation-reconversion",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 1226,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/contact",
+      "routeName": "contact",
+      "viewport": "1024x768",
+      "title": "Parler d’un projet avec Archeritage | ARCHERITAGE",
+      "pathname": "/contact",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 2622,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div.honeypot",
+          "left": -9532,
+          "right": -9531,
+          "width": 1
+        },
+        {
+          "selector": "label",
+          "left": -9532,
+          "right": -9531,
+          "width": 1
+        },
+        {
+          "selector": "#website",
+          "left": -9532,
+          "right": -9501,
+          "width": 31
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Parler d’un projet avec Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/mentions-legales",
+      "routeName": "mentions-legales",
+      "viewport": "1024x768",
+      "title": "Mentions légales | ARCHERITAGE",
+      "pathname": "/mentions-legales",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 1867,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Mentions légales"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/confidentialite",
+      "routeName": "confidentialite",
+      "viewport": "1024x768",
+      "title": "Politique de confidentialité | ARCHERITAGE",
+      "pathname": "/confidentialite",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 2245,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Politique de confidentialité"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/route-audit-inexistante",
+      "routeName": "not-found",
+      "viewport": "1024x768",
+      "title": "ARCHERITAGE",
+      "pathname": "/route-audit-inexistante",
+      "viewportWidth": 1024,
+      "documentWidth": 1009,
+      "bodyWidth": 1009,
+      "documentHeight": 1226,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/",
+      "routeName": "home",
+      "viewport": "1280x800",
+      "title": "Valoriser le foncier. Construire l’envergure. Préserver la mémoire.",
+      "pathname": "/",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 4439,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div",
+          "left": -16,
+          "right": 1281,
+          "width": 1297
+        },
+        {
+          "selector": "img",
+          "left": -16,
+          "right": 1281,
+          "width": 1297
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Valoriser le foncier. Construire l’envergure. Préserver la mémoire."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/cabinet",
+      "routeName": "cabinet",
+      "viewport": "1280x800",
+      "title": "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine | ARCHERITAGE",
+      "pathname": "/cabinet",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 4600,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/expertises",
+      "routeName": "expertises",
+      "viewport": "1280x800",
+      "title": "Une expertise architecturale au service du foncier, des grands projets et du patrimoine | ARCHERITAGE",
+      "pathname": "/expertises",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 3316,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expertise architecturale au service du foncier, des grands projets et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/missions",
+      "routeName": "missions",
+      "viewport": "1280x800",
+      "title": "Comment Archeritage intervient sur vos projets | ARCHERITAGE",
+      "pathname": "/missions",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 3662,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Comment Archeritage intervient sur vos projets"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/methode",
+      "routeName": "methode",
+      "viewport": "1280x800",
+      "title": "PATRIGOV by Archeritage | ARCHERITAGE",
+      "pathname": "/methode",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 3866,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "PATRIGOV by Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/references",
+      "routeName": "references",
+      "viewport": "1280x800",
+      "title": "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine | ARCHERITAGE",
+      "pathname": "/references",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 3989,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal",
+      "routeName": "journal",
+      "viewport": "1280x800",
+      "title": "Journal Archeritage | ARCHERITAGE",
+      "pathname": "/journal",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 3167,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Journal Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "routeName": "article-foncier",
+      "viewport": "1280x800",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 1299,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/tinmel-116-jours-retard",
+      "routeName": "article-tinmel",
+      "viewport": "1280x800",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/tinmel-116-jours-retard",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 1299,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/restauration-rehabilitation-reconversion",
+      "routeName": "article-reconversion",
+      "viewport": "1280x800",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/restauration-rehabilitation-reconversion",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 1299,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/contact",
+      "routeName": "contact",
+      "viewport": "1280x800",
+      "title": "Parler d’un projet avec Archeritage | ARCHERITAGE",
+      "pathname": "/contact",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 2769,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div.honeypot",
+          "left": -9421,
+          "right": -9420,
+          "width": 1
+        },
+        {
+          "selector": "label",
+          "left": -9421,
+          "right": -9420,
+          "width": 1
+        },
+        {
+          "selector": "#website",
+          "left": -9421,
+          "right": -9390,
+          "width": 31
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Parler d’un projet avec Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/mentions-legales",
+      "routeName": "mentions-legales",
+      "viewport": "1280x800",
+      "title": "Mentions légales | ARCHERITAGE",
+      "pathname": "/mentions-legales",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 2049,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Mentions légales"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/confidentialite",
+      "routeName": "confidentialite",
+      "viewport": "1280x800",
+      "title": "Politique de confidentialité | ARCHERITAGE",
+      "pathname": "/confidentialite",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 2434,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Politique de confidentialité"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/route-audit-inexistante",
+      "routeName": "not-found",
+      "viewport": "1280x800",
+      "title": "ARCHERITAGE",
+      "pathname": "/route-audit-inexistante",
+      "viewportWidth": 1280,
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "documentHeight": 1299,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/",
+      "routeName": "home",
+      "viewport": "1440x900",
+      "title": "Valoriser le foncier. Construire l’envergure. Préserver la mémoire.",
+      "pathname": "/",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 4702,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div",
+          "left": -18,
+          "right": 1443,
+          "width": 1461
+        },
+        {
+          "selector": "img",
+          "left": -18,
+          "right": 1443,
+          "width": 1461
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Valoriser le foncier. Construire l’envergure. Préserver la mémoire."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/cabinet",
+      "routeName": "cabinet",
+      "viewport": "1440x900",
+      "title": "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine | ARCHERITAGE",
+      "pathname": "/cabinet",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 4845,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/expertises",
+      "routeName": "expertises",
+      "viewport": "1440x900",
+      "title": "Une expertise architecturale au service du foncier, des grands projets et du patrimoine | ARCHERITAGE",
+      "pathname": "/expertises",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 3484,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expertise architecturale au service du foncier, des grands projets et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/missions",
+      "routeName": "missions",
+      "viewport": "1440x900",
+      "title": "Comment Archeritage intervient sur vos projets | ARCHERITAGE",
+      "pathname": "/missions",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 3853,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Comment Archeritage intervient sur vos projets"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/methode",
+      "routeName": "methode",
+      "viewport": "1440x900",
+      "title": "PATRIGOV by Archeritage | ARCHERITAGE",
+      "pathname": "/methode",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 4029,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "PATRIGOV by Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/references",
+      "routeName": "references",
+      "viewport": "1440x900",
+      "title": "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine | ARCHERITAGE",
+      "pathname": "/references",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 4156,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal",
+      "routeName": "journal",
+      "viewport": "1440x900",
+      "title": "Journal Archeritage | ARCHERITAGE",
+      "pathname": "/journal",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 3346,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Journal Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "routeName": "article-foncier",
+      "viewport": "1440x900",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 1398,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/tinmel-116-jours-retard",
+      "routeName": "article-tinmel",
+      "viewport": "1440x900",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/tinmel-116-jours-retard",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 1398,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/restauration-rehabilitation-reconversion",
+      "routeName": "article-reconversion",
+      "viewport": "1440x900",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/restauration-rehabilitation-reconversion",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 1398,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/contact",
+      "routeName": "contact",
+      "viewport": "1440x900",
+      "title": "Parler d’un projet avec Archeritage | ARCHERITAGE",
+      "pathname": "/contact",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 2874,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div.honeypot",
+          "left": -9353,
+          "right": -9352,
+          "width": 1
+        },
+        {
+          "selector": "label",
+          "left": -9353,
+          "right": -9352,
+          "width": 1
+        },
+        {
+          "selector": "#website",
+          "left": -9353,
+          "right": -9322,
+          "width": 31
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Parler d’un projet avec Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/mentions-legales",
+      "routeName": "mentions-legales",
+      "viewport": "1440x900",
+      "title": "Mentions légales | ARCHERITAGE",
+      "pathname": "/mentions-legales",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 2121,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Mentions légales"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/confidentialite",
+      "routeName": "confidentialite",
+      "viewport": "1440x900",
+      "title": "Politique de confidentialité | ARCHERITAGE",
+      "pathname": "/confidentialite",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 2510,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Politique de confidentialité"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/route-audit-inexistante",
+      "routeName": "not-found",
+      "viewport": "1440x900",
+      "title": "ARCHERITAGE",
+      "pathname": "/route-audit-inexistante",
+      "viewportWidth": 1440,
+      "documentWidth": 1425,
+      "bodyWidth": 1425,
+      "documentHeight": 1398,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/",
+      "routeName": "home",
+      "viewport": "1920x1080",
+      "title": "Valoriser le foncier. Construire l’envergure. Préserver la mémoire.",
+      "pathname": "/",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 4965,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div",
+          "left": -24,
+          "right": 1929,
+          "width": 1953
+        },
+        {
+          "selector": "img",
+          "left": -24,
+          "right": 1929,
+          "width": 1953
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Valoriser le foncier. Construire l’envergure. Préserver la mémoire."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/cabinet",
+      "routeName": "cabinet",
+      "viewport": "1920x1080",
+      "title": "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine | ARCHERITAGE",
+      "pathname": "/cabinet",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 5037,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/expertises",
+      "routeName": "expertises",
+      "viewport": "1920x1080",
+      "title": "Une expertise architecturale au service du foncier, des grands projets et du patrimoine | ARCHERITAGE",
+      "pathname": "/expertises",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 3640,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expertise architecturale au service du foncier, des grands projets et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/missions",
+      "routeName": "missions",
+      "viewport": "1920x1080",
+      "title": "Comment Archeritage intervient sur vos projets | ARCHERITAGE",
+      "pathname": "/missions",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 3954,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Comment Archeritage intervient sur vos projets"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/methode",
+      "routeName": "methode",
+      "viewport": "1920x1080",
+      "title": "PATRIGOV by Archeritage | ARCHERITAGE",
+      "pathname": "/methode",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 4218,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "PATRIGOV by Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/references",
+      "routeName": "references",
+      "viewport": "1920x1080",
+      "title": "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine | ARCHERITAGE",
+      "pathname": "/references",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 4339,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal",
+      "routeName": "journal",
+      "viewport": "1920x1080",
+      "title": "Journal Archeritage | ARCHERITAGE",
+      "pathname": "/journal",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 3530,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Journal Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "routeName": "article-foncier",
+      "viewport": "1920x1080",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/valorisation-fonciere-diagnostic-prealable",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 1526,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/tinmel-116-jours-retard",
+      "routeName": "article-tinmel",
+      "viewport": "1920x1080",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/tinmel-116-jours-retard",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 1526,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/journal/restauration-rehabilitation-reconversion",
+      "routeName": "article-reconversion",
+      "viewport": "1920x1080",
+      "title": "ARCHERITAGE",
+      "pathname": "/journal/restauration-rehabilitation-reconversion",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 1526,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    },
+    {
+      "route": "/contact",
+      "routeName": "contact",
+      "viewport": "1920x1080",
+      "title": "Parler d’un projet avec Archeritage | ARCHERITAGE",
+      "pathname": "/contact",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 2912,
+      "horizontalOverflow": false,
+      "overflow": [
+        {
+          "selector": "div.honeypot",
+          "left": -9106,
+          "right": -9105,
+          "width": 1
+        },
+        {
+          "selector": "label",
+          "left": -9106,
+          "right": -9105,
+          "width": 1
+        },
+        {
+          "selector": "#website",
+          "left": -9106,
+          "right": -9076,
+          "width": 31
+        }
+      ],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Parler d’un projet avec Archeritage"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/mentions-legales",
+      "routeName": "mentions-legales",
+      "viewport": "1920x1080",
+      "title": "Mentions légales | ARCHERITAGE",
+      "pathname": "/mentions-legales",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 2140,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Mentions légales"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/confidentialite",
+      "routeName": "confidentialite",
+      "viewport": "1920x1080",
+      "title": "Politique de confidentialité | ARCHERITAGE",
+      "pathname": "/confidentialite",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 2529,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "Politique de confidentialité"
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [],
+      "networkFailures": []
+    },
+    {
+      "route": "/route-audit-inexistante",
+      "routeName": "not-found",
+      "viewport": "1920x1080",
+      "title": "ARCHERITAGE",
+      "pathname": "/route-audit-inexistante",
+      "viewportWidth": 1920,
+      "documentWidth": 1905,
+      "bodyWidth": 1905,
+      "documentHeight": 1526,
+      "horizontalOverflow": false,
+      "overflow": [],
+      "brokenImages": [],
+      "h1Count": 1,
+      "headings": [
+        "La page demandée est introuvable."
+      ],
+      "unlabeledButtons": [],
+      "unlabeledInputs": [],
+      "visiblePlaceholders": [],
+      "console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        }
+      ],
+      "networkFailures": []
+    }
+  ],
+  "reducedMotion": {
+    "title": "Valoriser le foncier. Construire l’envergure. Préserver la mémoire.",
+    "pathname": "/",
+    "viewportWidth": 1440,
+    "documentWidth": 1440,
+    "bodyWidth": 1440,
+    "documentHeight": 4702,
+    "horizontalOverflow": false,
+    "overflow": [
+      {
+        "selector": "div",
+        "left": -18,
+        "right": 1458,
+        "width": 1476
+      },
+      {
+        "selector": "img",
+        "left": -18,
+        "right": 1458,
+        "width": 1476
+      }
+    ],
+    "brokenImages": [],
+    "h1Count": 1,
+    "headings": [
+      "Valoriser le foncier. Construire l’envergure. Préserver la mémoire."
+    ],
+    "unlabeledButtons": [],
+    "unlabeledInputs": [],
+    "visiblePlaceholders": []
+  },
+  "specialChecks": {
+    "mobileMenuOpen": {
+      "exists": true,
+      "opacity": "1",
+      "overflowY": "auto",
+      "activeLabel": "Fermer le menu",
+      "bodyOverflow": "hidden"
+    },
+    "mobileMenuShiftTab": {
+      "text": "ARCHERITAGE",
+      "label": "Retour à l’accueil"
+    },
+    "mobileMenuFocusWrap": {
+      "text": "CONTACTEZ-NOUS",
+      "href": "/contact"
+    },
+    "mobileMenuEscape": {
+      "closed": true,
+      "activeLabel": "Ouvrir le menu",
+      "bodyOverflow": ""
+    },
+    "reducedMotionMenu": {
+      "exists": true,
+      "opacity": "1",
+      "width": 390,
+      "height": 844,
+      "activeLabel": "Fermer le menu"
+    },
+    "laptopMenu": {
+      "exists": true,
+      "clientHeight": 768,
+      "scrollHeight": 842,
+      "ctaBottom": 817.640625
+    },
+    "contactValidation": {
+      "errorCount": 6,
+      "activeId": "fullName",
+      "skipFocused": false,
+      "skipTransform": "matrix(1, 0, 0, 1, 0, -73.875)"
+    }
+  }
+}

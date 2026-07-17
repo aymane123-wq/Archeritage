@@ -9,5 +9,5 @@ export const site = {
   phoneHref: contactDetails.phoneHref,
   address: contactDetails.addressLines.join(', '),
   city: `${contactDetails.city}, ${contactDetails.country}`,
-  description: 'Cabinet d’architecture, valorisation foncière et patrimoine à Casablanca.',
+  description: 'Cabinet d’architecture à Casablanca : valorisation foncière et territoriale, projets d’envergure et valorisation du patrimoine.',
 };

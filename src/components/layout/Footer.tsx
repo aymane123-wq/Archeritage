@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import { ArcheritageIcon } from '@/components/icons/ArcheritageIcon';
 import { FooterMotion } from '@/components/motion/FooterMotion';
 import { Container } from '@/components/ui/Container';
 import { contactDetails, contactLinks } from '@/content/site/contact-details';
@@ -22,9 +23,9 @@ export function Footer() {
             </nav>
             <div className="site-footer__contact">
               <p className="eyebrow">Contact</p>
-              <a href={contactLinks.email}>{contactDetails.email}</a>
-              <a href={contactLinks.phone}>{contactDetails.phoneDisplay}</a>
-              <address>{contactDetails.addressLines.map((line) => <span key={line}>{line}</span>)}</address>
+              <a href={contactLinks.email} className="footer-contact-line"><ArcheritageIcon name="mail" tone="light" />{contactDetails.email}</a>
+              <a href={contactLinks.phone} className="footer-contact-line"><ArcheritageIcon name="phone" tone="light" />{contactDetails.phoneDisplay}</a>
+              <address className="footer-contact-line"><ArcheritageIcon name="map-pin" tone="light" /><span>{contactDetails.addressLines.map((line) => <span key={line}>{line}</span>)}</span></address>
               <Link href="/contact" className="arrow-link">Parler d’un projet<ArrowUpRight className="h-4 w-4" /></Link>
               <div className="footer-legal"><Link href="/mentions-legales">Mentions légales</Link><Link href="/confidentialite">Confidentialité</Link></div>
             </div>

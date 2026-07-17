@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import type { CSSProperties } from 'react';
+import { ArcheritageIcon, pillarIcons } from '@/components/icons/ArcheritageIcon';
 import type { Pillar } from '@/content/site/official';
 import { expertiseContactCtas } from '@/content/site/contextual-ctas';
 
@@ -14,6 +15,7 @@ export function PillarCard({ pillar, index, detailed = false }: { pillar: Pillar
         <span>0{index + 1}</span>
       </div>
       <div className="pillar-card__body">
+        <ArcheritageIcon name={pillarIcons[index]} variant="card" tone="accent" className="pillar-card__icon" />
         <h3>{pillar.title}</h3>
         <p>{pillar.description}</p>
         {detailed ? (

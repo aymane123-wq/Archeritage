@@ -19,7 +19,7 @@ export type JournalPost = {
 };
 
 export const founderAttribution =
-  "Ces repères relèvent du parcours professionnel de 35 ans du fondateur. Ils constituent le socle d’expérience sur lequel ARCHERITAGE construit sa méthode et son exigence.";
+  "Les trois premiers repères relèvent du parcours professionnel de 35 ans du fondateur et constituent le socle d’expérience sur lequel ARCHERITAGE construit son exigence. PATRIGOV est la méthode propriétaire du cabinet.";
 
 export const home = {
   hero: {
@@ -151,9 +151,9 @@ export const references = [
 ];
 
 export const journalPosts: JournalPost[] = [
-  { slug: "valorisation-fonciere-diagnostic-prealable", title: "Valorisation foncière : ce qu’un diagnostic préalable change vraiment", description: "Note de doctrine sur la valeur d’une étude de faisabilité avant toute décision foncière.", category: "Notes de doctrine", image: "/images/pillars/pillar-valorisation-fonciere.png", imageAlt: "Vue aérienne d’un territoire résidentiel structuré", body: [] },
-  { slug: "tinmel-116-jours-retard", title: "Tinmel : documenter 116 jours de retard pour sécuriser un chantier patrimonial", description: "Retour d’expérience sur l’application de la gouvernance documentaire à un chantier de restauration réel.", category: "Méthode et gouvernance", image: "/images/references/tinmel-cover.jpg", imageAlt: "Architecture patrimoniale de la mosquée de Tinmel", body: [] },
-  { slug: "restauration-rehabilitation-reconversion", title: "Restauration, réhabilitation, reconversion : trois mots que l’on confond à tort", description: "Note de doctrine clarifiant une distinction essentielle pour tout maître d’ouvrage patrimonial.", category: "Regards sur le patrimoine", image: "/images/journal/journal-chantier-construction.jpg", imageAlt: "Structure architecturale en cours de construction", body: [] },
+  { slug: "valorisation-fonciere-diagnostic-prealable", title: "Valorisation foncière : ce qu’un diagnostic préalable change vraiment", description: "Note de doctrine sur la valeur d’une étude de faisabilité avant toute décision foncière.", category: "Notes de doctrine", image: "/images/pillars/pillar-valorisation-fonciere.png", imageAlt: "Vue aérienne d’un territoire résidentiel structuré", body: [] },
+  { slug: "tinmel-116-jours-retard", title: "Tinmel : documenter 116 jours de retard pour sécuriser un chantier patrimonial", description: "Retour d’expérience sur l’application de la gouvernance documentaire à un chantier de restauration réel.", category: "Méthode et gouvernance", image: "/images/references/tinmel-cover.jpg", imageAlt: "Architecture patrimoniale de la mosquée de Tinmel", body: [] },
+  { slug: "restauration-rehabilitation-reconversion", title: "Restauration, réhabilitation, reconversion : trois mots que l’on confond à tort", description: "Note de doctrine clarifiant une distinction essentielle pour tout maître d’ouvrage patrimonial.", category: "Regards sur le patrimoine", image: "/images/journal/journal-chantier-construction.jpg", imageAlt: "Structure architecturale en cours de construction", body: [] },
 ];
 
 export const journalCategories = ["Notes de doctrine", "Regards sur le patrimoine", "Carnets de projets", "Méthode et gouvernance"];

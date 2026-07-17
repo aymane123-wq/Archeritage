@@ -18,7 +18,9 @@ export function ClientSegmentation() {
           {clientSegments.map((segment, index) => (
             <article className="client-segment-card" key={segment.title}>
               <div className="client-segment-card__meta">
-                <ArcheritageIcon name={clientProfileIcons[index]} variant="card" tone="accent" />
+                <span className="client-segment-card__icon-frame" aria-hidden="true">
+                  <ArcheritageIcon name={clientProfileIcons[index]} variant="card" tone="accent" />
+                </span>
                 <span className="client-segment-card__index">{String(index + 1).padStart(2, '0')}</span>
               </div>
               <h3>{segment.title}</h3>

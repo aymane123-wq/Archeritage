@@ -1,43 +1,90 @@
-import type { SitePage } from './types';
-
-export const referencesPage: SitePage = {
-  eyebrow: 'Références',
-  title: 'Des expériences à l’intersection de l’architecture, du patrimoine et des projets complexes',
-  introduction: 'Archeritage s’appuie sur un parcours professionnel développé dans des contextes architecturaux, urbains, patrimoniaux, territoriaux et institutionnels. Les références sont présentées par familles d’intervention, avec rigueur sur le rôle réellement exercé.',
-  sections: [
-    {
-      eyebrow: 'Domaines de références',
-      title: 'Six familles d’intervention',
-      introduction: 'Ces domaines expriment l’étendue de l’expérience mobilisable par le cabinet. Ils ne constituent pas une liste de projets attribués sans validation.',
-      variant: 'cards',
-      cards: [
-        { title: 'Architecture et équipements', text: 'Bâtiments publics ou privés, équipements collectifs, transformations, extensions et études de faisabilité.' },
-        { title: 'Urbanisme, lotissements et aménagement', text: 'Études foncières, scénarios urbains, insertion réglementaire, organisation parcellaire et espaces collectifs.' },
-        { title: 'Patrimoine et réhabilitation', text: 'Diagnostics, restauration, reconversion, sauvegarde et valorisation de bâtiments ou de sites anciens.' },
-        { title: 'Grands projets et opérations institutionnelles', text: 'Programmes multi-acteurs nécessitant coordination technique, administrative et stratégique.' },
-        { title: 'AMO, audit et gouvernance', text: 'Cadrage, aide à la décision, audit de situation, sécurisation documentaire et redressement opérationnel.' },
-        { title: 'Territoires et valorisation', text: 'Patrimoine comme levier d’identité, de développement local, de transmission et d’attractivité.' },
-      ],
-    },
-    {
-      eyebrow: 'Expérience fondatrice',
-      title: 'Un cabinet jeune, fondé sur un parcours consolidé',
-      introduction: 'L’expérience professionnelle d’Ahmed Taoufik Naciri constitue le socle du cabinet. Elle permet d’aborder un projet comme un système complet : un site, un programme, un maître d’ouvrage, des acteurs, des risques, des arbitrages et une trajectoire de réalisation.',
-      variant: 'split',
-    },
-    {
-      eyebrow: 'Présentation responsable',
-      title: 'Distinguer clairement la nature de chaque contribution',
-      introduction: 'Archeritage veille à préciser si une expérience relève directement du cabinet, du parcours professionnel de son fondateur, d’un partenariat ou d’une contribution méthodologique. Les missions sensibles peuvent être présentées de manière anonymisée ou rester confidentielles.',
-      points: ['Références du cabinet', 'Expériences professionnelles du fondateur', 'Missions réalisées en partenariat', 'Contributions stratégiques ou documentaires', 'Missions anonymisées ou confidentielles'],
-      variant: 'list',
-    },
-    {
-      eyebrow: 'Études de cas',
-      title: 'Une sélection appelée à s’enrichir',
-      introduction: 'Les études de cas validées présenteront le contexte, les enjeux, la mission assurée, la méthode mobilisée et les enseignements utiles. Cette rubrique privilégiera la compréhension du projet à la simple galerie d’images.',
-      variant: 'split',
-    },
-  ],
-  cta: { title: 'Échanger sur une expérience ou un domaine d’intervention', text: 'Certaines références peuvent être détaillées dans un cadre adapté au niveau de confidentialité de la mission.', label: 'Nous contacter', href: '/contact' },
+export type ReferenceSection = {
+  title: 'Contexte' | 'Mission conduite' | 'Enjeux' | 'Approche';
+  text: string;
 };
+
+export type ReferenceRecord = {
+  slug: 'tinmel' | 'tiznit' | 'cervantes' | 'safi';
+  title: string;
+  institution?: string;
+  location?: string;
+  image?: string;
+  imageAlt?: string;
+  summary: string;
+  attribution: string;
+  sections: ReferenceSection[];
+};
+
+const founderAttribution = 'Expérience professionnelle du fondateur';
+
+export const referenceRecords: ReferenceRecord[] = [
+  {
+    slug: 'tinmel',
+    title: 'Mosquée de Tinmel',
+    institution: 'Ministère des Habous',
+    location: 'Tinmel',
+    image: '/images/references/tinmel-cover.jpg',
+    imageAlt: 'Architecture patrimoniale de la mosquée de Tinmel',
+    summary: 'Restauration d’un édifice historique majeur du Haut Atlas, mobilisant lecture historique, coordination technique et gouvernance documentaire du chantier.',
+    attribution: founderAttribution,
+    sections: [
+      { title: 'Contexte', text: 'Restauration d’un édifice historique majeur du Haut Atlas.' },
+      { title: 'Mission conduite', text: 'Lecture historique, coordination technique et gouvernance documentaire du chantier.' },
+      { title: 'Approche', text: 'Une conduite de mission structurée autour de la traçabilité et de la coordination.' },
+    ],
+  },
+  {
+    slug: 'tiznit',
+    title: 'Kasbah de Tiznit et Place Mechouar',
+    location: 'Tiznit',
+    image: '/images/references/tiznit-cover.jpg',
+    imageAlt: 'Ensemble patrimonial de la kasbah de Tiznit et de la place Mechouar',
+    summary: 'Valorisation patrimoniale d’un ensemble historique urbain, entre restauration et mise en usage contemporaine.',
+    attribution: founderAttribution,
+    sections: [
+      { title: 'Contexte', text: 'Valorisation patrimoniale d’un ensemble historique urbain.' },
+      { title: 'Mission conduite', text: 'Restauration et mise en usage contemporaine.' },
+    ],
+  },
+  {
+    slug: 'cervantes',
+    title: 'Théâtre Cervantès — Tanger',
+    institution: 'APDN',
+    location: 'Tanger',
+    image: '/images/references/cervantes-cover.jpg',
+    imageAlt: 'Façade du Théâtre Cervantès à Tanger',
+    summary: 'Accompagnement d’une opération de réhabilitation d’un patrimoine architectural du XXe siècle, sous maîtrise d’ouvrage de l’Agence de promotion et de développement du Nord.',
+    attribution: founderAttribution,
+    sections: [
+      { title: 'Contexte', text: 'Accompagnement d’une opération de réhabilitation d’un patrimoine architectural du XXe siècle.' },
+      { title: 'Mission conduite', text: 'Sous maîtrise d’ouvrage de l’Agence de promotion et de développement du Nord.' },
+    ],
+  },
+  {
+    slug: 'safi',
+    title: 'Murailles portugaises et Château de Mer — Safi',
+    institution: 'Direction régionale de la Culture',
+    location: 'Safi',
+    summary: 'Intervention sur un monument classé du XVIe siècle, en lien avec la Direction régionale de la Culture.',
+    attribution: founderAttribution,
+    sections: [
+      { title: 'Contexte', text: 'Intervention sur un monument classé du XVIe siècle.' },
+      { title: 'Mission conduite', text: 'En lien avec la Direction régionale de la Culture.' },
+    ],
+  },
+];
+
+export const homepageReferences = referenceRecords.slice(0, 3);
+
+export function getReferenceBySlug(slug: string) {
+  return referenceRecords.find((reference) => reference.slug === slug);
+}
+
+export function getReferenceNavigation(slug: string) {
+  const index = referenceRecords.findIndex((reference) => reference.slug === slug);
+  if (index < 0) return null;
+  return {
+    previous: referenceRecords[(index - 1 + referenceRecords.length) % referenceRecords.length],
+    next: referenceRecords[(index + 1) % referenceRecords.length],
+  };
+}

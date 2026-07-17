@@ -1,15 +1,97 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
-import { ArcheritageIcon } from '@/components/icons/ArcheritageIcon';
 import { Container } from '@/components/ui/Container';
 import { CTASection } from '@/components/ui/CTASection';
-import { PageHero } from '@/components/ui/PageHero';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { journalCategories } from '@/content/site/official';
-import { getJournalPosts, isJournalPostPublished } from '@/lib/journal';
+import { EditorialRubricsAccordion } from '@/components/journal/EditorialRubricsAccordion';
+import { journalPosts, editorialRubrics } from '@/content/site/official';
 
-export const metadata: Metadata = { title: 'Journal Archeritage', description: "Pensées, notes et regards sur l’architecture, le patrimoine et les projets complexes.", alternates: { canonical: '/journal' } };
+export const metadata: Metadata = {
+  title: 'Journal Archeritage',
+  description: "Pensées, notes et regards sur l'architecture, le patrimoine et les projets complexes.",
+  alternates: { canonical: '/journal' },
+};
 
-export default async function JournalPage() { const posts = await getJournalPosts(); return <><PageHero eyebrow="Journal" title="Journal Archeritage" introduction="Pensées, notes et regards sur l’architecture, le patrimoine et les projets complexes." supporting="Le Journal rassemble les réflexions, notes de doctrine et retours d’expérience du cabinet. Ligne éditoriale : publier peu, mais publier juste." /><section className="section section--ivory"><Container><SectionHeading eyebrow="À paraître" title="Premières publications à lancer" /><div className="journal-grid">{posts.map((post, index) => { const isPublished = isJournalPostPublished(post); return <article key={post.slug}>{post.image ? <div className="journal-card__image"><Image src={post.image} alt={post.imageAlt ?? ''} fill sizes="(min-width: 1024px) 33vw, 100vw" /></div> : null}<div className="journal-card__body"><span className="journal-card__meta"><ArcheritageIcon name="document" tone="accent" />{post.category} · 0{index + 1}</span><h3>{post.title}</h3><p>{post.description}</p>{isPublished ? <Link href={`/journal/${post.slug}`}>Lire la publication <ArrowUpRight aria-hidden="true" /></Link> : <span className="journal-card__status">Publication à venir</span>}</div></article>; })}</div></Container></section><section className="section section--alt"><Container><SectionHeading eyebrow="Rubriques" title="Une ligne éditoriale resserrée" /><div className="category-list">{journalCategories.map((category, index) => <div key={category}><span>0{index + 1}</span><p>{category}</p></div>)}</div></Container></section><CTASection title="Être informé des prochaines publications" text="Contactez Archeritage pour suivre les prochaines notes et regards du cabinet." /></>; }
+export default async function JournalPage() {
+  const rubrics = editorialRubrics.map((rubric) => ({
+    ...rubric,
+    plannedPublicationTitle: journalPosts.find(
+      (post) => post.slug === rubric.plannedPublicationSlug,
+    )?.title,
+  }));
+
+  return (
+    <>
+      <header className="journal-hero">
+        <Container className="journal-hero__inner">
+          <div>
+            <p className="eyebrow">Journal</p>
+            <h1>Journal Archeritage</h1>
+          </div>
+          <div className="journal-hero__copy">
+            <p className="journal-hero__introduction">
+              Pensées, notes et regards sur l&apos;architecture, le patrimoine
+              et les projets complexes.
+            </p>
+            <p>
+              Le Journal rassemble les réflexions, notes de doctrine et retours
+              d&apos;expérience du cabinet.
+            </p>
+            <p className="journal-hero__line">
+              Ligne éditoriale&nbsp;: publier peu, mais publier juste.
+            </p>
+          </div>
+        </Container>
+      </header>
+
+      <section className="journal-publications section section--ivory">
+        <Container>
+          <SectionHeading
+            eyebrow="À paraître"
+            title="Prochaines publications"
+          />
+          <div className="journal-preview-grid">
+            {journalPosts.map((post, index) => (
+              <article key={post.slug} className="journal-preview-card">
+                {post.image ? (
+                  <div className="journal-preview-card__image">
+                    <Image
+                      src={post.image}
+                      alt={post.imageAlt ?? ''}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                    />
+                    <span className="journal-preview-card__badge">
+                      À paraître
+                    </span>
+                  </div>
+                ) : null}
+                <div className="journal-preview-card__body">
+                  <div className="journal-preview-card__meta">
+                    <span>{post.category}</span>
+                    <span>0{index + 1}</span>
+                  </div>
+                  <h3>{post.title}</h3>
+                  <p>{post.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="journal-rubrics section section--alt">
+        <Container>
+          <EditorialRubricsAccordion rubrics={rubrics} />
+        </Container>
+      </section>
+
+      <div className="journal-cta">
+        <CTASection
+          title="Être informé des prochaines publications"
+          text="Contactez Archeritage pour suivre les prochaines notes et regards du cabinet."
+        />
+      </div>
+    </>
+  );
+}

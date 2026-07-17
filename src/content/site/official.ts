@@ -45,7 +45,7 @@ export const pillars: Pillar[] = [
     title: "Valorisation foncière et territoriale",
     description:
       "Études de faisabilité, optimisation parcellaire, lotissements, structuration d’opérations foncières complexes et stratégies de valorisation pour collectivités et investisseurs.",
-    href: "/expertises#foncier",
+    href: "/expertises/valorisation-fonciere",
     image: "/images/pillars/pillar-valorisation-fonciere.png",
     imageAlt: "Vue aérienne d’un site foncier structuré par ses parcelles et ses accès",
     imagePosition: "center",
@@ -60,7 +60,7 @@ export const pillars: Pillar[] = [
     title: "Architecture et projets d’envergure",
     description:
       "Conception, coordination et pilotage de bâtiments publics, équipements collectifs et opérations multi-acteurs nécessitant une gouvernance de projet rigoureuse.",
-    href: "/expertises#architecture",
+    href: "/expertises/architecture-projets-envergure",
     image: "/images/pillars/pillar-architecture-envergure.jpg",
     imageAlt: "Architecture contemporaine d’un équipement de grande envergure",
     imagePosition: "center 48%",
@@ -75,7 +75,7 @@ export const pillars: Pillar[] = [
     title: "Valorisation du patrimoine",
     description:
       "Diagnostic, restauration, réhabilitation et reconversion de monuments, kasbahs, médinas et sites historiques — de la lecture patrimoniale à la mise en valeur territoriale.",
-    href: "/expertises#patrimoine",
+    href: "/expertises/valorisation-patrimoine",
     image: "/images/references/tiznit-cover.jpg",
     imageAlt: "Ensemble patrimonial de la kasbah de Tiznit et de la place Mechouar",
     imagePosition: "center",
@@ -157,6 +157,39 @@ export const journalPosts: JournalPost[] = [
 ];
 
 export const journalCategories = ["Notes de doctrine", "Regards sur le patrimoine", "Carnets de projets", "Méthode et gouvernance"];
+
+export type EditorialRubric = {
+  id: string;
+  title: string;
+  description: string;
+  plannedPublicationSlug?: string;
+};
+
+export const editorialRubrics: EditorialRubric[] = [
+  {
+    id: "notes-de-doctrine",
+    title: "Notes de doctrine",
+    description: "Les positions professionnelles d’ARCHERITAGE sur le foncier, l’architecture, le patrimoine et la conduite des projets complexes.",
+    plannedPublicationSlug: "valorisation-fonciere-diagnostic-prealable",
+  },
+  {
+    id: "regards-sur-le-patrimoine",
+    title: "Regards sur le patrimoine",
+    description: "Des lectures de lieux, de bâtiments et de territoires pour comprendre leur histoire, leurs transformations et leur potentiel.",
+    plannedPublicationSlug: "restauration-rehabilitation-reconversion",
+  },
+  {
+    id: "carnets-de-projets",
+    title: "Carnets de projets",
+    description: "Des fragments de démarche, observations de terrain et enseignements issus de situations professionnelles pouvant être partagées publiquement.",
+  },
+  {
+    id: "methode-et-gouvernance",
+    title: "Méthode et gouvernance",
+    description: "Les principes de PATRIGOV, la gouvernance documentaire et les outils qui permettent de clarifier, sécuriser et piloter un projet.",
+    plannedPublicationSlug: "tinmel-116-jours-retard",
+  },
+];
 
 export const contact = {
   title: "Parler d’un projet avec Archeritage",

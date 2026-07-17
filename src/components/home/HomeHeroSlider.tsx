@@ -6,6 +6,7 @@ import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react
 import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent } from 'react';
 import { useGSAP } from '@gsap/react';
 import { Container } from '@/components/ui/Container';
+import { StatRow } from '@/components/ui/StatRow';
 import { gsap, registerGsapPlugins } from '@/lib/gsap';
 
 const AUTOPLAY_DELAY = 5000;
@@ -18,9 +19,9 @@ const slides = [
   { src: '/images/missions/mission-coordination-plans.jpg', alt: 'Professionnels examinant des plans lors d’une coordination de projet', position: { desktop: 'center 50%', mobile: 'center 48%' } },
 ];
 
-type Props = { eyebrow: string; title: string; introduction: string; supporting: string };
+type Props = { eyebrow: string; title: string; introduction: string; stats: { value: string; label: string }[]; note: string };
 
-export function HomeHeroSlider({ eyebrow, title, introduction, supporting }: Props) {
+export function HomeHeroSlider({ eyebrow, title, introduction, stats, note }: Props) {
   const [active, setActive] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
@@ -100,29 +101,32 @@ export function HomeHeroSlider({ eyebrow, title, introduction, supporting }: Pro
         <div className="home-hero__content">
           <p className="eyebrow">{eyebrow}</p>
           <h1>{title}</h1>
-          <div className="home-hero__bottom">
-            <div><p className="home-hero__intro">{introduction}</p><p className="home-hero__support">{supporting}</p></div>
-            <div className="home-hero__actions">
-              <Link className="button button--primary" href="/contact">Discuter d’un projet <ArrowRight aria-hidden="true" /></Link>
-              <Link className="button button--ghost" href="/expertises">Découvrir nos expertises</Link>
-            </div>
+          <p className="home-hero__intro">{introduction}</p>
+          <div className="home-hero__actions">
+            <Link className="button button--primary" href="/contact">Discuter d’un projet <ArrowRight aria-hidden="true" /></Link>
+            <Link className="button button--ghost" href="/expertises">Découvrir nos expertises</Link>
           </div>
         </div>
-        <div className="hero-controls" role="group" aria-label="Contrôles du diaporama" onKeyDown={handleControlKeys}>
-          <div className="hero-counter" aria-label={`Image ${active + 1} sur ${slides.length}`}>
-            <span>{String(active + 1).padStart(2, '0')}</span><span aria-hidden="true">/</span><span>{String(slides.length).padStart(2, '0')}</span>
+        <div className="home-hero__meta">
+          <div className="hero-controls" role="group" aria-label="Contrôles du diaporama" onKeyDown={handleControlKeys}>
+            <div className="hero-counter" aria-label={`Image ${active + 1} sur ${slides.length}`}>
+              <span>{String(active + 1).padStart(2, '0')}</span><span aria-hidden="true">/</span><span>{String(slides.length).padStart(2, '0')}</span>
+            </div>
+            <div className="hero-progress" aria-hidden="true">
+              {slides.map((slide, index) => <span key={slide.src} className={index === active ? 'is-active' : ''}><i key={`${active}-${timerVersion}-${autoplayEnabled}`} className={index === active && autoplayEnabled ? 'is-running' : ''} /></span>)}
+            </div>
+            <div className="hero-controls__buttons">
+              <button type="button" onClick={() => navigate(active - 1)} aria-label="Image précédente"><ChevronLeft aria-hidden="true" /></button>
+              <button type="button" onClick={() => navigate(active + 1)} aria-label="Image suivante"><ChevronRight aria-hidden="true" /></button>
+              {!reducedMotion ? (
+                <button type="button" onClick={() => setIsPlaying((value) => !value)} aria-label={isPlaying ? 'Mettre le diaporama en pause' : 'Reprendre le diaporama'} aria-pressed={!isPlaying}>
+                  {isPlaying ? <Pause aria-hidden="true" /> : <Play aria-hidden="true" />}
+                </button>
+              ) : null}
+            </div>
           </div>
-          <div className="hero-progress" aria-hidden="true">
-            {slides.map((slide, index) => <span key={slide.src} className={index === active ? 'is-active' : ''}><i key={`${active}-${timerVersion}-${autoplayEnabled}`} className={index === active && autoplayEnabled ? 'is-running' : ''} /></span>)}
-          </div>
-          <div className="hero-controls__buttons">
-            <button type="button" onClick={() => navigate(active - 1)} aria-label="Image précédente"><ChevronLeft aria-hidden="true" /></button>
-            <button type="button" onClick={() => navigate(active + 1)} aria-label="Image suivante"><ChevronRight aria-hidden="true" /></button>
-            {!reducedMotion ? (
-              <button type="button" onClick={() => setIsPlaying((value) => !value)} aria-label={isPlaying ? 'Mettre le diaporama en pause' : 'Reprendre le diaporama'} aria-pressed={!isPlaying}>
-                {isPlaying ? <Pause aria-hidden="true" /> : <Play aria-hidden="true" />}
-              </button>
-            ) : null}
+          <div className="home-hero__proof">
+            <StatRow stats={stats} note={note} variant="floating" />
           </div>
         </div>
       </Container>

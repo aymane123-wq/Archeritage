@@ -10,6 +10,7 @@ import { Menu, X } from 'lucide-react';
 import { siteRoutes as navigation } from '@/content/site/navigation';
 import { ContactPhoneIcon } from '@/components/ui/ContactPhoneIcon';
 import { gsap, registerGsapPlugins } from '@/lib/gsap';
+import { motionTokens } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 
 type MobileMenuProps = {
@@ -132,7 +133,18 @@ export function MobileMenu({ open, onOpenChange }: MobileMenuProps) {
         return;
       }
 
-      gsap.fromTo(panelRef.current, { xPercent: 100, opacity: 0 }, { xPercent: 0, opacity: 1, duration: 0.55, ease: 'power3.out' });
+      const links = panelRef.current.querySelectorAll('nav a');
+      const cta = panelRef.current.querySelector('.button');
+      const timeline = gsap.timeline({ defaults: { ease: motionTokens.ease.major } });
+      timeline.fromTo(panelRef.current, { xPercent: 100, opacity: 0 }, { xPercent: 0, opacity: 1, duration: 0.4 });
+      if (links.length) {
+        gsap.set(links, { autoAlpha: 0, y: 14 });
+        timeline.to(links, { autoAlpha: 1, y: 0, duration: 0.32, stagger: 0.04 }, 0.1);
+      }
+      if (cta) {
+        gsap.set(cta, { autoAlpha: 0, y: 10 });
+        timeline.to(cta, { autoAlpha: 1, y: 0, duration: motionTokens.duration.ui }, '-=0.08');
+      }
     },
     { dependencies: [open] },
   );
@@ -159,7 +171,7 @@ export function MobileMenu({ open, onOpenChange }: MobileMenuProps) {
           aria-modal="true"
           aria-label="Navigation principale"
           tabIndex={-1}
-          className="fixed inset-0 z-50 overflow-y-auto overscroll-contain bg-[rgba(10,10,9,0.98)] px-5 py-6 text-white opacity-0"
+          className="fixed inset-0 z-[70] overflow-y-auto overscroll-contain bg-[rgba(10,10,9,0.98)] px-5 py-6 text-white opacity-0"
         >
           <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[var(--border)] bg-[rgba(10,10,9,0.98)] pb-4">
             <Link href="/" aria-label="Retour à l’accueil" className="text-base font-semibold tracking-[0.32em] text-white" onClick={() => onOpenChange(false)}>

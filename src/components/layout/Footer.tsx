@@ -12,6 +12,7 @@ export function Footer() {
       <footer className="site-footer">
         <Container>
           <div className="site-footer__wordmark">ARCHERITAGE</div>
+          <span className="site-footer__rule" aria-hidden="true" />
           <div className="site-footer__grid">
             <div>
               <p className="eyebrow">Cabinet d’architecture</p>

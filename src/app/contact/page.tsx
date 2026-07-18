@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ArcheritageIcon } from '@/components/icons/ArcheritageIcon';
+import { EditorialMotion } from '@/components/motion/EditorialMotion';
 import { ContactForm } from '@/components/site/ContactForm';
 import { Container } from '@/components/ui/Container';
 import { PageHero } from '@/components/ui/PageHero';
@@ -23,7 +24,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
   const jsonLd = getProfessionalServiceJsonLd();
 
   return (
-    <>
+    <EditorialMotion>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Contact"
@@ -31,9 +32,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         introduction={contact.promise}
         supporting={contact.introduction}
       />
-      <section className="section section--ivory">
+      <section className="section section--ivory" data-motion="section">
         <Container className="contact-layout">
-          <div className="contact-guidance">
+          <div className="contact-guidance" data-motion-item>
             <div className="contact-details contact-details--primary">
               <p className="eyebrow">Contact direct</p>
               <h2>Coordonnées</h2>
@@ -56,6 +57,6 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           </div>
         </Container>
       </section>
-    </>
+    </EditorialMotion>
   );
 }

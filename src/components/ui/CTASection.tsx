@@ -16,10 +16,17 @@ export function CTASection({
   href = '/contact',
 }: CTASectionProps) {
   return (
-    <section className="cta-section">
+    <section className="cta-section" data-motion="section">
       <Container className="cta-section__inner">
-        <div><p className="eyebrow">Premier échange</p><h2>{title}</h2><p>{text}</p></div>
-        <Link href={href} className="button button--primary">{label}<ArrowUpRight aria-hidden="true" /></Link>
+        <div>
+          <p className="eyebrow" data-motion-eyebrow>Premier échange</p>
+          <h2 data-motion-heading>{title}</h2>
+          <p data-motion-copy>{text}</p>
+        </div>
+        <Link href={href} className="button button--primary" data-motion-item>
+          {label}
+          <ArrowUpRight aria-hidden="true" />
+        </Link>
       </Container>
     </section>
   );

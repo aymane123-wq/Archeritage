@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import { EditorialMotion } from '@/components/motion/EditorialMotion';
 import { Container } from '@/components/ui/Container';
 import { CTASection } from '@/components/ui/CTASection';
 import { PageHero } from '@/components/ui/PageHero';
@@ -16,14 +17,14 @@ export const metadata: Metadata = {
 
 export default function ExpertisesPage() {
   return (
-    <>
+    <EditorialMotion>
       <PageHero
         eyebrow="Expertises"
         title={expertises.title}
         introduction={expertises.introduction}
         supporting={expertises.supporting}
       />
-      <section className="section section--ivory">
+      <section className="section section--ivory" data-motion="section">
         <Container>
           <div className="pillar-grid pillar-grid--expertises">
             {pillars.map((pillar, index) => (
@@ -32,17 +33,19 @@ export default function ExpertisesPage() {
           </div>
         </Container>
       </section>
-      <section className="section section--alt">
+      <section className="section section--alt" data-motion="section">
         <Container>
-          <ProofBox eyebrow="Signature transversale" title="Gouvernance documentaire">
-            <p>{expertises.governance}</p>
-            <Link href="/methode" className="text-link">
-              Découvrir PATRIGOV <ArrowUpRight aria-hidden="true" />
-            </Link>
-          </ProofBox>
+          <div data-motion-item>
+            <ProofBox eyebrow="Signature transversale" title="Gouvernance documentaire">
+              <p>{expertises.governance}</p>
+              <Link href="/methode" className="text-link">
+                Découvrir PATRIGOV <ArrowUpRight aria-hidden="true" />
+              </Link>
+            </ProofBox>
+          </div>
         </Container>
       </section>
       <CTASection text="Une expertise à mobiliser sur votre projet ?" label="CONTACTEZ-NOUS" />
-    </>
+    </EditorialMotion>
   );
 }

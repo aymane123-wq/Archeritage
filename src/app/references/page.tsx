@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { EditorialMotion } from '@/components/motion/EditorialMotion';
 import { Container } from '@/components/ui/Container';
 import { CTASection } from '@/components/ui/CTASection';
 import { PageHero } from '@/components/ui/PageHero';
@@ -14,14 +15,14 @@ export const metadata: Metadata = {
 
 export default function ReferencesPage() {
   return (
-    <>
+    <EditorialMotion>
       <PageHero
         eyebrow="Références"
         title={referencesIntro.title}
         introduction={referencesIntro.introduction}
         supporting={referencesIntro.attribution}
       />
-      <section className="section section--ivory">
+      <section className="section section--ivory" data-motion="section">
         <Container>
           <div className="references-grid references-grid--overview">
             {referenceRecords.map((reference, index) => (
@@ -36,6 +37,6 @@ export default function ReferencesPage() {
         </Container>
       </section>
       <CTASection text="Discuter d’une référence ou d’un projet comparable." label="CONTACTEZ-NOUS" />
-    </>
+    </EditorialMotion>
   );
 }

@@ -8,6 +8,7 @@ import { useGSAP } from '@gsap/react';
 import { Container } from '@/components/ui/Container';
 import { StatRow } from '@/components/ui/StatRow';
 import { gsap, registerGsapPlugins } from '@/lib/gsap';
+import { fadeRise, motionTokens, revealLineMask } from '@/lib/motion';
 
 const AUTOPLAY_DELAY = 5000;
 
@@ -27,13 +28,12 @@ export function HomeHeroSlider({ eyebrow, title, introduction, stats, note }: Pr
   const [isVisible, setIsVisible] = useState(true);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [timerVersion, setTimerVersion] = useState(0);
-  // Prioritize only the LCP slide; warm the next slide after first paint.
   const [mountedSlides, setMountedSlides] = useState(() => new Set([0]));
   const hasAdvanced = useRef(false);
+  const entranceDone = useRef(false);
   const root = useRef<HTMLElement>(null);
 
   const autoplayEnabled = isPlaying && isVisible && !reducedMotion;
-
   const mountedList = useMemo(() => [...mountedSlides].sort((a, b) => a - b), [mountedSlides]);
 
   useEffect(() => {
@@ -83,17 +83,100 @@ export function HomeHeroSlider({ eyebrow, title, introduction, stats, note }: Pr
     return () => window.clearTimeout(timer);
   }, [active, autoplayEnabled, timerVersion]);
 
+  // Initial entrance — runs once; never hides the LCP image.
+  useGSAP(() => {
+    registerGsapPlugins();
+    if (!root.current || entranceDone.current) return;
+
+    const eyebrowEl = root.current.querySelector<HTMLElement>('[data-hero-eyebrow]');
+    const titleEl = root.current.querySelector<HTMLElement>('[data-hero-title]');
+    const introEl = root.current.querySelector<HTMLElement>('[data-hero-intro]');
+    const actionsEl = root.current.querySelector<HTMLElement>('[data-hero-actions]');
+    const controlsEl = root.current.querySelector<HTMLElement>('[data-hero-controls]');
+    const proofEl = root.current.querySelector<HTMLElement>('[data-hero-proof]');
+
+    if (reducedMotion) {
+      gsap.set([eyebrowEl, titleEl, introEl, actionsEl, controlsEl, proofEl].filter(Boolean), {
+        clearProps: 'all',
+        autoAlpha: 1,
+        y: 0,
+        x: 0,
+      });
+      entranceDone.current = true;
+      return;
+    }
+
+    const timeline = gsap.timeline({ defaults: { ease: motionTokens.ease.major } });
+    if (eyebrowEl) {
+      gsap.set(eyebrowEl, { autoAlpha: 0, x: -14 });
+      timeline.to(eyebrowEl, { autoAlpha: 1, x: 0, duration: motionTokens.duration.ui }, 0.08);
+    }
+    if (titleEl) {
+      const tween = revealLineMask(gsap, titleEl, { duration: motionTokens.duration.hero, stagger: 0.08 });
+      if (tween) timeline.add(tween, 0.16);
+    }
+    if (introEl) {
+      timeline.add(fadeRise(gsap, introEl, { duration: 0.7, y: 18 })!, '-=0.5');
+    }
+    if (actionsEl) {
+      const buttons = actionsEl.querySelectorAll('a');
+      timeline.add(fadeRise(gsap, buttons, { duration: 0.55, stagger: 0.08, y: 14 })!, '-=0.35');
+    }
+    if (controlsEl) {
+      timeline.add(fadeRise(gsap, controlsEl, { duration: 0.5, y: 12 })!, '-=0.25');
+    }
+    if (proofEl) {
+      const items = proofEl.querySelectorAll('.stat-row__item, .stat-row__note');
+      gsap.set(proofEl, { autoAlpha: 0, y: 20 });
+      timeline.to(proofEl, { autoAlpha: 1, y: 0, duration: 0.65, ease: motionTokens.ease.reveal }, '-=0.15');
+      if (items.length) {
+        gsap.set(items, { autoAlpha: 0, y: 12 });
+        timeline.to(items, {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: motionTokens.stagger.tight,
+          ease: motionTokens.ease.reveal,
+        }, '-=0.35');
+      }
+    }
+
+    entranceDone.current = true;
+  }, { scope: root, dependencies: [reducedMotion] });
+
+  // Slide crossfade only — content stays fixed.
   useGSAP(() => {
     registerGsapPlugins();
     if (!root.current) return;
     const items = root.current.querySelectorAll('[data-slide]');
-    items.forEach((item, index) => gsap.to(item, {
-      autoAlpha: index === active ? 1 : 0,
-      scale: reducedMotion || index !== active ? 1 : 1.025,
-      duration: reducedMotion ? 0 : 1.1,
-      ease: 'power2.inOut',
-      overwrite: true,
-    }));
+    items.forEach((item, index) => {
+      const isActive = index === active;
+      if (reducedMotion) {
+        gsap.set(item, { autoAlpha: isActive ? 1 : 0, scale: 1 });
+        return;
+      }
+      if (isActive) {
+        gsap.fromTo(
+          item,
+          { autoAlpha: 1, scale: motionTokens.slideScale },
+          {
+            autoAlpha: 1,
+            scale: 1,
+            duration: 1.1,
+            ease: motionTokens.ease.reveal,
+            overwrite: 'auto',
+          },
+        );
+      } else {
+        gsap.to(item, {
+          autoAlpha: 0,
+          scale: 1.01,
+          duration: 0.95,
+          ease: motionTokens.ease.crossfade,
+          overwrite: 'auto',
+        });
+      }
+    });
   }, { scope: root, dependencies: [active, reducedMotion, mountedList] });
 
   const navigate = (index: number) => {
@@ -141,21 +224,25 @@ export function HomeHeroSlider({ eyebrow, title, introduction, stats, note }: Pr
       <div className="home-hero__shade" />
       <Container className="home-hero__inner">
         <div className="home-hero__content">
-          <p className="eyebrow">{eyebrow}</p>
-          <h1>{title}</h1>
-          <p className="home-hero__intro">{introduction}</p>
-          <div className="home-hero__actions">
+          <p className="eyebrow" data-hero-eyebrow>{eyebrow}</p>
+          <h1 data-hero-title>{title}</h1>
+          <p className="home-hero__intro" data-hero-intro>{introduction}</p>
+          <div className="home-hero__actions" data-hero-actions>
             <Link className="button button--primary" href="/contact">Discuter d’un projet <ArrowRight aria-hidden="true" /></Link>
             <Link className="button button--ghost" href="/expertises">Découvrir nos expertises</Link>
           </div>
         </div>
         <div className="home-hero__meta">
-          <div className="hero-controls" role="group" aria-label="Contrôles du diaporama" onKeyDown={handleControlKeys}>
+          <div className="hero-controls" data-hero-controls role="group" aria-label="Contrôles du diaporama" onKeyDown={handleControlKeys}>
             <div className="hero-counter" aria-label={`Image ${active + 1} sur ${slides.length}`}>
               <span>{String(active + 1).padStart(2, '0')}</span><span aria-hidden="true">/</span><span>{String(slides.length).padStart(2, '0')}</span>
             </div>
             <div className="hero-progress" aria-hidden="true">
-              {slides.map((slide, index) => <span key={slide.src} className={index === active ? 'is-active' : ''}><i key={`${active}-${timerVersion}-${autoplayEnabled}`} className={index === active && autoplayEnabled ? 'is-running' : ''} /></span>)}
+              {slides.map((slide, index) => (
+                <span key={slide.src} className={index === active ? 'is-active' : ''}>
+                  <i key={`${active}-${timerVersion}-${autoplayEnabled}`} className={index === active && autoplayEnabled ? 'is-running' : ''} />
+                </span>
+              ))}
             </div>
             <div className="hero-controls__buttons">
               <button type="button" onClick={() => navigate(active - 1)} aria-label="Image précédente"><ChevronLeft aria-hidden="true" /></button>
@@ -167,7 +254,7 @@ export function HomeHeroSlider({ eyebrow, title, introduction, stats, note }: Pr
               ) : null}
             </div>
           </div>
-          <div className="home-hero__proof">
+          <div className="home-hero__proof" data-hero-proof>
             <StatRow stats={stats} note={note} variant="floating" />
           </div>
         </div>

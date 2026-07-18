@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { EditorialMotion } from '@/components/motion/EditorialMotion';
 import { Container } from '@/components/ui/Container';
 import { CTASection } from '@/components/ui/CTASection';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -21,26 +22,26 @@ export default async function JournalPage() {
   }));
 
   return (
-    <>
-      <header className="journal-hero">
+    <EditorialMotion>
+      <header className="journal-hero" data-motion="hero">
         <Container className="journal-hero__inner">
           <div>
-            <p className="eyebrow">Journal</p>
-            <h1>Journal Archeritage</h1>
+            <p className="eyebrow" data-motion-eyebrow>Journal</p>
+            <h1 data-motion-heading>Journal Archeritage</h1>
           </div>
           <div className="journal-hero__copy">
-            <p className="journal-hero__introduction">
+            <p className="journal-hero__introduction" data-motion-copy>
               Pensées, notes et regards sur l&apos;architecture, le patrimoine
               et les projets complexes.
             </p>
-            <p className="journal-hero__line">
+            <p className="journal-hero__line" data-motion-copy>
               Ligne éditoriale&nbsp;: publier peu, mais publier juste.
             </p>
           </div>
         </Container>
       </header>
 
-      <section className="journal-publications section section--ivory">
+      <section className="journal-publications section section--ivory" data-motion="section">
         <Container>
           <SectionHeading
             eyebrow="À paraître"
@@ -48,9 +49,9 @@ export default async function JournalPage() {
           />
           <div className="journal-preview-grid">
             {journalPosts.map((post, index) => (
-              <article key={post.slug} className="journal-preview-card">
+              <article key={post.slug} className="journal-preview-card" data-motion-item>
                 {post.image ? (
-                  <div className="journal-preview-card__image">
+                  <div className="journal-preview-card__image" data-motion-media data-motion-dir={index % 2 ? 'left' : 'right'}>
                     <Image
                       src={post.image}
                       alt={post.imageAlt ?? ''}
@@ -76,9 +77,11 @@ export default async function JournalPage() {
         </Container>
       </section>
 
-      <section className="journal-rubrics section section--alt">
+      <section className="journal-rubrics section section--alt" data-motion="section">
         <Container>
-          <EditorialRubricsAccordion rubrics={rubrics} />
+          <div data-motion-item>
+            <EditorialRubricsAccordion rubrics={rubrics} />
+          </div>
         </Container>
       </section>
 
@@ -89,6 +92,6 @@ export default async function JournalPage() {
           label="CONTACTEZ-NOUS"
         />
       </div>
-    </>
+    </EditorialMotion>
   );
 }

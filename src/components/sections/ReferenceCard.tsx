@@ -18,10 +18,10 @@ export function ReferenceCard({ reference, href, index, variant = 'index' }: Ref
     : '(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw';
 
   return (
-    <Link className={`reference-card-link reference-card-link--${variant}`} href={href} aria-label={`Découvrir la référence ${reference.title}`}>
+    <Link className={`reference-card-link reference-card-link--${variant}`} href={href} aria-label={`Découvrir la référence ${reference.title}`} data-motion-item>
       <article className={`reference-card reference-card--${variant}${reference.image ? '' : ' reference-card--no-image'}`}>
         {reference.image ? (
-          <div className="reference-card__media">
+          <div className="reference-card__media" data-motion-media data-motion-dir={index % 2 === 0 ? 'right' : 'left'}>
             <Image src={reference.image} alt={reference.imageAlt ?? reference.title} fill sizes={imageSizes} />
           </div>
         ) : (

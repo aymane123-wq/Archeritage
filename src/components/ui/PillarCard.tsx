@@ -15,8 +15,13 @@ export function PillarCard({ pillar, index, detailed = false, headingLevel = 'h3
   const Heading = headingLevel;
 
   return (
-    <article className={`pillar-card${detailed ? ' pillar-card--detailed' : ''}`}>
-      <div className="pillar-card__media" style={{ '--pillar-image-position': pillar.imagePosition ?? 'center' } as CSSProperties}>
+    <article className={`pillar-card${detailed ? ' pillar-card--detailed' : ''}`} data-motion-item>
+      <div
+        className="pillar-card__media"
+        data-motion-media
+        data-motion-dir={index % 2 === 0 ? 'right' : 'left'}
+        style={{ '--pillar-image-position': pillar.imagePosition ?? 'center' } as CSSProperties}
+      >
         <Image src={pillar.image} alt={pillar.imageAlt ?? ''} fill sizes="(max-width: 1023px) 100vw, 33vw" />
         <span aria-hidden="true">0{index + 1}</span>
       </div>

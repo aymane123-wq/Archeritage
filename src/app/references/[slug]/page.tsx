@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
+import { EditorialMotion } from '@/components/motion/EditorialMotion';
 import { CTASection } from '@/components/ui/CTASection';
 import { Container } from '@/components/ui/Container';
 import { getReferenceBySlug, getReferenceNavigation, referenceRecords } from '@/content/site/references';
@@ -42,8 +43,8 @@ export default async function ReferenceDetailPage({ params }: ReferencePageProps
   const navigation = getReferenceNavigation(reference.slug);
 
   return (
-    <div className="reference-detail">
-      <header className="reference-detail__hero">
+    <EditorialMotion className="reference-detail">
+      <header className="reference-detail__hero" data-motion="hero">
         <Container>
           <nav aria-label="Fil d’Ariane" className="reference-detail__breadcrumb">
             <Link href="/references">Références</Link>
@@ -52,17 +53,19 @@ export default async function ReferenceDetailPage({ params }: ReferencePageProps
           </nav>
           <div className="reference-detail__hero-grid">
             <div className="reference-detail__hero-copy">
-              <p className="eyebrow">Référence</p>
-              <h1>{reference.title}</h1>
-              <p className="reference-detail__hero-meta">{[reference.institution, reference.location].filter(Boolean).join(' · ')}</p>
-              <p className="reference-detail__hero-attribution">{reference.attribution}</p>
+              <p className="eyebrow" data-motion-eyebrow>Référence</p>
+              <h1 data-motion-heading>{reference.title}</h1>
+              <p className="reference-detail__hero-meta" data-motion-copy>
+                {[reference.institution, reference.location].filter(Boolean).join(' · ')}
+              </p>
+              <p className="reference-detail__hero-attribution" data-motion-copy>{reference.attribution}</p>
             </div>
             {reference.image ? (
-              <div className="reference-detail__hero-media">
+              <div className="reference-detail__hero-media" data-motion-media data-motion-dir="right">
                 <Image src={reference.image} alt={reference.imageAlt ?? reference.title} fill priority sizes="(max-width: 1023px) 100vw, 58vw" />
               </div>
             ) : (
-              <div className="reference-detail__hero-no-image" aria-hidden="true">
+              <div className="reference-detail__hero-no-image" aria-hidden="true" data-motion-copy>
                 <span className="reference-detail__hero-no-image-label">ARCHERITAGE</span>
                 <span className="reference-detail__hero-no-image-title">{reference.title}</span>
               </div>
@@ -71,21 +74,21 @@ export default async function ReferenceDetailPage({ params }: ReferencePageProps
         </Container>
       </header>
 
-      <section className="section section--ivory reference-detail__sections">
+      <section className="section section--ivory reference-detail__sections" data-motion="section">
         <Container>
-          <div className="reference-detail__intro">
+          <div className="reference-detail__intro" data-motion-copy>
             <p>{reference.summary}</p>
           </div>
           <div className="reference-detail__content">
             {reference.sections.map((section) => (
-              <section key={section.title} className="reference-detail__section">
+              <section key={section.title} className="reference-detail__section" data-motion-item>
                 <h2 className="eyebrow eyebrow-heading">{section.title}</h2>
                 <p>{section.text}</p>
               </section>
             ))}
           </div>
           {navigation ? (
-            <nav aria-label="Navigation entre les références" className="reference-detail__nav">
+            <nav aria-label="Navigation entre les références" className="reference-detail__nav" data-motion-item>
               <Link href={`/references/${navigation.previous.slug}`} className="reference-detail__nav-link">
                 <ArrowLeft aria-hidden="true" />
                 <span>
@@ -107,6 +110,6 @@ export default async function ReferenceDetailPage({ params }: ReferencePageProps
       </section>
 
       <CTASection text="Vous portez un projet comparable ?" label="CONTACTEZ-NOUS" />
-    </div>
+    </EditorialMotion>
   );
 }

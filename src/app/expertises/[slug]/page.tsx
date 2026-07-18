@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 
+import { EditorialMotion } from '@/components/motion/EditorialMotion';
 import { Container } from '@/components/ui/Container';
 import { getExpertiseBySlug, getExpertiseNavigation, expertiseSlugs } from '@/content/site/expertises';
 
@@ -48,9 +49,8 @@ export default async function ExpertiseDetailPage({ params }: ExpertisePageProps
   const navigation = getExpertiseNavigation(expertise.slug);
 
   return (
-    <div className="expertise-detail">
-      {/* 1. Compact editorial hero */}
-      <header className="expertise-detail__hero">
+    <EditorialMotion className="expertise-detail">
+      <header className="expertise-detail__hero" data-motion="hero">
         <Container>
           <nav aria-label="Fil d'Ariane" className="expertise-detail__breadcrumb">
             <Link href="/expertises">Expertises</Link>
@@ -59,15 +59,15 @@ export default async function ExpertiseDetailPage({ params }: ExpertisePageProps
           </nav>
           <div className="expertise-detail__hero-grid">
             <div className="expertise-detail__hero-copy">
-              <p className="eyebrow">{expertise.eyebrow}</p>
-              <h1>{expertise.title}</h1>
-              <p className="expertise-detail__hero-intro">{expertise.introduction}</p>
-              <Link href={expertise.contactCtaHref} className="button button--primary expertise-detail__hero-cta">
+              <p className="eyebrow" data-motion-eyebrow>{expertise.eyebrow}</p>
+              <h1 data-motion-heading>{expertise.title}</h1>
+              <p className="expertise-detail__hero-intro" data-motion-copy>{expertise.introduction}</p>
+              <Link href={expertise.contactCtaHref} className="button button--primary expertise-detail__hero-cta" data-motion-copy>
                 {expertise.contactCtaLabel}
                 <ArrowUpRight aria-hidden="true" />
               </Link>
             </div>
-            <div className="expertise-detail__hero-media">
+            <div className="expertise-detail__hero-media" data-motion-media data-motion-dir="right">
               <Image
                 src={expertise.image}
                 alt={expertise.imageAlt}
@@ -80,14 +80,13 @@ export default async function ExpertiseDetailPage({ params }: ExpertisePageProps
         </Container>
       </header>
 
-      {/* 2. Compact competencies */}
-      <section className="section section--compact section--ivory">
+      <section className="section section--compact section--ivory" data-motion="section">
         <Container>
           <div className="expertise-detail__competencies">
-            <h2 className="eyebrow eyebrow-heading">Nos champs d&apos;intervention</h2>
+            <h2 className="eyebrow eyebrow-heading" data-motion-eyebrow>Nos champs d&apos;intervention</h2>
             <ol className="expertise-detail__competency-grid">
               {expertise.competencies.map((competency, i) => (
-                <li key={competency}>
+                <li key={competency} data-motion-item>
                   <span className="expertise-detail__competency-num">{String(i + 1).padStart(2, '0')}</span>
                   <span className="expertise-detail__competency-label">{competency}</span>
                 </li>
@@ -97,10 +96,9 @@ export default async function ExpertiseDetailPage({ params }: ExpertisePageProps
         </Container>
       </section>
 
-      {/* 3. Merged audience / needs / formats */}
-      <section className="section section--compact section--alt">
+      <section className="section section--compact section--alt" data-motion="section">
         <Container>
-          <div className="expertise-detail__fits">
+          <div className="expertise-detail__fits" data-motion-item>
             <h2 className="eyebrow eyebrow-heading">Cette expertise est adaptée à votre projet si…</h2>
             <div className="expertise-detail__fits-grid">
               <div className="expertise-detail__fits-col">
@@ -135,16 +133,15 @@ export default async function ExpertiseDetailPage({ params }: ExpertisePageProps
         </Container>
       </section>
 
-      {/* 4. Compact PATRIGOV band */}
-      <section className="section section--compact section--ivory">
+      <section className="section section--compact section--ivory" data-motion="section">
         <Container>
-          <div className="expertise-detail__patrigov">
+          <div className="expertise-detail__patrigov" data-motion-item>
             <div className="expertise-detail__patrigov-left">
               <p className="eyebrow">Signature transversale</p>
-              <h2>Gouvernance documentaire — PATRIGOV</h2>
+              <h2 data-motion-heading>Gouvernance documentaire — PATRIGOV</h2>
             </div>
             <div className="expertise-detail__patrigov-right">
-              <p>{expertise.patrigovConnection}</p>
+              <p data-motion-copy>{expertise.patrigovConnection}</p>
               <Link href="/methode" className="text-link">
                 Découvrir la méthode <ArrowUpRight aria-hidden="true" />
               </Link>
@@ -153,12 +150,11 @@ export default async function ExpertiseDetailPage({ params }: ExpertisePageProps
         </Container>
       </section>
 
-      {/* 5. Final CTA + expertise navigation */}
-      <section className="section section--compact section--alt">
+      <section className="section section--compact section--alt" data-motion="section">
         <Container>
           <div className="expertise-detail__footer">
             {navigation ? (
-              <nav aria-label="Navigation entre les expertises" className="expertise-detail__explore">
+              <nav aria-label="Navigation entre les expertises" className="expertise-detail__explore" data-motion-item>
                 <p className="eyebrow">Explorer aussi</p>
                 <div className="expertise-detail__explore-links">
                   <Link href={`/expertises/${navigation.previous.slug}`} className="expertise-detail__explore-link">
@@ -181,7 +177,7 @@ export default async function ExpertiseDetailPage({ params }: ExpertisePageProps
                 </div>
               </nav>
             ) : null}
-            <div className="expertise-detail__final-cta">
+            <div className="expertise-detail__final-cta" data-motion-item>
               <h2>{expertise.contactCtaLabel}</h2>
               <p>Un premier échange, sous 48 heures.</p>
               <Link href={expertise.contactCtaHref} className="button button--primary">
@@ -192,6 +188,6 @@ export default async function ExpertiseDetailPage({ params }: ExpertisePageProps
           </div>
         </Container>
       </section>
-    </div>
+    </EditorialMotion>
   );
 }

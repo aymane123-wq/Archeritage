@@ -16,7 +16,7 @@ export function ClientSegmentation() {
         />
         <div className="client-segment-grid">
           {clientSegments.map((segment, index) => (
-            <article className="client-segment-card" key={segment.title}>
+            <article className="client-segment-card" key={segment.title} data-motion-item>
               <div className="client-segment-card__meta">
                 <span className="client-segment-card__icon-frame" aria-hidden="true">
                   <ArcheritageIcon name={clientProfileIcons[index]} variant="card" tone="accent" />

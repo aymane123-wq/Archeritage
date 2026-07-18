@@ -5,6 +5,7 @@ import {
   contactSchema,
   hasAllowedContactAttachmentSignature,
   isAllowedContactAttachment,
+  sanitizeContactAttachmentFilename,
 } from '@/lib/validation';
 
 const attempts = new Map<string, { count: number; resetAt: number }>();
@@ -55,7 +56,9 @@ export async function POST(request: Request) {
   if (!parsed.success) {
     return NextResponse.json({ message: 'Vérifiez les informations du formulaire.' }, { status: 400 });
   }
-  if (parsed.data.website) return NextResponse.json({ message: 'Demande reçue.' });
+  if (parsed.data.website) {
+    return NextResponse.json({ message: 'Votre demande a bien été transmise. Un premier échange, sous 48 heures.' });
+  }
 
   const attachmentFiles = form
     .getAll('attachment')
@@ -104,7 +107,7 @@ export async function POST(request: Request) {
     .map(([label, value]) => `<p><strong>${escapeHtml(label)} :</strong> ${escapeHtml(value || '—')}</p>`)
     .join('');
   const attachments = attachment
-    ? [{ filename: attachment.name, content: Buffer.from(await attachment.arrayBuffer()).toString('base64') }]
+    ? [{ filename: sanitizeContactAttachmentFilename(attachment.name), content: Buffer.from(await attachment.arrayBuffer()).toString('base64') }]
     : undefined;
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), RESEND_TIMEOUT_MS);

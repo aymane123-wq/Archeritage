@@ -59,7 +59,7 @@ export default async function ReferenceDetailPage({ params }: ReferencePageProps
             </div>
             {reference.image ? (
               <div className="reference-detail__hero-media">
-                <Image src={reference.image} alt={reference.imageAlt ?? reference.title} fill priority sizes="(min-width: 1024px) 58vw, 100vw" />
+                <Image src={reference.image} alt={reference.imageAlt ?? reference.title} fill priority sizes="(max-width: 1023px) 100vw, 58vw" />
               </div>
             ) : (
               <div className="reference-detail__hero-no-image" aria-hidden="true">

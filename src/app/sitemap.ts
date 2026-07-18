@@ -7,7 +7,9 @@ import { getPublishedJournalPosts } from '@/lib/journal';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getPublishedJournalPosts();
-  const staticRoutes = [{ href: '/' }, ...siteRoutes];
+  const staticRoutes = Array.from(
+    new Map([{ href: '/' }, ...siteRoutes].map((route) => [route.href, route])).values(),
+  );
 
   const expertiseRoutes = expertiseSlugs.map((slug) => ({
     href: `/expertises/${slug}`,

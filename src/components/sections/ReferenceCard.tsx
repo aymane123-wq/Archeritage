@@ -14,8 +14,8 @@ type ReferenceCardProps = {
 export function ReferenceCard({ reference, href, index, variant = 'index' }: ReferenceCardProps) {
   const Heading = variant === 'index' ? 'h2' : 'h3';
   const imageSizes = variant === 'index'
-    ? '(min-width: 768px) 50vw, 100vw'
-    : '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw';
+    ? '(max-width: 767px) 100vw, 50vw'
+    : '(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw';
 
   return (
     <Link className={`reference-card-link reference-card-link--${variant}`} href={href} aria-label={`Découvrir la référence ${reference.title}`}>

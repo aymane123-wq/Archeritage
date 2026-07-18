@@ -12,7 +12,7 @@ import { homepageReferences } from '@/content/site/references';
 import { getProfessionalServiceJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: home.hero.title,
+  title: { absolute: 'ARCHERITAGE — Cabinet d’architecture' },
   description: home.hero.introduction,
   alternates: { canonical: '/' },
 };
@@ -25,14 +25,14 @@ export default function HomePage() {
       <HomeHeroSlider {...home.hero} stats={home.stats} note={founderAttribution} />
       <section className="section section--alt home-pillars-section">
         <Container>
-          <SectionHeading eyebrow="Nos trois piliers" title={home.pillarsTitle} text="Du foncier brut au monument classé, une même culture de la maîtrise relie nos interventions." />
+          <SectionHeading eyebrow="Nos trois piliers" title={home.pillarsTitle} text={home.pillarsIntro} />
           <div className="pillar-grid">{pillars.map((pillar, index) => <PillarCard key={pillar.title} pillar={pillar} index={index} />)}</div>
         </Container>
       </section>
       <ClientSegmentation />
       <section className="section section--ink home-references-section">
         <Container>
-          <SectionHeading eyebrow="Expérience fondatrice" title="Des missions patrimoniales significatives" text="Ces missions ont été conduites dans le cadre de l’expérience professionnelle du fondateur. Elles ne sont pas présentées comme des commandes directes d’ARCHERITAGE." light />
+          <SectionHeading eyebrow="Expérience fondatrice" title="Références sélectionnées" text={founderAttribution} light />
           <div className="reference-grid reference-grid--home">
             {homepageReferences.map((reference, index) => <ReferenceCard key={reference.slug} reference={reference} href={`/references/${reference.slug}`} index={index} variant="home" />)}
           </div>

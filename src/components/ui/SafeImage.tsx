@@ -47,7 +47,7 @@ export function SafeImage({ src, alt, className, sizes, priority, fill = true, w
         alt={alt}
         fill
         priority={priority}
-        sizes={sizes}
+        sizes={sizes ?? '(max-width: 768px) 100vw, 50vw'}
         className="object-cover"
         onError={() => setHasError(true)}
       />
@@ -60,7 +60,7 @@ export function SafeImage({ src, alt, className, sizes, priority, fill = true, w
         width={width ?? 1600}
         height={height ?? 1200}
         priority={priority}
-        sizes={sizes}
+        sizes={sizes ?? '(max-width: 768px) 100vw, 50vw'}
         className="h-full w-full object-cover"
         onError={() => setHasError(true)}
       />

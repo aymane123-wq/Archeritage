@@ -73,7 +73,7 @@ export default async function ExpertiseDetailPage({ params }: ExpertisePageProps
                 alt={expertise.imageAlt}
                 fill
                 priority
-                sizes="(min-width: 768px) 48vw, 100vw"
+                sizes="(max-width: 767px) 100vw, 48vw"
               />
             </div>
           </div>

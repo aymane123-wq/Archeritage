@@ -16,17 +16,22 @@ export function Footer() {
             <div>
               <p className="eyebrow">Cabinet d’architecture</p>
               <p className="site-footer__statement">Valorisation foncière, projets d’envergure et patrimoine.</p>
-              <p className="site-footer__copy">ARCHERITAGE réunit trois expertises pour transformer des sites complexes en projets maîtrisés.</p>
             </div>
             <nav aria-label="Navigation du pied de page">
-              {siteRoutes.map((route, index) => <Link key={route.href} href={route.href}><span>{String(index + 1).padStart(2, '0')}</span>{route.label}<ArrowUpRight className="h-3.5 w-3.5" /></Link>)}
+              {siteRoutes.map((route, index) => (
+                <Link key={route.href} href={route.href}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  {route.label}
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </Link>
+              ))}
             </nav>
             <div className="site-footer__contact">
               <p className="eyebrow">Contact</p>
               <a href={contactLinks.email} className="footer-contact-line"><ArcheritageIcon name="mail" tone="light" />{contactDetails.email}</a>
               <a href={contactLinks.phone} className="footer-contact-line"><ArcheritageIcon name="phone" tone="light" />{contactDetails.phoneDisplay}</a>
               <address className="footer-contact-line"><ArcheritageIcon name="map-pin" tone="light" /><span>{contactDetails.addressLines.map((line) => <span key={line}>{line}</span>)}</span></address>
-              <Link href="/contact" className="arrow-link">Parler d’un projet<ArrowUpRight className="h-4 w-4" /></Link>
+              <Link href="/contact" className="arrow-link">Discuter d’un projet<ArrowUpRight className="h-4 w-4" /></Link>
               <div className="footer-legal"><Link href="/mentions-legales">Mentions légales</Link><Link href="/confidentialite">Confidentialité</Link></div>
             </div>
           </div>

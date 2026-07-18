@@ -10,7 +10,7 @@ import { getProfessionalServiceJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: contact.title,
-  description: 'Présentez votre projet à ARCHERITAGE. Un premier échange, sous 48 heures.',
+  description: contact.introduction,
   alternates: { canonical: '/contact' },
 };
 
@@ -46,10 +46,6 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             <div className="contact-details contact-details--identity">
               <p>ARCHERITAGE — Cabinet d’architecture, valorisation foncière et patrimoine</p>
               <p>Fondateur : Ahmed Taoufik Naciri, architecte</p>
-            </div>
-            <div className="contact-note">
-              <h2><ArcheritageIcon name="shield-check" variant="card" tone="accent" />Confidentialité</h2>
-              <p>{contact.confidentiality}</p>
             </div>
           </div>
           <div className="contact-form-panel">

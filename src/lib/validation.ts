@@ -38,6 +38,20 @@ export function isAllowedContactAttachment(file: { name: string; size: number; t
     && CONTACT_ATTACHMENT_ALLOWED_EXTENSIONS.has(extension);
 }
 
+export function sanitizeContactAttachmentFilename(name: string) {
+  const extension = getContactAttachmentExtension(name);
+  const stem = name
+    .slice(0, Math.max(0, name.length - extension.length))
+    .normalize('NFKD')
+    .replace(/[^\w.\-+() ]+/g, '_')
+    .replace(/\s+/g, '_')
+    .replace(/_+/g, '_')
+    .replace(/^[.\-_]+|[.\-_]+$/g, '')
+    .slice(0, 80) || 'piece-jointe';
+
+  return `${stem}${extension || '.bin'}`;
+}
+
 export async function hasAllowedContactAttachmentSignature(file: { name: string; slice: (start?: number, end?: number) => Blob }) {
   const header = new Uint8Array(await file.slice(0, 1024).arrayBuffer());
   const extension = getContactAttachmentExtension(file.name);

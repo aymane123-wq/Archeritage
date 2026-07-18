@@ -28,8 +28,8 @@ export const expertiseDetails: ExpertiseDetail[] = [
     shortTitle: 'Foncier',
     eyebrow: 'Expertise 01',
     introduction:
-      "Comprendre le potentiel d'un site, structurer une opération foncière et définir une stratégie de valorisation territoriale. Archeritage intervient sur les phases amont qui déterminent la faisabilité, l'optimisation parcellaire et la gouvernance d'un projet.",
-    image: '/images/pillars/pillar-valorisation-fonciere.png',
+      "Comprendre le potentiel d’un site et structurer une opération foncière avant les décisions structurantes.",
+    image: '/images/pillars/pillar-valorisation-fonciere.jpg',
     imageAlt: "Vue aérienne d'un site foncier structuré par ses parcelles et ses accès",
     competencies: [
       'Études de faisabilité et optimisation parcellaire',
@@ -68,7 +68,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
     shortTitle: 'Architecture',
     eyebrow: 'Expertise 02',
     introduction:
-      "Concevoir, coordonner et piloter des bâtiments publics, équipements collectifs et opérations multi-acteurs. Archeritage apporte une gouvernance de projet rigoureuse aux projets institutionnels et complexes.",
+      "Concevoir, coordonner et piloter des bâtiments publics, équipements collectifs et opérations multi-acteurs.",
     image: '/images/pillars/pillar-architecture-envergure.jpg',
     imageAlt: 'Architecture contemporaine d\'un équipement de grande envergure',
     competencies: [
@@ -108,7 +108,7 @@ export const expertiseDetails: ExpertiseDetail[] = [
     shortTitle: 'Patrimoine',
     eyebrow: 'Expertise 03',
     introduction:
-      "Diagnostiquer, restaurer, réhabiliter et revaloriser le patrimoine bâti — de la lecture historique et constructive à la mise en valeur territoriale. Archeritage accompagne les sites historiques avec la rigueur qu'exige chaque intervention patrimoniale.",
+      "Diagnostiquer, restaurer, réhabiliter et revaloriser le patrimoine bâti — de la lecture du lieu à sa mise en valeur territoriale.",
     image: '/images/references/tiznit-cover.jpg',
     imageAlt: 'Ensemble patrimonial de la kasbah de Tiznit et de la place Mechouar',
     competencies: [

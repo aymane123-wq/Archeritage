@@ -75,11 +75,11 @@ export const projects: Project[] = [
       'Accompagnement d’un porteur de projet dans la compréhension du contexte local, des contraintes patrimoniales, du potentiel de reconversion et des étapes administratives.',
     description:
       'Cette référence illustre l’accompagnement stratégique d’un projet entrant au Maroc: première lecture du territoire, identification des contraintes patrimoniales, clarification des étapes et préparation d’une feuille de route réaliste.',
-    coverImage: '/images/hero/hero-urbanisme-foncier.png',
+    coverImage: '/images/hero/hero-urbanisme-foncier.jpg',
     altText: 'Étude et accompagnement investisseur pour patrimoine au Maroc',
-    heroImage: '/images/hero/hero-urbanisme-foncier.png',
+    heroImage: '/images/hero/hero-urbanisme-foncier.jpg',
     gallery: [
-      '/images/hero/hero-urbanisme-foncier.png',
+      '/images/hero/hero-urbanisme-foncier.jpg',
       '/images/references/diagnostic-cover.jpg',
       '/images/optional/architecture-villa-contemporaine.jpg',
     ],

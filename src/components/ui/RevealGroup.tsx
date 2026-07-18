@@ -5,7 +5,6 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 
 import { gsap, registerGsapPlugins } from '@/lib/gsap';
-import { cn } from '@/lib/utils';
 
 type RevealGroupProps = {
   children: React.ReactNode;
@@ -84,7 +83,7 @@ export function RevealGroup({
   );
 
   return (
-    <Component ref={ref as never} className={cn('will-change-transform', className)}>
+    <Component ref={ref as never} className={className}>
       {children}
     </Component>
   );

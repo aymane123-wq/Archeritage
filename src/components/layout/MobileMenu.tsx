@@ -46,7 +46,7 @@ export function MobileMenu({ open, onOpenChange }: MobileMenuProps) {
   }, [onOpenChange, pathname]);
 
   useEffect(() => {
-    const desktopQuery = window.matchMedia('(min-width: 1180px)');
+    const desktopQuery = window.matchMedia('(min-width: 1220px)');
     const handleBreakpointChange = (event: MediaQueryListEvent) => {
       if (event.matches) {
         onOpenChange(false);

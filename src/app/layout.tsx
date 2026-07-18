@@ -9,11 +9,13 @@ import { site } from '@/data/site';
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
+  display: 'swap',
 });
 
 const display = Fraunces({
   subsets: ['latin'],
   variable: '--font-display',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {

@@ -22,7 +22,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'Investir au Maroc',
     category: 'Accompagnement',
     description: 'Guider les porteurs de projets marocains et étrangers dans un territoire riche, complexe et patrimonial.',
-    image: '/images/hero/hero-urbanisme-foncier.png',
+    image: '/images/hero/hero-urbanisme-foncier.jpg',
     alt: 'Contexte urbain patrimonial au Maroc',
   },
   {

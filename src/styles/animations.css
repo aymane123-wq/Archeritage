@@ -1,9 +1,9 @@
 [data-reveal] {
-  will-change: transform, opacity;
+  /* will-change applied only during GSAP animation via inline styles */
 }
 
 [data-card] {
-  will-change: transform, opacity;
+  /* reserved for card motion hooks; avoid permanent will-change */
 }
 
 [data-split-word] {
@@ -85,13 +85,21 @@
     scroll-behavior: auto;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  .motion-scroll-progress,
+  .route-transition-panel,
+  .motion-cursor,
+  .hero-intro-panel,
+  .button-primary::before,
+  .button-secondary::before,
+  .arrow-link::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .button-primary:hover svg,
+  .button-secondary:hover svg,
+  .arrow-link:hover svg {
+    transform: none;
   }
 }
 

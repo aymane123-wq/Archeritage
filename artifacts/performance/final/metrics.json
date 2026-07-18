@@ -1,0 +1,820 @@
+{
+  "generatedAt": "2026-07-18T09:16:28.739Z",
+  "baseUrl": "http://localhost:3001",
+  "phase": "final",
+  "results": [
+    {
+      "phase": "final",
+      "route": "home",
+      "path": "/",
+      "viewport": "390x844",
+      "url": "http://localhost:3001/",
+      "documentTitle": "Valoriser le foncier. Construire l’envergure. Préserver la mémoire.",
+      "fcp": 740,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 717,
+      "loadEvent": 918,
+      "transfer": {
+        "total": 579996,
+        "images": 288742,
+        "scripts": 182275,
+        "css": 54109
+      },
+      "counts": {
+        "resources": 23,
+        "images": 5,
+        "scripts": 13,
+        "css": 3
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-valorisation-fonciere.jpg&w=640&q=75",
+          "transferKB": 94,
+          "decodedKB": 94
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fhero%2Fhero-urbanisme-foncier.jpg&w=640&q=75",
+          "transferKB": 94,
+          "decodedKB": 94
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-architecture-envergure.jpg&w=640&q=75",
+          "transferKB": 38,
+          "decodedKB": 38
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fhero%2Fhero-architecture-publique.jpg&w=640&q=80",
+          "transferKB": 34,
+          "decodedKB": 33
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftiznit-cover.jpg&w=640&q=75",
+          "transferKB": 22,
+          "decodedKB": 22
+        }
+      ],
+      "heroImageCount": 2,
+      "heroCompleteImages": 2
+    },
+    {
+      "phase": "final",
+      "route": "cabinet",
+      "path": "/cabinet",
+      "viewport": "390x844",
+      "url": "http://localhost:3001/cabinet",
+      "documentTitle": "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine | ARCHERITAGE",
+      "fcp": 688,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 646,
+      "loadEvent": 936,
+      "transfer": {
+        "total": 313737,
+        "images": 21300,
+        "scripts": 182275,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 18,
+        "images": 1,
+        "scripts": 13,
+        "css": 2
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Fprofile%2Fnacir.jpeg&w=640&q=75",
+          "transferKB": 21,
+          "decodedKB": 21
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "expertises",
+      "path": "/expertises",
+      "viewport": "390x844",
+      "url": "http://localhost:3001/expertises",
+      "documentTitle": "Une expertise architecturale au service du foncier, des grands projets et du patrimoine | ARCHERITAGE",
+      "fcp": 640,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 611,
+      "loadEvent": 889,
+      "transfer": {
+        "total": 450403,
+        "images": 157966,
+        "scripts": 182275,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 20,
+        "images": 3,
+        "scripts": 13,
+        "css": 2
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-valorisation-fonciere.jpg&w=640&q=75",
+          "transferKB": 94,
+          "decodedKB": 94
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-architecture-envergure.jpg&w=640&q=75",
+          "transferKB": 38,
+          "decodedKB": 38
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftiznit-cover.jpg&w=640&q=75",
+          "transferKB": 22,
+          "decodedKB": 22
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "expertise-foncier",
+      "path": "/expertises/valorisation-fonciere",
+      "viewport": "390x844",
+      "url": "http://localhost:3001/expertises/valorisation-fonciere",
+      "documentTitle": "Valorisation foncière et territoriale | ARCHERITAGE",
+      "fcp": 620,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 603,
+      "loadEvent": 816,
+      "transfer": {
+        "total": 395111,
+        "images": 96300,
+        "scripts": 182814,
+        "css": 115933
+      },
+      "counts": {
+        "resources": 21,
+        "images": 1,
+        "scripts": 14,
+        "css": 3
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-valorisation-fonciere.jpg&w=640&q=75",
+          "transferKB": 94,
+          "decodedKB": 94
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "missions",
+      "path": "/missions",
+      "viewport": "390x844",
+      "url": "http://localhost:3001/missions",
+      "documentTitle": "Comment Archeritage intervient sur vos projets | ARCHERITAGE",
+      "fcp": 700,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 932,
+      "loadEvent": 1087,
+      "transfer": {
+        "total": 292385,
+        "images": 0,
+        "scripts": 182223,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 17,
+        "images": 0,
+        "scripts": 13,
+        "css": 2
+      },
+      "topImages": [],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "methode",
+      "path": "/methode",
+      "viewport": "390x844",
+      "url": "http://localhost:3001/methode",
+      "documentTitle": "PATRIGOV by Archeritage | ARCHERITAGE",
+      "fcp": 464,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 447,
+      "loadEvent": 602,
+      "transfer": {
+        "total": 292882,
+        "images": 0,
+        "scripts": 182720,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 17,
+        "images": 0,
+        "scripts": 13,
+        "css": 2
+      },
+      "topImages": [],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "references",
+      "path": "/references",
+      "viewport": "390x844",
+      "url": "http://localhost:3001/references",
+      "documentTitle": "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine | ARCHERITAGE",
+      "fcp": 656,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 881,
+      "loadEvent": 903,
+      "transfer": {
+        "total": 380124,
+        "images": 83086,
+        "scripts": 182275,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 21,
+        "images": 3,
+        "scripts": 13,
+        "css": 2
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Fcervantes-cover.jpg&w=640&q=75",
+          "transferKB": 36,
+          "decodedKB": 36
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftinmel-cover.jpg&w=640&q=75",
+          "transferKB": 23,
+          "decodedKB": 23
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftiznit-cover.jpg&w=640&q=75",
+          "transferKB": 22,
+          "decodedKB": 22
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "reference-tinmel",
+      "path": "/references/tinmel",
+      "viewport": "390x844",
+      "url": "http://localhost:3001/references/tinmel",
+      "documentTitle": "Mosquée de Tinmel | Références | ARCHERITAGE | ARCHERITAGE",
+      "fcp": 348,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 335,
+      "loadEvent": 461,
+      "transfer": {
+        "total": 320772,
+        "images": 23356,
+        "scripts": 182275,
+        "css": 42989
+      },
+      "counts": {
+        "resources": 19,
+        "images": 1,
+        "scripts": 13,
+        "css": 3
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftinmel-cover.jpg&w=640&q=75",
+          "transferKB": 23,
+          "decodedKB": 23
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "journal",
+      "path": "/journal",
+      "viewport": "390x844",
+      "url": "http://localhost:3001/journal",
+      "documentTitle": "Journal Archeritage | ARCHERITAGE",
+      "fcp": 760,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 726,
+      "loadEvent": 1039,
+      "transfer": {
+        "total": 445760,
+        "images": 152510,
+        "scripts": 183088,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 20,
+        "images": 3,
+        "scripts": 13,
+        "css": 2
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-valorisation-fonciere.jpg&w=640&q=75",
+          "transferKB": 94,
+          "decodedKB": 94
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fjournal%2Fjournal-chantier-construction.jpg&w=640&q=75",
+          "transferKB": 32,
+          "decodedKB": 32
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftinmel-cover.jpg&w=640&q=75",
+          "transferKB": 23,
+          "decodedKB": 23
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "contact",
+      "path": "/contact",
+      "viewport": "390x844",
+      "url": "http://localhost:3001/contact",
+      "documentTitle": "Parler d’un projet avec Archeritage | ARCHERITAGE",
+      "fcp": 1068,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 1061,
+      "loadEvent": 1350,
+      "transfer": {
+        "total": 325449,
+        "images": 0,
+        "scripts": 215287,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 18,
+        "images": 0,
+        "scripts": 14,
+        "css": 2
+      },
+      "topImages": [],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "home",
+      "path": "/",
+      "viewport": "1440x900",
+      "url": "http://localhost:3001/",
+      "documentTitle": "Valoriser le foncier. Construire l’envergure. Préserver la mémoire.",
+      "fcp": 816,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 715,
+      "loadEvent": 962,
+      "transfer": {
+        "total": 1040404,
+        "images": 718520,
+        "scripts": 186176,
+        "css": 197937
+      },
+      "counts": {
+        "resources": 35,
+        "images": 7,
+        "scripts": 18,
+        "css": 3
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Fhero%2Fhero-urbanisme-foncier.jpg&w=1920&q=75",
+          "transferKB": 314,
+          "decodedKB": 314
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fhero%2Fhero-architecture-publique.jpg&w=1920&q=80",
+          "transferKB": 174,
+          "decodedKB": 174
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-valorisation-fonciere.jpg&w=640&q=75",
+          "transferKB": 94,
+          "decodedKB": 94
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-architecture-envergure.jpg&w=640&q=75",
+          "transferKB": 38,
+          "decodedKB": 38
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Fcervantes-cover.jpg&w=640&q=75",
+          "transferKB": 36,
+          "decodedKB": 36
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftinmel-cover.jpg&w=640&q=75",
+          "transferKB": 23,
+          "decodedKB": 23
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftiznit-cover.jpg&w=640&q=75",
+          "transferKB": 22,
+          "decodedKB": 22
+        }
+      ],
+      "heroImageCount": 2,
+      "heroCompleteImages": 2
+    },
+    {
+      "phase": "final",
+      "route": "cabinet",
+      "path": "/cabinet",
+      "viewport": "1440x900",
+      "url": "http://localhost:3001/cabinet",
+      "documentTitle": "Trois décennies d’action territoriale au service d’une nouvelle culture du patrimoine | ARCHERITAGE",
+      "fcp": 552,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 522,
+      "loadEvent": 687,
+      "transfer": {
+        "total": 344612,
+        "images": 21300,
+        "scripts": 186176,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 29,
+        "images": 1,
+        "scripts": 18,
+        "css": 2
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Fprofile%2Fnacir.jpeg&w=640&q=75",
+          "transferKB": 21,
+          "decodedKB": 21
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "expertises",
+      "path": "/expertises",
+      "viewport": "1440x900",
+      "url": "http://localhost:3001/expertises",
+      "documentTitle": "Une expertise architecturale au service du foncier, des grands projets et du patrimoine | ARCHERITAGE",
+      "fcp": 716,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 791,
+      "loadEvent": 1093,
+      "transfer": {
+        "total": 480925,
+        "images": 157966,
+        "scripts": 185637,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 30,
+        "images": 3,
+        "scripts": 17,
+        "css": 2
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-valorisation-fonciere.jpg&w=640&q=75",
+          "transferKB": 94,
+          "decodedKB": 94
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-architecture-envergure.jpg&w=640&q=75",
+          "transferKB": 38,
+          "decodedKB": 38
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftiznit-cover.jpg&w=640&q=75",
+          "transferKB": 22,
+          "decodedKB": 22
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "expertise-foncier",
+      "path": "/expertises/valorisation-fonciere",
+      "viewport": "1440x900",
+      "url": "http://localhost:3001/expertises/valorisation-fonciere",
+      "documentTitle": "Valorisation foncière et territoriale | ARCHERITAGE",
+      "fcp": 788,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 904,
+      "loadEvent": 939,
+      "transfer": {
+        "total": 456477,
+        "images": 127590,
+        "scripts": 186176,
+        "css": 147223
+      },
+      "counts": {
+        "resources": 30,
+        "images": 1,
+        "scripts": 18,
+        "css": 3
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-valorisation-fonciere.jpg&w=750&q=75",
+          "transferKB": 125,
+          "decodedKB": 124
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "missions",
+      "path": "/missions",
+      "viewport": "1440x900",
+      "url": "http://localhost:3001/missions",
+      "documentTitle": "Comment Archeritage intervient sur vos projets | ARCHERITAGE",
+      "fcp": 636,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 592,
+      "loadEvent": 830,
+      "transfer": {
+        "total": 323349,
+        "images": 0,
+        "scripts": 186176,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 28,
+        "images": 0,
+        "scripts": 18,
+        "css": 2
+      },
+      "topImages": [],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "methode",
+      "path": "/methode",
+      "viewport": "1440x900",
+      "url": "http://localhost:3001/methode",
+      "documentTitle": "PATRIGOV by Archeritage | ARCHERITAGE",
+      "fcp": 556,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 503,
+      "loadEvent": 693,
+      "transfer": {
+        "total": 323267,
+        "images": 0,
+        "scripts": 186176,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 28,
+        "images": 0,
+        "scripts": 18,
+        "css": 2
+      },
+      "topImages": [],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "references",
+      "path": "/references",
+      "viewport": "1440x900",
+      "url": "http://localhost:3001/references",
+      "documentTitle": "Une expérience construite à l’intersection du foncier, de l’architecture et du patrimoine | ARCHERITAGE",
+      "fcp": 716,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 648,
+      "loadEvent": 919,
+      "transfer": {
+        "total": 440477,
+        "images": 108024,
+        "scripts": 185637,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 32,
+        "images": 3,
+        "scripts": 17,
+        "css": 2
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Fcervantes-cover.jpg&w=750&q=75",
+          "transferKB": 47,
+          "decodedKB": 46
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftiznit-cover.jpg&w=750&q=75",
+          "transferKB": 30,
+          "decodedKB": 30
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftinmel-cover.jpg&w=750&q=75",
+          "transferKB": 29,
+          "decodedKB": 29
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "reference-tinmel",
+      "path": "/references/tinmel",
+      "viewport": "1440x900",
+      "url": "http://localhost:3001/references/tinmel",
+      "documentTitle": "Mosquée de Tinmel | Références | ARCHERITAGE | ARCHERITAGE",
+      "fcp": 700,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 928,
+      "loadEvent": 1002,
+      "transfer": {
+        "total": 372314,
+        "images": 43966,
+        "scripts": 185637,
+        "css": 63599
+      },
+      "counts": {
+        "resources": 29,
+        "images": 1,
+        "scripts": 17,
+        "css": 3
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftinmel-cover.jpg&w=1080&q=75",
+          "transferKB": 43,
+          "decodedKB": 43
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "journal",
+      "path": "/journal",
+      "viewport": "1440x900",
+      "url": "http://localhost:3001/journal",
+      "documentTitle": "Journal Archeritage | ARCHERITAGE",
+      "fcp": 1020,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 1217,
+      "loadEvent": 1360,
+      "transfer": {
+        "total": 476380,
+        "images": 152510,
+        "scripts": 186176,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 31,
+        "images": 3,
+        "scripts": 18,
+        "css": 2
+      },
+      "topImages": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-valorisation-fonciere.jpg&w=640&q=75",
+          "transferKB": 94,
+          "decodedKB": 94
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fjournal%2Fjournal-chantier-construction.jpg&w=640&q=75",
+          "transferKB": 32,
+          "decodedKB": 32
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftinmel-cover.jpg&w=640&q=75",
+          "transferKB": 23,
+          "decodedKB": 23
+        }
+      ],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "contact",
+      "path": "/contact",
+      "viewport": "1440x900",
+      "url": "http://localhost:3001/contact",
+      "documentTitle": "Parler d’un projet avec Archeritage | ARCHERITAGE",
+      "fcp": 984,
+      "lcp": null,
+      "lcpUrl": null,
+      "cls": 0,
+      "domContentLoaded": 1205,
+      "loadEvent": 1334,
+      "transfer": {
+        "total": 362007,
+        "images": 0,
+        "scripts": 219727,
+        "css": 19633
+      },
+      "counts": {
+        "resources": 30,
+        "images": 0,
+        "scripts": 20,
+        "css": 2
+      },
+      "topImages": [],
+      "heroImageCount": 0,
+      "heroCompleteImages": 0
+    },
+    {
+      "phase": "final",
+      "route": "home-first-paint",
+      "path": "/",
+      "viewport": "1440x900",
+      "imageRequests": 6,
+      "imageTransferKB": 388,
+      "images": [
+        {
+          "url": "/_next/image?url=%2Fimages%2Fhero%2Fhero-architecture-publique.jpg&w=1920&q=80",
+          "transferKB": 174
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-valorisation-fonciere.jpg&w=640&q=75",
+          "transferKB": 94
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Fpillars%2Fpillar-architecture-envergure.jpg&w=640&q=75",
+          "transferKB": 38
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftiznit-cover.jpg&w=640&q=75",
+          "transferKB": 22
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Ftinmel-cover.jpg&w=640&q=75",
+          "transferKB": 23
+        },
+        {
+          "url": "/_next/image?url=%2Fimages%2Freferences%2Fcervantes-cover.jpg&w=640&q=75",
+          "transferKB": 36
+        }
+      ],
+      "heroImgNodes": 1,
+      "heroLoaded": [
+        "/_next/image?url=%2Fimages%2Fhero%2Fhero-architecture-publique.jpg&w=1920&q=80"
+      ],
+      "lcp": null
+    }
+  ]
+}

@@ -132,7 +132,18 @@ export function ContactForm({ initialValues = {} }: ContactFormProps) {
   return (
     <form className="contact-form" onSubmit={submit} noValidate>
       <div className="honeypot" aria-hidden="true">
-        <label htmlFor="website">Site web<input id="website" tabIndex={-1} autoComplete="off" {...register('website')} /></label>
+        <label htmlFor="website">
+          Site web
+          <input
+            id="website"
+            tabIndex={-1}
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck={false}
+            {...register('website')}
+          />
+        </label>
       </div>
       <div className="form-grid">
         {field('fullName', 'Nom et prénom', { autoComplete: 'name' }, true)}
@@ -173,10 +184,13 @@ export function ContactForm({ initialValues = {} }: ContactFormProps) {
         {attachmentError ? <small id="attachment-error" role="alert">{attachmentError}</small> : null}
       </div>
       {status ? <div className={`form-status form-status--${status.kind}`} role={status.kind === 'error' ? 'alert' : 'status'} aria-live="polite"><ArcheritageIcon name={status.kind === 'success' ? 'check' : 'shield-alert'} />{status.message}</div> : null}
-      <p className="contact-form-privacy">Vos données sont utilisées uniquement pour répondre à votre demande. <Link href="/confidentialite">Consulter la politique de confidentialité</Link>.</p>
       <button className="button button--primary" type="submit" disabled={isSubmitting}>
         {isSubmitting ? 'Envoi en cours…' : 'Envoyer ma demande'}<ArcheritageIcon name="send" />
       </button>
+      <p className="contact-form-privacy">
+        Vos informations sont utilisées uniquement pour traiter votre demande et préparer le premier échange.{' '}
+        <Link href="/confidentialite">En savoir plus sur la confidentialité</Link>
+      </p>
     </form>
   );
 }

@@ -33,10 +33,6 @@ export default async function JournalPage() {
               Pensées, notes et regards sur l&apos;architecture, le patrimoine
               et les projets complexes.
             </p>
-            <p>
-              Le Journal rassemble les réflexions, notes de doctrine et retours
-              d&apos;expérience du cabinet.
-            </p>
             <p className="journal-hero__line">
               Ligne éditoriale&nbsp;: publier peu, mais publier juste.
             </p>
@@ -59,7 +55,7 @@ export default async function JournalPage() {
                       src={post.image}
                       alt={post.imageAlt ?? ''}
                       fill
-                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      sizes="(max-width: 679px) 100vw, (max-width: 1023px) 50vw, 33vw"
                     />
                     <span className="journal-preview-card__badge">
                       À paraître
@@ -88,8 +84,9 @@ export default async function JournalPage() {
 
       <div className="journal-cta">
         <CTASection
-          title="Être informé des prochaines publications"
-          text="Contactez Archeritage pour suivre les prochaines notes et regards du cabinet."
+          title="Échanger autour de ces sujets"
+          text="Une question sur le foncier, le patrimoine ou la gouvernance d’un projet ? Contactez ARCHERITAGE."
+          label="CONTACTEZ-NOUS"
         />
       </div>
     </>

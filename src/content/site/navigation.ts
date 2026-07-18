@@ -1,4 +1,5 @@
 export const siteRoutes = [
+  { label: 'Accueil', href: '/' },
   { label: 'Cabinet', href: '/cabinet' },
   { label: 'Expertises', href: '/expertises' },
   { label: 'Missions', href: '/missions' },
